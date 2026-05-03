@@ -4,7 +4,7 @@
 
 Çalışma koşullarını anlat — hak ihlallerini tespit et, kıdem ve ihbar tazminatını 2026 tarifesiyle hesapla, dilekçeni hazırla, kanıtlarını topla.
 
-[**🔗 Canlı Demo**](https://kullanici-adi.github.io/isci-haklari-asistani/) · [**📱 Telefonda Aç**](https://kullanici-adi.github.io/isci-haklari-asistani/) · [**🐛 Sorun Bildir**](https://github.com/kullanici-adi/isci-haklari-asistani/issues)
+[**🔗 Canlı Demo**](https://alimc48.github.io/isci-haklari-asistani/) · [**📱 Telefonda Aç**](https://alimc48.github.io/isci-haklari-asistani/) · [**🐛 Sorun Bildir**](https://alimc48.github.io/isci-haklari-asistani/)
 
 ---
 

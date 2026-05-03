@@ -134,9 +134,7 @@ Pull request'ler memnuniyetle kabul edilir. Büyük değişiklikler için lütfe
 
 ---
 
-## 📜 Lisans
 
-[MIT Lisansı](LICENSE) — istediğiniz gibi kullanın, değiştirin, dağıtın. Atıf yapmanız hoş olur ama zorunlu değil.
 
 ---
 

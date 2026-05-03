@@ -148,9 +148,7 @@ Hesap formüllerinde hata bulan, hukuki nüansları paylaşan, kanun değişikli
 
 ## 📞 İletişim
 
-- **Issue**: github.com/kullanici-adi/isci-haklari-asistani/issues
-- **Email**: senin@email.com
-- **Twitter/X**: @kullanici-adi
+- **Email**: alimceler123@gmail.com
 
 ---
 

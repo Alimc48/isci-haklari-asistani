@@ -1,0 +1,3886 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="theme-color" content="#0f1f3d">
+
+<!-- SEO -->
+<title>İşçi Hakları Asistanı — Türkiye'deki Çalışanlar İçin Ücretsiz Hak Analizi</title>
+<meta name="description" content="Çalışma koşullarını anlat — hak ihlallerini tespit et, kıdem ve ihbar tazminatını 2026 tarifesiyle hesapla, dilekçeni hazırla, kanıtlarını topla. Ücretsiz, açık kaynak, AI destekli.">
+<meta name="keywords" content="işçi hakları, kıdem tazminatı hesaplama, ihbar tazminatı, fazla mesai, mobbing, haklı fesih, iş kanunu, 4857, 2026 kıdem tavanı, ücretsiz hak analizi">
+<meta name="author" content="İşçi Hakları Asistanı">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://isci-haklari-asistani.example.com/">
+
+<!-- Open Graph (WhatsApp, Facebook, LinkedIn) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="İşçi Hakları Asistanı — Haklarını bil, hakkını ara">
+<meta property="og:description" content="Türkiye'deki çalışanlar için ücretsiz hak analizi. Kıdem hesabı, dilekçe taslağı, kanıt klasörü, patron simülatörü — hepsi tek yerde.">
+<meta property="og:image" content="https://isci-haklari-asistani.example.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:site_name" content="İşçi Hakları Asistanı">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="İşçi Hakları Asistanı">
+<meta name="twitter:description" content="Türkiye'deki çalışanlar için ücretsiz hak analizi ve kanıt yönetimi.">
+<meta name="twitter:image" content="https://isci-haklari-asistani.example.com/og-image.png">
+
+<!-- Favicon (SVG inline - dış dosya gerekmez) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%230f1f3d%22/><text x=%2250%22 y=%2272%22 font-size=%2260%22 text-anchor=%22middle%22>%E2%9A%96%EF%B8%8F</text></svg>">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%230f1f3d%22/><text x=%2250%22 y=%2272%22 font-size=%2260%22 text-anchor=%22middle%22>%E2%9A%96%EF%B8%8F</text></svg>">
+
+<!-- Structured Data (Google için) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "İşçi Hakları Asistanı",
+  "description": "Türkiye'deki çalışanlar için ücretsiz hak analizi, tazminat hesaplama, dilekçe taslağı ve kanıt yönetim aracı.",
+  "applicationCategory": "LegalService",
+  "operatingSystem": "Web Browser",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "TRY"
+  },
+  "inLanguage": "tr",
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Workers in Turkey"
+  }
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0f1f3d;
+  --navy2: #1a3260;
+  --blue: #1d4ed8;
+  --blue-light: #eff4ff;
+  --red: #b91c1c;
+  --red-light: #fef2f2;
+  --green: #15803d;
+  --green-dark: #166534;
+  --green-light: #f0fdf4;
+  --amber: #b45309;
+  --amber-light: #fffbeb;
+  --bg: #f8f7f5;
+  --card: #ffffff;
+  --ink: #111827;
+  --muted: #6b7280;
+  --border: #e5e2dc;
+  --serif: 'Lora', Georgia, serif;
+  --sans: 'DM Sans', system-ui, sans-serif;
+  --mono: 'DM Mono', monospace;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:var(--bg); color:var(--ink); font-family:var(--sans); min-height:100vh; -webkit-font-smoothing:antialiased; }
+
+/* ─── API Key Modal ─── */
+.modal-overlay {
+  position:fixed; inset:0; z-index:1000;
+  background:rgba(15,31,61,0.88);
+  backdrop-filter:blur(6px);
+  display:flex; align-items:center; justify-content:center;
+  padding:24px;
+}
+.modal-overlay.hidden { display:none; }
+.modal { background:#fff; border-radius:20px; padding:36px; max-width:520px; width:100%; box-shadow:0 24px 80px rgba(0,0,0,0.3); max-height:90vh; overflow-y:auto; }
+.modal-icon { font-size:36px; margin-bottom:14px; }
+.modal h2 { font-family:var(--serif); font-size:24px; margin-bottom:10px; line-height:1.2; }
+.modal > p { font-size:14px; color:var(--muted); line-height:1.7; margin-bottom:18px; }
+.mode-cards { display:grid; gap:10px; margin-bottom:18px; }
+.mode-card { border:1.5px solid var(--border); border-radius:12px; padding:14px 16px; cursor:pointer; transition:all 0.15s; background:#fafaf8; }
+.mode-card:hover { border-color:var(--blue); background:var(--blue-light); }
+.mode-card.selected { border-color:var(--blue); background:var(--blue-light); }
+.mode-card-title { font-weight:600; font-size:14px; display:flex; align-items:center; gap:8px; }
+.mode-card-desc { font-size:12px; color:var(--muted); margin-top:4px; line-height:1.5; }
+.mode-card-tag { display:inline-block; font-size:10px; font-family:var(--mono); padding:2px 7px; border-radius:4px; margin-left:auto; }
+.tag-free { background:var(--green-light); color:var(--green); }
+.tag-ai { background:var(--blue-light); color:var(--blue); }
+.modal-steps { background:#f8f7f5; border-radius:10px; padding:14px 18px; margin-bottom:14px; font-size:13px; line-height:1.9; color:var(--ink); }
+.modal-steps a { color:var(--blue); }
+.modal-input { width:100%; background:#fafaf8; border:1px solid var(--border); border-radius:10px; padding:11px 14px; font-family:var(--mono); font-size:13px; color:var(--ink); outline:none; margin-bottom:12px; transition:border-color 0.2s; }
+.modal-input:focus { border-color:var(--blue); }
+.modal-btn { width:100%; background:var(--navy); color:#fff; border:none; border-radius:10px; padding:13px; font-family:var(--sans); font-size:14px; font-weight:600; cursor:pointer; transition:background 0.2s; }
+.modal-btn:hover:not(:disabled) { background:var(--navy2); }
+.modal-btn:disabled { opacity:.4; cursor:not-allowed; }
+.modal-note { font-size:11px; color:var(--muted); text-align:center; margin-top:10px; line-height:1.5; }
+.modal-warn { background:var(--amber-light); border:1px solid #fcd34d; border-radius:8px; padding:10px 14px; font-size:12px; line-height:1.55; color:var(--amber); margin-bottom:14px; }
+.ai-section { display:none; }
+.ai-section.active { display:block; }
+
+/* Wizard pages */
+.wizard-page { display:none; }
+.wizard-page.active { display:block; animation: fadeUp 0.3s ease both; }
+.wizard-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:14px; }
+.wizard-back { background:none; border:none; color:var(--blue); font-size:13px; cursor:pointer; padding:6px 0; font-weight:500; }
+.wizard-back:hover { text-decoration:underline; }
+.wizard-progress { font-size:11px; color:var(--muted); font-family:var(--mono); letter-spacing:0.04em; }
+
+/* FAQ list */
+.faq-list { display:grid; gap:10px; margin-bottom:18px; }
+.faq-item { background:#fafaf8; border:1px solid var(--border); border-radius:10px; padding:13px 16px; }
+.faq-q { font-weight:600; font-size:13.5px; margin-bottom:5px; }
+.faq-a { font-size:13px; line-height:1.6; color:var(--muted); }
+.faq-a strong { color:var(--ink); }
+
+/* Step visual */
+.step-visual { display:flex; gap:14px; margin-bottom:18px; align-items:flex-start; }
+.step-visual-num { width:30px; height:30px; border-radius:50%; background:var(--navy); color:#fff; font-weight:700; font-size:14px; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:2px; }
+.step-visual-content { flex:1; min-width:0; }
+.step-visual-title { font-weight:600; font-size:14px; margin-bottom:8px; }
+.step-visual-desc { font-size:12.5px; color:var(--muted); line-height:1.55; margin-top:8px; }
+.external-btn { display:inline-flex; align-items:center; gap:8px; background:#1a73e8; color:#fff; padding:9px 14px; border-radius:8px; text-decoration:none; font-size:13.5px; font-weight:500; margin-bottom:8px; transition:background 0.15s; min-width:240px; }
+.external-btn:hover { background:#1557b0; }
+.mock-screen { background:#fff; border:1px solid #dadce0; border-radius:8px; padding:14px; margin-bottom:8px; }
+.mock-google-signin { padding:8px; }
+
+/* ─── Header ─── */
+.header {
+  background:var(--navy); color:#fff;
+  padding:0 32px;
+  display:flex; align-items:center; gap:16px;
+  height:60px; position:sticky; top:0; z-index:100;
+}
+.header-logo { display:flex; align-items:center; gap:10px; font-family:var(--serif); font-size:17px; font-weight:600; }
+.header-icon { width:32px; height:32px; background:rgba(255,255,255,0.12); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:16px; }
+.header-right { margin-left:auto; display:flex; align-items:center; gap:12px; }
+.mode-badge {
+  font-family:var(--mono); font-size:11px;
+  padding:5px 12px; border-radius:100px;
+  display:flex; align-items:center; gap:7px;
+  cursor:pointer; transition:opacity 0.15s;
+}
+.mode-badge:hover { opacity:0.85; }
+.mode-badge.ai { background:rgba(52,211,153,0.15); color:#4ade80; border:1px solid rgba(74,222,128,0.2); }
+.mode-badge.offline { background:rgba(96,165,250,0.15); color:#93c5fd; border:1px solid rgba(147,197,253,0.25); }
+.mode-dot { width:6px; height:6px; border-radius:50%; background:currentColor; animation:pulse 2s infinite; }
+
+/* ─── Disclaimer banner ─── */
+.disclaimer-banner {
+  background:#fef9c3; border-bottom:1px solid #fde68a;
+  padding:9px 32px; font-size:12.5px; color:#713f12;
+  display:flex; align-items:center; gap:10px; line-height:1.5;
+}
+.disclaimer-banner strong { color:#713f12; }
+
+/* ─── Hero ─── */
+.hero {
+  background:var(--navy); color:#fff;
+  padding:52px 32px 60px; position:relative; overflow:hidden;
+}
+.hero::after { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 70% 50%,rgba(29,78,216,0.25) 0%,transparent 70%); pointer-events:none; }
+.hero-inner { max-width:680px; position:relative; z-index:1; }
+.hero-tag { display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); border-radius:100px; padding:5px 14px; font-size:12px; font-family:var(--mono); color:rgba(255,255,255,0.7); margin-bottom:22px; letter-spacing:0.04em; }
+.hero-tag-dot { width:6px; height:6px; border-radius:50%; background:#4ade80; animation:pulse 2s ease-in-out infinite; }
+.hero h1 { font-family:var(--serif); font-size:clamp(30px,4.5vw,52px); line-height:1.08; letter-spacing:-0.02em; margin-bottom:18px; }
+.hero h1 em { font-style:italic; color:#93c5fd; }
+.hero p { font-size:16px; color:rgba(255,255,255,0.7); line-height:1.7; max-width:560px; }
+.hero-stats { display:flex; gap:32px; margin-top:32px; flex-wrap:wrap; }
+.stat-num { font-family:var(--serif); font-size:28px; font-weight:700; color:#fff; letter-spacing:-0.02em; line-height:1; }
+.stat-label { font-size:12px; color:rgba(255,255,255,0.5); margin-top:4px; }
+
+/* ─── Main ─── */
+.main { max-width:1080px; margin:0 auto; padding:36px 24px 72px; display:grid; grid-template-columns:420px 1fr; gap:28px; align-items:start; }
+
+/* ─── Form ─── */
+.form-panel { background:var(--card); border:1px solid var(--border); border-radius:14px; overflow:hidden; position:sticky; top:72px; }
+.form-head { background:#f3f4f6; padding:18px 26px; border-bottom:1px solid var(--border); display:flex; align-items:center; gap:12px; }
+.form-head-text { flex:1; }
+.form-head h2 { font-family:var(--serif); font-size:18px; letter-spacing:-0.01em; }
+.form-head p { font-size:13px; color:var(--muted); margin-top:3px; }
+.form-reset { background:none; border:1px solid var(--border); color:var(--muted); padding:6px 12px; border-radius:7px; font-size:12px; cursor:pointer; transition:all 0.15s; }
+.form-reset:hover { background:#fff; color:var(--ink); border-color:var(--ink); }
+.form-body { padding:22px 26px; display:flex; flex-direction:column; gap:16px; }
+.field { display:flex; flex-direction:column; gap:6px; }
+.field label { font-size:11.5px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--muted); }
+.field-help { font-size:11px; color:var(--muted); margin-top:2px; line-height:1.4; }
+.field input,.field select,.field textarea { background:#fafaf8; border:1px solid var(--border); border-radius:8px; padding:10px 13px; font-family:var(--sans); font-size:14px; color:var(--ink); outline:none; transition:all 0.15s; width:100%; }
+.field input:focus,.field select:focus,.field textarea:focus { border-color:var(--blue); background:#fff; box-shadow:0 0 0 3px rgba(29,78,216,0.08); }
+.field select option { background:#fff; }
+.field textarea { resize:vertical; min-height:72px; font-family:var(--sans); }
+.field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.field-row-3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; }
+.analyze-btn { background:var(--navy); color:#fff; border:none; border-radius:10px; padding:13px 18px; font-family:var(--sans); font-size:14.5px; font-weight:600; cursor:pointer; transition:all 0.15s; display:flex; align-items:center; justify-content:center; gap:10px; width:100%; margin-top:4px; position:relative; }
+.analyze-btn:hover:not(:disabled) { background:var(--navy2); transform:translateY(-1px); box-shadow:0 4px 12px rgba(15,31,61,0.2); }
+.analyze-btn:disabled { opacity:.45; cursor:not-allowed; transform:none; }
+.spinner { width:15px; height:15px; border:2px solid rgba(255,255,255,0.3); border-top-color:#fff; border-radius:50%; animation:spin 0.7s linear infinite; display:none; }
+.loading .spinner { display:block; }
+.loading .btn-text { display:none; }
+.form-note { font-size:11px; color:var(--muted); text-align:center; line-height:1.5; padding:0 4px; }
+
+/* ─── Right panel ─── */
+.right-panel { display:flex; flex-direction:column; gap:18px; }
+.empty-state { background:var(--card); border:1px dashed var(--border); border-radius:14px; padding:56px 36px; text-align:center; color:var(--muted); }
+.empty-icon { font-size:38px; margin-bottom:14px; opacity:0.4; }
+.empty-state h3 { font-family:var(--serif); font-size:20px; color:var(--ink); margin-bottom:8px; font-weight:600; }
+.empty-state p { font-size:14px; line-height:1.6; max-width:340px; margin:0 auto; }
+
+/* ─── Result cards ─── */
+.result-card { background:var(--card); border:1px solid var(--border); border-radius:14px; overflow:hidden; animation:fadeUp 0.4s ease both; }
+.card-head { padding:16px 22px; border-bottom:1px solid var(--border); display:flex; align-items:center; gap:10px; }
+.card-icon { width:32px; height:32px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:15px; flex-shrink:0; }
+.ci-red { background:var(--red-light); } .ci-green { background:var(--green-light); } .ci-blue { background:var(--blue-light); } .ci-amber { background:var(--amber-light); } .ci-navy { background:#eef0f7; }
+.card-title { font-size:15px; font-weight:600; }
+.card-subtitle { font-size:11.5px; color:var(--muted); margin-left:auto; font-family:var(--mono); }
+.card-body { padding:20px 22px; }
+
+/* Score gauge */
+.score-wrap { display:flex; align-items:center; gap:24px; }
+.gauge-svg { flex-shrink:0; }
+.score-info { flex:1; }
+
+/* Verdict */
+.verdict-banner { border-radius:10px; padding:14px 18px; display:flex; align-items:flex-start; gap:14px; margin-bottom:14px; }
+.vb-red { background:var(--red-light); border:1px solid #fca5a5; }
+.vb-amber { background:var(--amber-light); border:1px solid #fcd34d; }
+.vb-green { background:var(--green-light); border:1px solid #86efac; }
+.vb-icon { font-size:22px; flex-shrink:0; line-height:1; padding-top:2px; }
+.vb-text h3 { font-size:15px; font-weight:600; margin-bottom:4px; }
+.vb-red h3 { color:var(--red); } .vb-amber h3 { color:var(--amber); } .vb-green h3 { color:var(--green); }
+.vb-text p { font-size:13px; line-height:1.6; color:var(--ink); }
+
+/* Violations */
+.violation-item { padding:12px 0; border-bottom:1px solid var(--border); display:flex; gap:12px; align-items:flex-start; }
+.violation-item:last-child { border-bottom:none; }
+.v-severity { flex-shrink:0; font-size:10.5px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; padding:3px 8px; border-radius:4px; font-family:var(--mono); white-space:nowrap; }
+.vs-high { background:var(--red-light); color:var(--red); } .vs-mid { background:var(--amber-light); color:var(--amber); } .vs-low { background:var(--blue-light); color:var(--blue); }
+.v-content { flex:1; min-width:0; }
+.v-title { font-size:14px; font-weight:600; margin-bottom:3px; }
+.v-desc { font-size:13px; color:var(--muted); line-height:1.55; }
+.v-law { font-family:var(--mono); font-size:11px; color:var(--blue); margin-top:6px; word-break:break-word; }
+
+/* Money */
+.money-table { width:100%; border-collapse:collapse; }
+.money-table th { font-size:11px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--muted); text-align:left; padding:8px 0; border-bottom:2px solid var(--border); }
+.money-table th:last-child { text-align:right; }
+.money-table td { padding:11px 0; border-bottom:1px solid var(--border); font-size:14px; vertical-align:top; }
+.money-table tr:last-child td { border-bottom:none; }
+.money-table .amount { font-family:var(--mono); font-weight:500; color:var(--green); text-align:right; white-space:nowrap; }
+.money-table .total td { font-weight:700; font-size:15px; padding-top:14px; border-top:2px solid var(--border); border-bottom:none; }
+.money-table .total .amount { font-size:18px; color:var(--green); }
+
+/* Timeline */
+.timeline { position:relative; padding-left:26px; }
+.timeline::before { content:''; position:absolute; left:6px; top:6px; bottom:6px; width:2px; background:var(--border); }
+.tl-item { position:relative; margin-bottom:18px; }
+.tl-item:last-child { margin-bottom:0; }
+.tl-dot { position:absolute; left:-26px; top:4px; width:14px; height:14px; border-radius:50%; border:2px solid var(--border); background:#fff; }
+.tl-dot.active { background:var(--blue); border-color:var(--blue); }
+.tl-dot.future { background:#fff; border-color:var(--muted); }
+.tl-time { font-family:var(--mono); font-size:11px; color:var(--muted); margin-bottom:2px; }
+.tl-label { font-size:13.5px; font-weight:600; margin-bottom:2px; }
+.tl-desc { font-size:13px; color:var(--muted); line-height:1.5; }
+
+/* Steps */
+.step-item { display:flex; gap:13px; align-items:flex-start; padding:12px 0; border-bottom:1px solid var(--border); }
+.step-item:last-child { border-bottom:none; padding-bottom:0; }
+.step-num { width:26px; height:26px; border-radius:50%; background:var(--navy); color:#fff; font-size:12px; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.step-text { font-size:14px; line-height:1.6; flex:1; }
+.step-text strong { font-weight:600; display:block; margin-bottom:2px; }
+
+/* Letter */
+.letter-box { background:#fafaf8; border:1px solid var(--border); border-radius:10px; padding:22px 26px; font-family:var(--serif); font-size:14px; line-height:1.85; color:var(--ink); white-space:pre-wrap; word-break:break-word; max-height:380px; overflow-y:auto; }
+
+/* Buttons */
+.copy-btn, .secondary-btn { margin-top:14px; background:transparent; border:1px solid var(--border); border-radius:8px; padding:9px 16px; font-family:var(--sans); font-size:13px; font-weight:500; color:var(--ink); cursor:pointer; transition:all 0.15s; display:inline-flex; align-items:center; gap:7px; }
+.copy-btn:hover, .secondary-btn:hover { background:var(--blue-light); border-color:var(--blue); color:var(--blue); }
+.btn-row { display:flex; gap:10px; flex-wrap:wrap; margin-top:0; }
+
+/* Chat */
+.chat-box { border-top:1px solid var(--border); margin-top:0; }
+.chat-messages { max-height:320px; overflow-y:auto; padding:16px 22px; display:flex; flex-direction:column; gap:10px; }
+.chat-msg { max-width:85%; }
+.chat-msg.user { align-self:flex-end; }
+.chat-msg.ai { align-self:flex-start; }
+.chat-bubble { padding:10px 13px; border-radius:12px; font-size:13.5px; line-height:1.6; word-wrap:break-word; }
+.chat-msg.user .chat-bubble { background:var(--navy); color:#fff; border-bottom-right-radius:4px; }
+.chat-msg.ai .chat-bubble { background:#f3f4f6; color:var(--ink); border-bottom-left-radius:4px; }
+.chat-input-row { display:flex; gap:10px; padding:14px 22px; border-top:1px solid var(--border); }
+.chat-input { flex:1; background:#fafaf8; border:1px solid var(--border); border-radius:8px; padding:9px 13px; font-family:var(--sans); font-size:13.5px; color:var(--ink); outline:none; transition:border-color 0.15s; }
+.chat-input:focus { border-color:var(--blue); }
+.chat-send { background:var(--navy); color:#fff; border:none; border-radius:8px; padding:9px 14px; font-size:13.5px; cursor:pointer; transition:background 0.2s; white-space:nowrap; font-family:var(--sans); font-weight:500; }
+.chat-send:hover:not(:disabled) { background:var(--navy2); }
+.chat-send:disabled { opacity:.4; cursor:not-allowed; }
+.chat-typing { font-size:12px; color:var(--muted); padding:4px 22px 0; font-style:italic; }
+.ai-only-note { padding:14px 22px; background:var(--blue-light); border-top:1px solid var(--border); font-size:12.5px; color:var(--blue); display:flex; align-items:center; gap:8px; line-height:1.5; }
+
+/* PDF btn */
+.pdf-btn { background:var(--green); color:#fff; border:none; border-radius:8px; padding:9px 16px; font-family:var(--sans); font-size:13px; font-weight:600; cursor:pointer; display:inline-flex; align-items:center; gap:7px; transition:background 0.2s; }
+.pdf-btn:hover { background:var(--green-dark); }
+.wa-btn { background:#25D366; color:#fff; border:none; border-radius:8px; padding:9px 16px; font-family:var(--sans); font-size:13px; font-weight:600; cursor:pointer; display:inline-flex; align-items:center; gap:7px; transition:background 0.2s; }
+.wa-btn:hover { background:#1da851; }
+
+@keyframes spin { to { transform:rotate(360deg); } }
+@keyframes pulse { 0%,100%{ opacity:1 } 50%{ opacity:0.3 } }
+@keyframes fadeUp { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:translateY(0)} }
+
+/* ─── Tabs ─── */
+.tabs-bar { background:#fff; border-bottom:1px solid var(--border); position:sticky; top:60px; z-index:50; }
+.tabs-inner { max-width:1080px; margin:0 auto; padding:0 24px; display:flex; gap:0; overflow-x:auto; scrollbar-width:none; }
+.tabs-inner::-webkit-scrollbar { display:none; }
+.tab-btn { background:none; border:none; padding:16px 20px; font-family:var(--sans); font-size:13.5px; font-weight:500; color:var(--muted); cursor:pointer; border-bottom:2px solid transparent; transition:all 0.15s; white-space:nowrap; display:flex; align-items:center; gap:6px; }
+.tab-btn:hover { color:var(--ink); }
+.tab-btn.active { color:var(--ink); border-bottom-color:var(--red); font-weight:600; }
+.tab-ai-icon { font-size:9px; font-family:var(--mono); padding:1px 5px; border-radius:3px; background:var(--blue-light); color:var(--blue); }
+.single-col { max-width:760px; margin:0 auto; padding:36px 24px 72px; }
+.single-card { background:var(--card); border:1px solid var(--border); border-radius:14px; overflow:hidden; }
+
+/* Disorder warning when AI not avail */
+.feature-locked {
+  position:relative; opacity:0.5; pointer-events:none;
+}
+.feature-locked::after {
+  content:'AI gerekli — bağlan'; position:absolute; top:8px; right:8px;
+  background:var(--blue); color:#fff; padding:3px 10px; border-radius:100px;
+  font-size:10px; font-family:var(--mono); pointer-events:auto;
+}
+
+/* Responsive — Tablet ve büyük telefon */
+@media (max-width:820px) {
+  .main { grid-template-columns:1fr; padding:20px 14px 60px; gap:18px; }
+  .form-panel { position:static; }
+  .hero { padding:32px 18px 38px; }
+  .hero h1 { font-size:clamp(26px, 7vw, 36px); }
+  .hero p { font-size:14.5px; }
+  .header { padding:0 14px; height:54px; }
+  .disclaimer-banner { padding:9px 14px; font-size:11.5px; }
+  .field-row, .field-row-3 { grid-template-columns:1fr; gap:10px; }
+  .single-col { padding:20px 14px 60px; }
+  .hero-stats { gap:18px; margin-top:24px; }
+  .stat-num { font-size:22px; }
+  .stat-label { font-size:11px; }
+  .tabs-inner { padding:0 12px; }
+  .tab-btn { padding:13px 12px; font-size:12.5px; gap:5px; }
+  .tab-ai-icon { font-size:8.5px; padding:1px 4px; }
+  .header-logo { font-size:15px; gap:8px; }
+  .header-icon { width:28px; height:28px; font-size:14px; }
+  .mode-badge { font-size:10px; padding:4px 9px; }
+  .modal { padding:24px 20px; max-height:88vh; border-radius:16px; }
+  .modal h2 { font-size:21px; }
+  .modal-icon { font-size:30px; }
+
+  /* Form input'larını telefonda büyüt - iOS zoom önler */
+  .field input, .field select, .field textarea, .modal-input {
+    font-size:16px; /* iOS otomatik zoom için minimum */
+    padding:12px 14px;
+  }
+  .chat-input { font-size:16px; padding:11px 14px; }
+
+  /* Result card padding telefonda azalt */
+  .card-body { padding:16px 18px; }
+  .card-head { padding:14px 18px; }
+  .form-head { padding:16px 18px; }
+  .form-body { padding:18px; gap:14px; }
+
+  /* Tablo telefonda yatay scroll */
+  .money-table { font-size:13px; }
+  .money-table th, .money-table td { padding:8px 6px; font-size:12.5px; }
+
+  /* Score gauge tablette yan yana, telefonda alt alta */
+  .score-wrap { flex-direction:column; gap:14px; align-items:flex-start; }
+  .gauge-svg { width:90px; height:90px; align-self:center; }
+
+  /* Verdict banner kompakt */
+  .verdict-banner { padding:12px 14px; gap:10px; }
+  .vb-text h3 { font-size:14px; }
+  .vb-text p { font-size:12.5px; }
+
+  /* Step visual'ı kompakt yap */
+  .step-visual { gap:11px; margin-bottom:16px; }
+  .step-visual-num { width:26px; height:26px; font-size:12px; }
+  .step-visual-title { font-size:13.5px; }
+  .external-btn { min-width:0; width:100%; justify-content:center; padding:11px; }
+
+  /* Senaryo butonları */
+  #patronChoicesList button { font-size:13px !important; padding:11px 12px !important; }
+
+  /* Kanıt klasörü grid'leri */
+  .form-body[style*="grid-template-columns:1fr 1fr 1fr auto"] { 
+    grid-template-columns:1fr !important;
+  }
+  .form-body[style*="grid-template-columns:1fr 1fr"] { 
+    grid-template-columns:1fr !important;
+  }
+}
+
+/* Responsive — Küçük telefon */
+@media (max-width:480px) {
+  .hero { padding:28px 16px 32px; }
+  .hero h1 { font-size:26px; line-height:1.15; }
+  .hero p { font-size:13.5px; }
+  .hero-stats { gap:14px; flex-wrap:wrap; }
+  .stat-num { font-size:20px; }
+  .stat-label { font-size:10.5px; }
+  .header { padding:0 12px; height:50px; }
+  .header-logo { font-size:14px; }
+  .header-icon { width:26px; height:26px; font-size:13px; }
+  .mode-badge { font-size:9.5px; padding:3px 8px; }
+  .mode-badge .mode-dot { width:5px; height:5px; }
+  .disclaimer-banner { padding:8px 12px; font-size:11px; line-height:1.45; }
+  .main { padding:16px 12px 50px; gap:14px; }
+  .single-col { padding:16px 12px 50px; }
+  .tabs-inner { padding:0 10px; }
+  .tab-btn { padding:12px 10px; font-size:12px; }
+  .tab-ai-icon { display:none; } /* Çok küçük ekranda gizle */
+  .form-head { padding:14px 16px; }
+  .form-head h2 { font-size:16px; }
+  .form-head p { font-size:12px; }
+  .form-body { padding:16px; gap:12px; }
+  .field label { font-size:11px; }
+  .card-body { padding:14px 16px; }
+  .card-head { padding:12px 16px; gap:8px; }
+  .card-icon { width:28px; height:28px; font-size:13px; }
+  .card-title { font-size:14px; }
+  .card-subtitle { font-size:10.5px; }
+  .modal { padding:20px 16px; border-radius:14px; max-height:92vh; }
+  .modal h2 { font-size:19px; }
+  .modal > p { font-size:13px; }
+  .modal-icon { font-size:26px; }
+  .mode-card { padding:12px 14px; }
+  .mode-card-title { font-size:13.5px; flex-wrap:wrap; }
+  .mode-card-desc { font-size:11.5px; }
+  .mode-card-tag { font-size:9.5px; padding:1px 5px; }
+  .modal-btn { padding:12px; font-size:13.5px; }
+  .modal-input { padding:11px 13px; font-size:14px; }
+  .modal-steps { padding:12px 14px; font-size:12px; }
+  .modal-warn { padding:9px 12px; font-size:11.5px; }
+  .modal-note { font-size:10.5px; }
+
+  /* Faq listesi */
+  .faq-q { font-size:13px; }
+  .faq-a { font-size:12.5px; }
+
+  /* Hak takip büyük rakamlar */
+  div[id="tYil"], div[id="tAy"], div[id="tGun"] { font-size:32px !important; }
+
+  /* Money table - mobilde kompakt */
+  .money-table th, .money-table td { padding:7px 4px; font-size:12px; }
+  .money-table .total .amount { font-size:15px !important; }
+
+  /* Letter box telefon */
+  .letter-box { padding:16px 18px; font-size:13px; max-height:280px; }
+
+  /* Chat box */
+  .chat-messages { padding:12px 16px; max-height:260px; }
+  .chat-msg { max-width:90%; }
+  .chat-bubble { font-size:13px; padding:9px 12px; }
+  .chat-input-row { padding:12px 16px; }
+
+  /* Senaryo karşılaştırma tablosu mobilde min-width ile scroll */
+  #senaryoTable { font-size:11.5px; }
+  #senaryoTable td, #senaryoTable th { padding:8px 5px !important; }
+
+  /* Print PDF butonları */
+  .pdf-btn, .wa-btn { padding:8px 12px; font-size:12px; }
+  .copy-btn, .secondary-btn { padding:8px 12px; font-size:12px; }
+
+  /* Gauge daha küçük */
+  .gauge-svg { width:80px; height:80px; }
+
+  /* Wizard header */
+  .wizard-back { font-size:12px; }
+  .wizard-progress { font-size:10px; }
+}
+
+/* Touch-friendly iyileştirmeler (her ekran boyutunda) */
+@media (hover: none) and (pointer: coarse) {
+  /* Dokunmatik cihazlar için minimum tıklama alanı */
+  .tab-btn, .copy-btn, .secondary-btn, .pdf-btn, .wa-btn, .chat-send,
+  .modal-btn, .analyze-btn, .form-reset, .external-btn {
+    min-height:44px; /* Apple HIG önerisi */
+  }
+  .mode-card { min-height:60px; }
+  /* Hover efektlerini kaldır - mobilde sticky olur */
+  .mode-card:hover { background:#fafaf8; }
+  .copy-btn:hover, .secondary-btn:hover { background:transparent; }
+}
+</style>
+</head>
+<body>
+
+<!-- Setup Modal -->
+<div class="modal-overlay" id="setupModal">
+  <div class="modal">
+    <!-- Sayfa 1: Hoşgeldin + mod seçimi -->
+    <div class="wizard-page active" id="wizardPage1">
+      <div class="modal-icon">⚖️</div>
+      <h2>Hoş geldin</h2>
+      <p>İşçi Hakları Asistanı'nı nasıl kullanmak istersin?</p>
+
+      <div class="mode-cards">
+        <div class="mode-card selected" id="modeOffline" onclick="selectMode('offline')">
+          <div class="mode-card-title">
+            📊 Offline Mod
+            <span class="mode-card-tag tag-free">ÜCRETSİZ · KOLAY</span>
+          </div>
+          <div class="mode-card-desc">
+            Hak analizi, tazminat hesaplama, kanıt klasörü, dilekçe taslakları, zamanaşımı alarmı, senaryo karşılaştırma. <strong>Hiçbir kayıt gerekmez, hemen başla.</strong>
+          </div>
+        </div>
+        <div class="mode-card" id="modeAI" onclick="selectMode('ai')">
+          <div class="mode-card-title">
+            🤖 AI Destekli Mod
+            <span class="mode-card-tag tag-ai">+EKSTRA ÖZELLİKLER</span>
+          </div>
+          <div class="mode-card-desc">
+            Yukarıdakilerin hepsi + <strong>gerçek AI patron simülatörü, sözleşme/bordro analizi, sohbet</strong>. Google'dan ücretsiz key alman gerekir (1 dakika). <strong>Para istemiyor, kart sormuyor.</strong>
+          </div>
+        </div>
+      </div>
+
+      <div id="modeOfflineActions">
+        <button class="modal-btn" onclick="useOffline()">Offline Modda Başla →</button>
+        <div class="modal-note">İstediğin zaman üstteki rozetten AI moduna geçebilirsin.</div>
+      </div>
+      <div id="modeAIActions" style="display:none">
+        <button class="modal-btn" onclick="goToWizard(2)">AI Anahtarı Almayı Öğren →</button>
+        <div class="modal-note">Endişelenme, sana adım adım göstereceğim.</div>
+      </div>
+    </div>
+
+    <!-- Sayfa 2: Endişeler + güven -->
+    <div class="wizard-page" id="wizardPage2">
+      <div class="wizard-header">
+        <button class="wizard-back" onclick="goToWizard(1)">← Geri</button>
+        <div class="wizard-progress">Adım 1 / 4</div>
+      </div>
+      <div class="modal-icon">🤔</div>
+      <h2>Önce kafanı rahatlatalım</h2>
+      <p>"API key" kulağa teknik geliyor ama korkulacak bir şey değil. Sıkça sorulan sorular:</p>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q">💰 Para mı vereceğim?</div>
+          <div class="faq-a"><strong>Hayır.</strong> Google ücretsiz veriyor. Kart bilgisi istemez. Günde 1.500 istek bedava — sen 50-100 kullanırsın bile zor.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">🔒 Güvenli mi? Verilerim Google'a gider mi?</div>
+          <div class="faq-a">Anahtar <strong>sadece senin tarayıcına</strong> kaydedilir, başka yere gönderilmez. AI'ya gönderdiğin sorular Google'a gider (bu zaten ChatGPT gibi her AI uygulamasında böyledir).</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">🎯 Ne kadar sürer?</div>
+          <div class="faq-a"><strong>1 dakika.</strong> 4 tıklama, hepsi bu. Gmail'in varsa zaten yarısı bitti.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">📧 Gmail'im yok, ne yapacağım?</div>
+          <div class="faq-a">Önce Gmail aç (5 dk, ücretsiz). Veya offline modda devam et — uygulamanın %80'i zaten AI'sız çalışıyor.</div>
+        </div>
+      </div>
+
+      <button class="modal-btn" onclick="goToWizard(3)">Tamam, devam et →</button>
+      <div class="modal-note">
+        <a href="#" onclick="useOffline();return false;" style="color:var(--blue)">Ya da offline modda başla, sonra dönerim</a>
+      </div>
+    </div>
+
+    <!-- Sayfa 3: Adım adım görsel rehber -->
+    <div class="wizard-page" id="wizardPage3">
+      <div class="wizard-header">
+        <button class="wizard-back" onclick="goToWizard(2)">← Geri</button>
+        <div class="wizard-progress">Adım 2 / 4</div>
+      </div>
+      <h2 style="margin-bottom:6px">Şimdi key alalım</h2>
+      <p style="margin-bottom:18px">Sırayla yap, sonra geri dön. Endişelenme, dönmen kolay.</p>
+
+      <div class="step-visual">
+        <div class="step-visual-num">1</div>
+        <div class="step-visual-content">
+          <div class="step-visual-title">Bu butona tıkla, yeni sekmede açılacak</div>
+          <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener" class="external-btn">
+            <span>🌐</span> aistudio.google.com aç
+            <span style="margin-left:auto;font-size:11px;opacity:0.7">↗</span>
+          </a>
+          <div class="step-visual-desc">Google AI Studio sayfasına gider. Bu tamamen güvenli, Google'ın resmi sitesi.</div>
+        </div>
+      </div>
+
+      <div class="step-visual">
+        <div class="step-visual-num">2</div>
+        <div class="step-visual-content">
+          <div class="step-visual-title">Google hesabınla giriş yap</div>
+          <div class="mock-screen">
+            <div class="mock-google-signin">
+              <div style="font-size:14px;color:#5f6368;margin-bottom:12px">Google'da oturum aç</div>
+              <div style="font-size:13px;color:#202124;border:1px solid #dadce0;padding:9px 12px;border-radius:4px;margin-bottom:8px">📧 ornek@gmail.com</div>
+              <div style="font-size:13px;color:#1a73e8;cursor:pointer">Hesap kullan</div>
+            </div>
+          </div>
+          <div class="step-visual-desc">Gmail/Google hesabınla. Daha önce oturum açtıysan otomatik geçer.</div>
+        </div>
+      </div>
+
+      <div class="step-visual">
+        <div class="step-visual-num">3</div>
+        <div class="step-visual-content">
+          <div class="step-visual-title">"Create API key" mavi butonuna tıkla</div>
+          <div class="mock-screen">
+            <div style="background:#1a73e8;color:#fff;padding:9px 18px;border-radius:6px;display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500">
+              <span style="font-size:16px">+</span> Create API key
+            </div>
+          </div>
+          <div class="step-visual-desc">Sayfanın üstünde mavi bir buton var. Tıklayınca proje seçim penceresi açılabilir — varsayılan projeyle devam et.</div>
+        </div>
+      </div>
+
+      <div class="step-visual">
+        <div class="step-visual-num">4</div>
+        <div class="step-visual-content">
+          <div class="step-visual-title">Oluşan anahtarı kopyala</div>
+          <div class="mock-screen">
+            <div style="background:#fff;border:1px solid #dadce0;border-radius:6px;padding:12px 14px;font-family:monospace;font-size:12.5px;color:#202124;display:flex;align-items:center;gap:10px">
+              <span style="color:#5f6368">🔑</span>
+              <span>AIzaSyD-X•••••••••••••••••••••••</span>
+              <span style="margin-left:auto;color:#1a73e8;cursor:pointer;font-size:11px">📋 Kopyala</span>
+            </div>
+          </div>
+          <div class="step-visual-desc"><strong>"AIzaSy" ile başlar</strong>, 39 karakterdir. "Kopyala" butonuna tıkla. <strong>Kimseyle paylaşma</strong> — şifre gibi düşün.</div>
+        </div>
+      </div>
+
+      <button class="modal-btn" onclick="goToWizard(4)">Anahtarı Aldım, Devam →</button>
+      <div class="modal-note">
+        <a href="#" onclick="useOffline();return false;" style="color:var(--muted)">Vazgeçtim, offline kullanayım</a>
+      </div>
+    </div>
+
+    <!-- Sayfa 4: Anahtarı yapıştır -->
+    <div class="wizard-page" id="wizardPage4">
+      <div class="wizard-header">
+        <button class="wizard-back" onclick="goToWizard(3)">← Geri</button>
+        <div class="wizard-progress">Adım 3 / 4 · Son adım</div>
+      </div>
+      <div class="modal-icon">🔑</div>
+      <h2>Anahtarını yapıştır</h2>
+      <p>Az önce kopyaladığın anahtarı buraya yapıştır.</p>
+
+      <div class="modal-warn">
+        ⚠️ Anahtar <strong>sadece senin tarayıcına</strong> kaydedilir. Cihazını başkasıyla paylaşıyorsan, kullandıktan sonra üstteki rozetten "Key sıfırla" demeyi unutma.
+      </div>
+
+      <input class="modal-input" type="password" id="apiKeyInput" placeholder="AIzaSy..." autocomplete="off" oninput="checkKey()" style="font-size:14px">
+      <div id="keyValidation" style="font-size:12px;margin-top:-6px;margin-bottom:12px;min-height:18px"></div>
+
+      <button class="modal-btn" id="saveKeyBtn" onclick="saveKey()" disabled>Kaydet ve Başla →</button>
+
+      <div class="modal-note" style="margin-top:14px">
+        <strong>Hata mı aldın?</strong> Yaygın sorunlar:<br>
+        • Anahtar "AIzaSy" ile başlamıyorsa → tekrar kopyala<br>
+        • "Servis hatası" alıyorsan → 1-2 dakika bekle, Google sistemleri uyansın<br>
+        <a href="#" onclick="useOffline();return false;" style="color:var(--blue);display:inline-block;margin-top:8px">Sorun yaşadın mı? Offline modda devam edebilirsin.</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<div class="header">
+  <div class="header-logo">
+    <div class="header-icon">⚖️</div>
+    İşçi Hakları Asistanı
+  </div>
+  <div class="header-right">
+    <div class="mode-badge offline" id="modeBadge" onclick="openModeMenu()" title="Modu değiştir">
+      <div class="mode-dot"></div>
+      <span id="modeLabel">Offline Mod</span>
+    </div>
+  </div>
+</div>
+
+<!-- Disclaimer -->
+<div class="disclaimer-banner">
+  <span>⚠️</span>
+  <span><strong>Hukuki danışmanlık değildir.</strong> Bu uygulama bilgilendirme amaçlıdır. Önemli kararlar için bir avukat veya İŞKUR'a danışın. Hesaplamalar yaklaşıktır.</span>
+</div>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-tag"><div class="hero-tag-dot"></div>Türkiye İş Hukuku · 4857 Sayılı İş Kanunu</div>
+    <h1>Haklarını bil,<br><em>hakkını ara.</em></h1>
+    <p>Türkiye'de milyonlarca çalışan fazla mesai, kıdem tazminatı ve ihbar süresi haklarından habersiz. Çalışma koşullarını anlat — ihlaller tespit edilsin, alacakların hesaplansın, dilekçen hazırlansın.</p>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">%68</div><div class="stat-label">Fazla mesai ücreti almıyor*</div></div>
+      <div class="stat"><div class="stat-num">120</div><div class="stat-label">İş Kanunu madde sayısı</div></div>
+      <div class="stat"><div class="stat-num">&lt;30sn</div><div class="stat-label">Analiz süresi</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- Tabs -->
+<div class="tabs-bar">
+  <div class="tabs-inner">
+    <button class="tab-btn active" data-tab="analiz" onclick="switchTab('analiz')">⚖️ Hak Analizi</button>
+    <button class="tab-btn" data-tab="hesap" onclick="switchTab('hesap')">💰 Hesaplayıcı</button>
+    <button class="tab-btn" data-tab="senaryo" onclick="switchTab('senaryo')">📈 Senaryo Karşılaştır</button>
+    <button class="tab-btn" data-tab="kanit" onclick="switchTab('kanit')">📁 Kanıt Klasörü</button>
+    <button class="tab-btn" data-tab="patron" onclick="switchTab('patron')">🎭 Patron Simülatörü <span class="tab-ai-icon">AI</span></button>
+    <button class="tab-btn" data-tab="belge" onclick="switchTab('belge')">📄 Belge Analizi <span class="tab-ai-icon">AI</span></button>
+    <button class="tab-btn" data-tab="takip" onclick="switchTab('takip')">📊 Hak Takip Panom</button>
+  </div>
+</div>
+
+<!-- TAB: Hak Analizi -->
+<div class="tab-content" id="tab-analiz">
+<div class="main">
+  <div class="form-panel">
+    <div class="form-head">
+      <div class="form-head-text">
+        <h2>Durumunu Anlat</h2>
+        <p>Ne kadar çok bilgi verirsen analiz o kadar doğru olur.</p>
+      </div>
+      <button class="form-reset" onclick="resetForm()" title="Formu temizle">↻ Sıfırla</button>
+    </div>
+    <div class="form-body">
+      <div class="field-row">
+        <div class="field">
+          <label>Sektör</label>
+          <select id="sector">
+            <option value="">Seç...</option>
+            <option>Üretim / Fabrika</option>
+            <option>Perakende / Mağaza</option>
+            <option>Restoran / Kafe</option>
+            <option>İnşaat</option>
+            <option>Teknoloji / Ofis</option>
+            <option>Sağlık</option>
+            <option>Eğitim</option>
+            <option>Lojistik / Kargo</option>
+            <option>Güvenlik</option>
+            <option>Temizlik</option>
+            <option>Diğer</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>İş türü</label>
+          <select id="contractType">
+            <option value="">Seç...</option>
+            <option>Belirsiz süreli (daimi)</option>
+            <option>Belirli süreli (sözleşmeli)</option>
+            <option>Deneme süreli</option>
+            <option>Part-time / Yarı zamanlı</option>
+            <option>Kayıt dışı / Sigortasız</option>
+          </select>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label>Günlük saat</label>
+          <input type="number" id="dailyHours" placeholder="Örn: 10" min="1" max="24">
+        </div>
+        <div class="field">
+          <label>Haftalık gün</label>
+          <input type="number" id="weeklyDays" placeholder="Örn: 6" min="1" max="7">
+        </div>
+      </div>
+      <div class="field">
+        <label>Brüt aylık maaş (₺)</label>
+        <input type="number" id="salary" placeholder="Örn: 35000">
+        <div class="field-help">Brüt = bordroda yazan, kesintiler düşülmeden önceki tutar. Net biliyorsan kabaca ÷0.7 yap (örn: net 25.000 ≈ brüt 35.700)</div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label>Çalışma süresi: yıl</label>
+          <input type="number" id="years" placeholder="0" min="0" max="50">
+        </div>
+        <div class="field">
+          <label>Çalışma süresi: ay</label>
+          <input type="number" id="months" placeholder="0" min="0" max="11">
+        </div>
+      </div>
+      <div class="field">
+        <label>Fazla mesai ücreti alıyor musun?</label>
+        <select id="overtime">
+          <option value="">Seç...</option>
+          <option>Hayır, hiç almıyorum</option>
+          <option>Evet, düzenli ödeniyor</option>
+          <option>Bazen, düzensiz</option>
+          <option>İzin olarak veriliyor (ücret yok)</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Şu an ne yaşıyorsun?</label>
+        <select id="situation">
+          <option value="">Seç...</option>
+          <option>Haksız yere işten çıkarıldım</option>
+          <option>İstifa etmek istiyorum, haklarımı öğrenmek istiyorum</option>
+          <option>Çalışmaya devam ediyorum, haklarımı merak ediyorum</option>
+          <option>Mobbing / baskı altındayım</option>
+          <option>Maaşım ödenmiyor</option>
+          <option>Ücret kesintisi yapıldı</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Ek detaylar (opsiyonel)</label>
+        <textarea id="extra" placeholder="Örn: Yıllık izin kullandırılmıyor, hafta sonu çalışıyorum ama ücret almıyorum..."></textarea>
+        <div class="field-help" id="extraHelp">Offline modda bu alan analizi etkilemez. AI modunda dikkate alınır.</div>
+      </div>
+      <button class="analyze-btn" id="analyzeBtn" onclick="analyze()">
+        <div class="spinner"></div>
+        <span class="btn-text">⚖️ Haklarımı Analiz Et</span>
+      </button>
+      <div class="form-note">Analiz, 4857 sayılı İş Kanunu'na ve 2026 yılı resmi tutarlarına dayanır. Hukuki danışmanlık yerine geçmez.</div>
+    </div>
+  </div>
+
+  <div class="right-panel" id="rightPanel">
+    <div class="empty-state" id="emptyState">
+      <div class="empty-icon">⚖️</div>
+      <h3>Analiz bekleniyor</h3>
+      <p>Sol taraftaki formu doldur. Çalışma koşullarını anlat — haklarını saniyeler içinde değerlendireceğiz.</p>
+    </div>
+  </div>
+</div>
+</div><!-- /tab-analiz -->
+
+<!-- TAB: Hesaplayıcı -->
+<div class="tab-content" id="tab-hesap" style="display:none">
+  <div class="single-col">
+    <div class="single-card">
+      <div class="form-head">
+        <div class="form-head-text">
+          <h2>Hızlı Hesaplayıcı</h2>
+          <p>2026 yılı resmi tutarlarına göre kesin formül. AI gerektirmez.</p>
+        </div>
+      </div>
+      <div class="form-body">
+        <div class="field">
+          <label>Brüt aylık maaş (₺)</label>
+          <input type="number" id="hMaas" placeholder="35000" oninput="calcAll()">
+          <div class="field-help">2026 kıdem tavanı: 64.948,77 ₺/yıl. Yüksek maaşlılar tavandan hesaplanır.</div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label>Çalışma süresi: yıl</label>
+            <input type="number" id="hYil" placeholder="2" min="0" max="50" oninput="calcAll()">
+          </div>
+          <div class="field">
+            <label>Çalışma süresi: ay</label>
+            <input type="number" id="hAy" placeholder="6" min="0" max="11" oninput="calcAll()">
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label>Haftalık çalışma saati</label>
+            <input type="number" id="hSaat" placeholder="55" oninput="calcAll()">
+            <div class="field-help">Yasal sınır: 45 saat</div>
+          </div>
+          <div class="field">
+            <label>Aylık fazla mesai (saat)</label>
+            <input type="number" id="hFm" placeholder="40" oninput="calcAll()">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="calcResults" style="display:none">
+      <div class="single-card" style="margin-top:18px">
+        <div class="card-head"><div class="card-icon ci-green">💰</div><div class="card-title">Hesaplama Sonuçları</div><div class="card-subtitle">Brüt, 2026 tarifesi</div></div>
+        <div class="card-body">
+          <table class="money-table">
+            <thead>
+              <tr><th>Alacak Kalemi</th><th>Hesap Detayı</th><th>Tutar (₺)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Kıdem Tazminatı</strong></td><td><span id="kidemNote" style="color:var(--muted);font-size:12.5px">—</span></td><td class="amount" id="kidemVal">—</td></tr>
+              <tr><td><strong>İhbar Tazminatı</strong></td><td><span id="ihbarNote" style="color:var(--muted);font-size:12.5px">—</span></td><td class="amount" id="ihbarVal">—</td></tr>
+              <tr><td><strong>Fazla Mesai (1 ay)</strong></td><td><span style="color:var(--muted);font-size:12.5px">Saatlik × %50 zam × saat</span></td><td class="amount" id="fmVal">—</td></tr>
+              <tr><td><strong>Yıllık İzin Ücreti</strong></td><td><span id="izinNote" style="color:var(--muted);font-size:12.5px">—</span></td><td class="amount" id="izinVal">—</td></tr>
+              <tr class="total"><td colspan="2">Toplam Tahmini Brüt Alacak</td><td class="amount" id="toplamVal">—</td></tr>
+            </tbody>
+          </table>
+          <p style="font-size:11.5px;color:var(--muted);margin-top:14px;line-height:1.55">
+            ⚠️ <strong>Brüt rakamlardır.</strong> Kıdem tazminatından sadece ‰7,59 damga vergisi kesilir (net ≈ brüt × 0.99241). 
+            Diğer alacaklarda gelir vergisi + SGK kesintileri vardır. Kesin hesap için SGK ve avukat danışmanlığı gerekir.
+          </p>
+        </div>
+      </div>
+
+      <div class="single-card" style="margin-top:14px">
+        <div class="card-head"><div class="card-icon ci-blue">📚</div><div class="card-title">Kullanılan Yasal Dayanaklar</div></div>
+        <div class="card-body" style="font-size:13.5px;line-height:1.7">
+          <div style="display:grid;gap:10px">
+            <div><strong>Kıdem tazminatı:</strong> <span style="color:var(--muted)">1475 sayılı İş Kanunu m.14 — her tam yıl için 30 günlük brüt giydirilmiş ücret. <strong>2026/1. yarı tavan: 64.948,77 ₺/yıl</strong>.</span></div>
+            <div><strong>İhbar tazminatı:</strong> <span style="color:var(--muted)">4857 sayılı İş Kanunu m.17 — &lt;6ay: 2 hafta, 6ay-1.5yıl: 4 hafta, 1.5-3yıl: 6 hafta, 3yıl+: 8 hafta.</span></div>
+            <div><strong>Fazla mesai:</strong> <span style="color:var(--muted)">m.41 — Haftalık 45 saati aşan çalışmaya saatlik ücretin %50 fazlası ödenir.</span></div>
+            <div><strong>Yıllık izin:</strong> <span style="color:var(--muted)">m.53 — 1-5 yıl: 14 gün, 5-15 yıl: 20 gün, 15+ yıl: 26 gün (1 yıl şart).</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TAB: Patron Simülatörü -->
+<div class="tab-content" id="tab-patron" style="display:none">
+  <div class="single-col">
+    <div class="single-card" id="patronSetup">
+      <div class="form-head">
+        <div class="form-head-text">
+          <h2>🎭 Patron Simülatörü</h2>
+          <p>Patronla yapılacak zorlu konuşmayı önceden prova et. Korkma, hata yap, öğren.</p>
+        </div>
+      </div>
+      <div class="form-body" id="patronSetupBody">
+        <div class="field">
+          <label>Konu seç</label>
+          <select id="patronTopic">
+            <option value="">Konu seç...</option>
+            <option value="zam">Zam istiyorum</option>
+            <option value="istifa">İstifa edeceğim, kıdem tazminatı talep ediyorum</option>
+            <option value="fazlamesai">Fazla mesai ücretimi istiyorum</option>
+            <option value="maas">Maaşım ödenmedi</option>
+            <option value="mobbing">Mobbing yaşıyorum, şikayet edeceğim</option>
+            <option value="izin">Yıllık iznimi kullanmak istiyorum</option>
+            <option value="haksizfesih">Haksız yere işten çıkarıldım, hakkımı arıyorum</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Patron tipi (kişilik)</label>
+          <select id="patronTip">
+            <option value="sert">Sert ve baskıcı</option>
+            <option value="oyalayici">Sakin ama oyalayıcı</option>
+            <option value="anlayisli">Anlayışlı</option>
+            <option value="tehditkar">Tehditkar</option>
+          </select>
+        </div>
+
+        <div id="patronModeInfo" style="background:#f0fdf4;border:1px solid #86efac;border-radius:10px;padding:12px 16px;font-size:13px;line-height:1.6;color:#166534;margin-top:4px">
+          📊 <strong>Offline mod:</strong> Senaryo ağacı tabanlı — patron önceden hazırlanmış cevaplar verir, sen 3 farklı cevap arasından seçim yaparsın. Eğitici ve hızlı.
+        </div>
+
+        <button class="analyze-btn" onclick="startPatron()" id="startPatronBtn">
+          <div class="spinner"></div>
+          <span class="btn-text">🎬 Simülasyonu Başlat</span>
+        </button>
+        <div class="form-note" id="patronNote">Offline modda da çalışır (senaryo ağacı). AI moduna geçersen daha doğal diyaloglar olur.</div>
+      </div>
+    </div>
+
+    <div id="patronChat" style="display:none;margin-top:18px">
+      <div class="single-card">
+        <div class="card-head">
+          <div class="card-icon ci-amber">🎭</div>
+          <div class="card-title" id="patronCardTitle">Simülasyon Aktif</div>
+          <div class="card-subtitle" id="patronModeBadge">Pratik et</div>
+        </div>
+        <div class="chat-box" style="border-top:1px solid var(--border)">
+          <div class="chat-messages" id="patronMessages"></div>
+          <div class="chat-typing" id="patronTyping" style="display:none">Patron yazıyor...</div>
+
+          <!-- AI mode input -->
+          <div class="chat-input-row" id="patronAIInput" style="display:none">
+            <input class="chat-input" id="patronInput" placeholder="Cevabını yaz..." onkeydown="if(event.key==='Enter')sendPatron()">
+            <button class="chat-send" onclick="sendPatron()" id="patronSendBtn">Gönder →</button>
+          </div>
+
+          <!-- Offline mode choice buttons -->
+          <div id="patronChoices" style="display:none;padding:14px 22px;border-top:1px solid var(--border);display:none">
+            <div style="font-size:11.5px;color:var(--muted);margin-bottom:10px;letter-spacing:0.04em;text-transform:uppercase;font-weight:600">Sen ne dersin?</div>
+            <div id="patronChoicesList"></div>
+          </div>
+        </div>
+      </div>
+      <div class="single-card" style="margin-top:14px">
+        <div class="card-body" style="padding:14px 20px">
+          <button class="copy-btn" onclick="getFeedback()" id="feedbackBtn">📊 Performansımı değerlendir</button>
+          <button class="copy-btn" onclick="resetPatron()" style="margin-left:8px">↻ Yeniden başla</button>
+          <div id="feedbackResult" style="margin-top:14px;display:none;font-size:13.5px;line-height:1.7"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TAB: Belge Analizi -->
+<div class="tab-content" id="tab-belge" style="display:none">
+  <div class="single-col">
+    <div class="single-card">
+      <div class="form-head">
+        <div class="form-head-text">
+          <h2>📄 Belge Analizi</h2>
+          <p>İş sözleşmen, maaş bordron veya fesih bildirimini yükle. AI çelişkileri ve sorunları tespit etsin.</p>
+        </div>
+      </div>
+      <div class="form-body">
+        <div id="belgeOfflineNotice" style="background:#fffbeb;border:1px solid #fcd34d;border-radius:10px;padding:14px 18px;margin-bottom:6px;display:none">
+          <div style="font-size:13.5px;line-height:1.6;color:#92400e">
+            🤖 <strong>Bu özellik AI gerektirir.</strong> Sözleşme/bordro fotoğrafından metin okuyup yorumlama için yapay zeka şart. Üst sağdaki rozetten AI moduna geçebilirsin (1 dk, ücretsiz).<br>
+            <span style="font-size:12.5px;opacity:0.9;display:block;margin-top:6px">Alternatif: Belgeyi <strong>Kanıt Klasörüm</strong> sekmesinde kaydedebilir, avukatına ileteceğin pakete ekleyebilirsin.</span>
+          </div>
+        </div>
+        <div class="field">
+          <label>Belge türü</label>
+          <select id="belgeTip">
+            <option>İş sözleşmesi</option>
+            <option>Maaş bordrosu</option>
+            <option>Fesih / İhbar bildirimi</option>
+            <option>İhtarname</option>
+            <option>Diğer</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Belge yükle (görsel veya PDF)</label>
+          <input type="file" id="belgeFile" accept="image/*,.pdf" onchange="onBelgeFile()" style="font-family:var(--sans);font-size:13px;padding:12px;background:#fafaf8;border:2px dashed var(--border);border-radius:8px;cursor:pointer;width:100%">
+          <div id="belgePreview" style="margin-top:10px"></div>
+        </div>
+        <div class="field">
+          <label>Senin durumun (kısa özet)</label>
+          <textarea id="belgeContext" placeholder="Örn: 2 yıldır çalışıyorum, sözleşmede 8 saat yazıyor ama 12 saat çalıştırılıyorum..."></textarea>
+        </div>
+        <button class="analyze-btn" onclick="analyzeBelge()" id="belgeBtn"><div class="spinner"></div><span class="btn-text">🔍 Belgeyi Analiz Et</span></button>
+        <div class="form-note">Bu özellik AI gerektirir. Belge sunucuya kaydedilmez.</div>
+      </div>
+    </div>
+    <div id="belgeResult" style="margin-top:18px"></div>
+  </div>
+</div>
+
+<!-- TAB: Hak Takip Panom -->
+<div class="tab-content" id="tab-takip" style="display:none">
+  <div class="single-col">
+    <div class="single-card">
+      <div class="form-head">
+        <div class="form-head-text">
+          <h2>📊 Hak Takip Panom</h2>
+          <p>İşe başlangıç tarihini ve maaşını gir — haklarının nasıl geliştiğini canlı izle.</p>
+        </div>
+      </div>
+      <div class="form-body">
+        <div class="field-row">
+          <div class="field"><label>İşe başlangıç tarihi</label><input type="date" id="tBaslangic" onchange="updateTakip()"></div>
+          <div class="field"><label>Brüt aylık maaş (₺)</label><input type="number" id="tMaas" placeholder="35000" oninput="updateTakip()"></div>
+        </div>
+        <div class="field"><label>Bu yıl kullanılan yıllık izin (gün)</label><input type="number" id="tIzin" value="0" min="0" oninput="updateTakip()"></div>
+        <div class="form-note">Bilgilerin tarayıcına kaydedilir, her ziyarette güncel kalır. Sunucuya gönderilmez.</div>
+      </div>
+    </div>
+
+    <div id="takipResult" style="display:none">
+      <div class="single-card" style="margin-top:18px">
+        <div class="card-head"><div class="card-icon ci-blue">⏰</div><div class="card-title">Çalışma Süren</div></div>
+        <div class="card-body">
+          <div style="display:flex;gap:24px;flex-wrap:wrap">
+            <div><div style="font-family:'Lora',serif;font-size:42px;font-weight:700;color:var(--navy);line-height:1" id="tYil">—</div><div style="font-size:12px;color:var(--muted);margin-top:4px">Yıl</div></div>
+            <div><div style="font-family:'Lora',serif;font-size:42px;font-weight:700;color:var(--navy);line-height:1" id="tAy">—</div><div style="font-size:12px;color:var(--muted);margin-top:4px">Ay</div></div>
+            <div><div style="font-family:'Lora',serif;font-size:42px;font-weight:700;color:var(--navy);line-height:1" id="tGun">—</div><div style="font-size:12px;color:var(--muted);margin-top:4px">Gün</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="single-card" style="margin-top:14px">
+        <div class="card-head"><div class="card-icon ci-green">💰</div><div class="card-title">Birikmiş Hakların</div><div class="card-subtitle">Brüt, 2026 tarifesi</div></div>
+        <div class="card-body">
+          <table class="money-table"><tbody>
+            <tr><td><strong>Kıdem Tazminatı</strong><br><span style="color:var(--muted);font-size:12px" id="tKidemNote">—</span></td><td class="amount" id="tKidem">—</td></tr>
+            <tr><td><strong>İhbar Tazminatı</strong><br><span style="color:var(--muted);font-size:12px" id="tIhbarNote">—</span></td><td class="amount" id="tIhbar">—</td></tr>
+            <tr><td><strong>Yıllık İzin Bakiyen</strong><br><span style="color:var(--muted);font-size:12px" id="tIzinNote">—</span></td><td class="amount" id="tIzinAmt">—</td></tr>
+          </tbody></table>
+        </div>
+      </div>
+
+      <div class="single-card" style="margin-top:14px">
+        <div class="card-head"><div class="card-icon ci-amber">🎯</div><div class="card-title">Sıradaki Kilometre Taşı</div></div>
+        <div class="card-body" id="tNext"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TAB: Senaryo Karşılaştırma -->
+<div class="tab-content" id="tab-senaryo" style="display:none">
+  <div class="single-col">
+    <div class="single-card">
+      <div class="form-head">
+        <div class="form-head-text">
+          <h2>📈 Senaryo Karşılaştırma</h2>
+          <p>"Şimdi vs sonra ayrılırsam ne kazanırım?" — bilinçli karar için tam karşılaştırma.</p>
+        </div>
+      </div>
+      <div class="form-body">
+        <div class="field-row">
+          <div class="field"><label>İşe başlangıç tarihi</label><input type="date" id="sBaslangic" onchange="calcSenaryo()"></div>
+          <div class="field"><label>Brüt aylık maaş (₺)</label><input type="number" id="sMaas" placeholder="35000" oninput="calcSenaryo()"></div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label>Ayrılma sebebi</label>
+            <select id="sSebep" onchange="calcSenaryo()">
+              <option value="haklı">Haklı fesih (kıdem + ihbar alırım)</option>
+              <option value="işveren">İşveren çıkardı (kıdem + ihbar alırım)</option>
+              <option value="istifa">Kendi isteğimle istifa (sadece izin alırım)</option>
+              <option value="emeklilik">Emeklilik / askerlik (sadece kıdem alırım)</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Aylık ortalama fazla mesai (saat)</label>
+            <input type="number" id="sFm" value="0" min="0" oninput="calcSenaryo()">
+            <div class="field-help">Hak ediyorsan hesaba dahil edilir</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="senaryoResult" style="display:none">
+      <div class="single-card" style="margin-top:18px">
+        <div class="card-head"><div class="card-icon ci-green">📊</div><div class="card-title">Ay Ay Tazminat Tablosu</div><div class="card-subtitle">Brüt, 2026 tarifesi</div></div>
+        <div class="card-body" style="padding:0">
+          <div style="overflow-x:auto">
+            <table class="money-table" style="margin:0">
+              <thead>
+                <tr>
+                  <th style="padding-left:22px">Ayrılma Tarihi</th>
+                  <th>Çalışma Süresi</th>
+                  <th>Kıdem</th>
+                  <th>İhbar</th>
+                  <th>İzin</th>
+                  <th style="padding-right:22px">Toplam</th>
+                </tr>
+              </thead>
+              <tbody id="senaryoTable"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="single-card" style="margin-top:14px">
+        <div class="card-head"><div class="card-icon ci-amber">💡</div><div class="card-title">Akıllı Tavsiyeler</div></div>
+        <div class="card-body" id="senaryoTavsiye" style="font-size:14px;line-height:1.7"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TAB: Kanıt Klasörü -->
+<div class="tab-content" id="tab-kanit" style="display:none">
+  <div class="single-col">
+    <div class="single-card">
+      <div class="form-head">
+        <div class="form-head-text">
+          <h2>📁 Kanıt Klasörüm</h2>
+          <p>Davayı kazandıran şey kanıttır. Sistematik olarak topla — avukatına teslim edebileceğin bir dosya hazırla.</p>
+        </div>
+        <button class="form-reset" onclick="kanitExport()" style="border-color:var(--blue);color:var(--blue)">📥 Tümünü İndir</button>
+      </div>
+      <div class="form-body" style="background:#fef9c3;border-top:1px solid #fde68a;padding:14px 26px">
+        <div style="font-size:13px;line-height:1.6;color:#713f12">
+          <strong>⚠️ Önemli:</strong> Kanıtların tamamı yalnızca senin tarayıcına kaydedilir, hiçbir sunucuya gönderilmez. Tarayıcıyı temizlersen veya başka cihazdan girersen veriler gitmiş olur. Önemli kanıtları "Tümünü İndir" ile dışarı aktarmayı unutma.
+        </div>
+      </div>
+    </div>
+
+    <!-- Mesai kayıtları -->
+    <div class="single-card" style="margin-top:18px">
+      <div class="card-head"><div class="card-icon ci-blue">⏰</div><div class="card-title">Mesai Kayıtları</div><div class="card-subtitle" id="kMesaiCount">0 kayıt</div></div>
+      <div class="card-body">
+        <p style="font-size:13px;color:var(--muted);margin-bottom:14px;line-height:1.6">Her gün başlangıç-bitiş saatlerini gir. Yargıtay kararlarına göre WhatsApp mesajları, fotoğraflar ve mesai çizelgeleri fazla mesai ispatında geçerlidir.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:10px;align-items:end;margin-bottom:14px">
+          <div class="field"><label>Tarih</label><input type="date" id="mesaiTarih"></div>
+          <div class="field"><label>Başlangıç</label><input type="time" id="mesaiBas" value="08:00"></div>
+          <div class="field"><label>Bitiş</label><input type="time" id="mesaiBit" value="18:00"></div>
+          <button class="copy-btn" style="height:38px;background:var(--navy);color:#fff;border-color:var(--navy)" onclick="addMesai()">+ Ekle</button>
+        </div>
+        <div id="mesaiListe"></div>
+      </div>
+    </div>
+
+    <!-- Tanıklar -->
+    <div class="single-card" style="margin-top:14px">
+      <div class="card-head"><div class="card-icon ci-amber">👥</div><div class="card-title">Tanıklar</div><div class="card-subtitle" id="kTanikCount">0 tanık</div></div>
+      <div class="card-body">
+        <p style="font-size:13px;color:var(--muted);margin-bottom:14px;line-height:1.6">İş arkadaşların, eski çalışanlar veya gözlem yapmış kişiler. İsim, telefon ve ne gördüklerini kısaca yaz. Yargıtay tanık delilini kabul eder.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px">
+          <div class="field"><label>Ad Soyad</label><input type="text" id="tanikAd" placeholder="Ahmet Yılmaz"></div>
+          <div class="field"><label>Telefon</label><input type="tel" id="tanikTel" placeholder="0532 ..."></div>
+        </div>
+        <div class="field" style="margin-bottom:10px"><label>Ne tanık olabilir?</label><textarea id="tanikIfade" placeholder="Örn: 2023 boyunca aynı ofiste çalıştı, her gün 21:00'a kadar mesai yaptığımı gördü"></textarea></div>
+        <button class="copy-btn" style="background:var(--navy);color:#fff;border-color:var(--navy)" onclick="addTanik()">+ Tanık Ekle</button>
+        <div id="tanikListe" style="margin-top:14px"></div>
+      </div>
+    </div>
+
+    <!-- Ekran görüntüleri -->
+    <div class="single-card" style="margin-top:14px">
+      <div class="card-head"><div class="card-icon ci-red">📸</div><div class="card-title">Ekran Görüntüleri & Belgeler</div><div class="card-subtitle" id="kBelgeCount">0 belge</div></div>
+      <div class="card-body">
+        <p style="font-size:13px;color:var(--muted);margin-bottom:14px;line-height:1.6">WhatsApp mesajları, e-posta, mesai çizelgesi fotoğrafları, maaş bordroları. Her dosya için kısa bir açıklama yaz.</p>
+        <div class="field" style="margin-bottom:10px"><label>Açıklama</label><input type="text" id="belgeAciklama" placeholder="Örn: Patronla 12 Mart 2024 WhatsApp - mesai talebi"></div>
+        <div class="field" style="margin-bottom:10px"><label>Dosya (max 4 MB)</label><input type="file" id="belgeDosya" accept="image/*,application/pdf" style="font-family:var(--sans);font-size:13px;padding:10px;background:#fafaf8;border:2px dashed var(--border);border-radius:8px;width:100%"></div>
+        <button class="copy-btn" style="background:var(--navy);color:#fff;border-color:var(--navy)" onclick="addBelge()">+ Dosya Ekle</button>
+        <div id="belgeListe" style="margin-top:14px"></div>
+      </div>
+    </div>
+
+    <!-- Notlar -->
+    <div class="single-card" style="margin-top:14px">
+      <div class="card-head"><div class="card-icon ci-navy">📝</div><div class="card-title">Olay Günlüğü</div><div class="card-subtitle" id="kNotCount">0 kayıt</div></div>
+      <div class="card-body">
+        <p style="font-size:13px;color:var(--muted);margin-bottom:14px;line-height:1.6">Patron baskısı, mobbing, sözlü uyarı gibi olaylar olduğunda hemen tarihiyle not al. Hafıza tazeliği önemli — sonradan hatırlamayabilirsin.</p>
+        <div class="field" style="margin-bottom:10px"><label>Olay tarihi</label><input type="date" id="notTarih"></div>
+        <div class="field" style="margin-bottom:10px"><label>Ne oldu?</label><textarea id="notIcerik" placeholder="Detaylı yaz: kim, ne dedi/yaptı, kimler şahit"></textarea></div>
+        <button class="copy-btn" style="background:var(--navy);color:#fff;border-color:var(--navy)" onclick="addNot()">+ Not Ekle</button>
+        <div id="notListe" style="margin-top:14px"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+// ═══════════════════════════════════════════════════════════════
+// SABITLER (2026 yılı resmi tutarları)
+// ═══════════════════════════════════════════════════════════════
+const KIDEM_TAVANI_2026_H1 = 64948.77;        // 01.01.2026 - 30.06.2026
+const ASGARI_UCRET_2026_BRUT = 33030;
+const DAMGA_VERGISI_ORANI = 0.00759;          // ‰7,59
+const HAFTALIK_YASAL_TAVAN = 45;              // saat
+
+// ═══════════════════════════════════════════════════════════════
+// GÜVENLİK: HTML escape (XSS önleme)
+// ═══════════════════════════════════════════════════════════════
+function escapeHTML(str) {
+  if (str === null || str === undefined) return '';
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+// AI cevabını render et: markdown + escape
+function renderAIText(text) {
+  if (!text) return '';
+  let safe = escapeHTML(text);
+  // Markdown: **bold** → <strong>
+  safe = safe.replace(/\*\*([^*\n]+)\*\*/g, '<strong>$1</strong>');
+  // Newlines → <br>
+  safe = safe.replace(/\n/g, '<br>');
+  return safe;
+}
+
+// Para formatı
+function fmtTL(n) {
+  if (!isFinite(n) || n === 0) return '—';
+  return Math.round(n).toLocaleString('tr-TR') + ' ₺';
+}
+
+// ═══════════════════════════════════════════════════════════════
+// MODE YÖNETİMİ
+// ═══════════════════════════════════════════════════════════════
+let APP_MODE = localStorage.getItem('app_mode') || '';  // 'offline' | 'ai'
+let GEMINI_KEY = localStorage.getItem('gemini_api_key') || '';
+
+function selectMode(mode) {
+  document.getElementById('modeOffline').classList.toggle('selected', mode === 'offline');
+  document.getElementById('modeAI').classList.toggle('selected', mode === 'ai');
+  document.getElementById('modeOfflineActions').style.display = mode === 'offline' ? 'block' : 'none';
+  document.getElementById('modeAIActions').style.display = mode === 'ai' ? 'block' : 'none';
+}
+
+function goToWizard(pageNum) {
+  document.querySelectorAll('.wizard-page').forEach(p => p.classList.remove('active'));
+  const target = document.getElementById('wizardPage' + pageNum);
+  if (target) {
+    target.classList.add('active');
+    // Modal scroll'unu sıfırla
+    const modal = target.closest('.modal');
+    if (modal) modal.scrollTop = 0;
+  }
+}
+
+function checkKey() {
+  const key = document.getElementById('apiKeyInput').value.trim();
+  const validation = document.getElementById('keyValidation');
+  const btn = document.getElementById('saveKeyBtn');
+
+  if (!key) {
+    validation.textContent = '';
+    btn.disabled = true;
+    return;
+  }
+  if (!key.startsWith('AIza')) {
+    validation.innerHTML = '<span style="color:var(--red)">⚠️ Anahtar "AIzaSy" ile başlamalı. Yanlış kopyalanmış olabilir.</span>';
+    btn.disabled = true;
+    return;
+  }
+  if (key.length < 35) {
+    validation.innerHTML = '<span style="color:var(--amber)">⏳ Anahtar yarım — 39 karakter olmalı (şu an ' + key.length + ')</span>';
+    btn.disabled = true;
+    return;
+  }
+  if (key.length > 50) {
+    validation.innerHTML = '<span style="color:var(--red)">⚠️ Anahtar çok uzun. Fazladan karakter yapıştırmış olabilirsin.</span>';
+    btn.disabled = true;
+    return;
+  }
+  validation.innerHTML = '<span style="color:var(--green)">✓ Anahtar geçerli görünüyor</span>';
+  btn.disabled = false;
+}
+
+function saveKey() {
+  const key = document.getElementById('apiKeyInput').value.trim();
+  if (!key) return;
+  GEMINI_KEY = key;
+  APP_MODE = 'ai';
+  localStorage.setItem('gemini_api_key', key);
+  localStorage.setItem('app_mode', 'ai');
+  document.getElementById('setupModal').classList.add('hidden');
+  updateModeBadge();
+}
+
+function useOffline() {
+  APP_MODE = 'offline';
+  localStorage.setItem('app_mode', 'offline');
+  document.getElementById('setupModal').classList.add('hidden');
+  updateModeBadge();
+}
+
+function openModeMenu() {
+  if (confirm(APP_MODE === 'ai'
+    ? 'AI modundan çıkmak ve key\'i silmek ister misin? Offline moda geçeceksin.'
+    : 'AI moduna geçmek ister misin? Ücretsiz Google Gemini API key gerekir.')) {
+    if (APP_MODE === 'ai') {
+      localStorage.removeItem('gemini_api_key');
+      GEMINI_KEY = '';
+      APP_MODE = 'offline';
+      localStorage.setItem('app_mode', 'offline');
+      updateModeBadge();
+    } else {
+      selectMode('ai');
+      goToWizard(1);
+      document.getElementById('setupModal').classList.remove('hidden');
+    }
+  }
+}
+
+function updateModeBadge() {
+  const badge = document.getElementById('modeBadge');
+  const label = document.getElementById('modeLabel');
+  if (APP_MODE === 'ai') {
+    badge.classList.remove('offline'); badge.classList.add('ai');
+    label.textContent = 'AI Modu';
+  } else {
+    badge.classList.remove('ai'); badge.classList.add('offline');
+    label.textContent = 'Offline Mod';
+  }
+}
+
+// İlk açılış
+if (!APP_MODE) {
+  goToWizard(1);
+  document.getElementById('setupModal').classList.remove('hidden');
+} else {
+  document.getElementById('setupModal').classList.add('hidden');
+  updateModeBadge();
+}
+
+// ═══════════════════════════════════════════════════════════════
+// AI ÇAĞRISI (Gemini)
+// ═══════════════════════════════════════════════════════════════
+// İstek geçmişini takip et — çok fazla istek koruması
+const REQUEST_LOG = [];
+function checkLocalRateLimit() {
+  const now = Date.now();
+  // Son 60 saniyedeki istekleri filtrele
+  while (REQUEST_LOG.length > 0 && now - REQUEST_LOG[0] > 60000) {
+    REQUEST_LOG.shift();
+  }
+  // Free tier: dakikada 15 istek
+  return REQUEST_LOG.length < 12; // 15 yerine 12 — biraz tampon bırak
+}
+
+async function callGemini(prompt, imageData, retryCount = 0) {
+  if (APP_MODE !== 'ai' || !GEMINI_KEY) {
+    throw new Error('AI_REQUIRED');
+  }
+
+  // Lokal rate limit kontrolü — Google'a istek atmadan önce kontrol et
+  if (!checkLocalRateLimit()) {
+    const waitSec = Math.ceil((60000 - (Date.now() - REQUEST_LOG[0])) / 1000);
+    throw new Error(`Dakikalık limit (15 istek) aşıldı. ${waitSec} saniye bekle ya da offline moda geç.`);
+  }
+
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 60000);
+
+  // Modeller — biri başarısız olursa diğerini dene (Mayıs 2026 itibarıyla geçerli)
+  const models = ['gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-flash-latest'];
+  const model = models[Math.min(retryCount, models.length - 1)];
+
+  console.log(`[İHA] Gemini isteği: model=${model}, deneme=${retryCount + 1}, son60sn=${REQUEST_LOG.length} istek`);
+  REQUEST_LOG.push(Date.now());
+
+  try {
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${encodeURIComponent(GEMINI_KEY)}`;
+    const parts = [{ text: prompt }];
+    if (imageData) parts.push({ inline_data: { mime_type: imageData.mime, data: imageData.data } });
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        contents: [{ parts }],
+        generationConfig: { temperature: 0.7, maxOutputTokens: 2048 }
+      }),
+      signal: controller.signal
+    });
+
+    if (!res.ok) {
+      // Hata gövdesini OKU — burası kritik!
+      let errorBody = '';
+      let errorJson = null;
+      try {
+        errorBody = await res.text();
+        errorJson = JSON.parse(errorBody);
+      } catch(parseErr) { /* JSON değil */ }
+
+      const apiMsg = errorJson?.error?.message || errorBody.substring(0, 200) || '(detay yok)';
+      console.error(`[İHA] Gemini ${res.status} hatası:`, apiMsg);
+
+      // Auth hataları
+      if (res.status === 400 && apiMsg.toLowerCase().includes('api key')) {
+        localStorage.removeItem('gemini_api_key'); GEMINI_KEY = '';
+        APP_MODE = 'offline'; localStorage.setItem('app_mode', 'offline');
+        updateModeBadge();
+        throw new Error(`API key geçersiz: ${apiMsg}\n\nOffline moda geçildi.`);
+      }
+      if (res.status === 401 || res.status === 403) {
+        localStorage.removeItem('gemini_api_key'); GEMINI_KEY = '';
+        APP_MODE = 'offline'; localStorage.setItem('app_mode', 'offline');
+        updateModeBadge();
+        throw new Error(`API key kabul edilmedi (${res.status}): ${apiMsg}\n\nOffline moda geçildi. Yeni key oluştur.`);
+      }
+
+      // Rate limit (429) — otomatik retry
+      if (res.status === 429) {
+        // Retry-After header'ı varsa kullan
+        const retryAfter = res.headers.get('Retry-After');
+        const waitMs = retryAfter ? parseInt(retryAfter) * 1000 : (15000 + retryCount * 10000);
+
+        if (retryCount < 2) {
+          console.warn(`[İHA] Rate limit, ${waitMs/1000}sn sonra retry...`);
+          await new Promise(r => setTimeout(r, waitMs));
+          clearTimeout(timer);
+          return callGemini(prompt, imageData, retryCount + 1);
+        }
+        throw new Error(`Google rate limit'i: ${apiMsg}\n\nÜcretsiz Gemini'ın limiti dakikada 15, günde 1.500 istektir. 1-2 dakika bekle ya da offline moda geç.`);
+      }
+
+      // Model bulunamadı — başka modele geç
+      if (res.status === 404 && retryCount < models.length - 1) {
+        console.warn(`[İHA] Model ${model} bulunamadı, sıradakini deniyorum...`);
+        clearTimeout(timer);
+        return callGemini(prompt, imageData, retryCount + 1);
+      }
+
+      // 5xx — sunucu hatası, retry yap
+      if (res.status >= 500 && retryCount < 2) {
+        console.warn(`[İHA] Sunucu hatası ${res.status}, 3sn sonra retry...`);
+        await new Promise(r => setTimeout(r, 3000));
+        clearTimeout(timer);
+        return callGemini(prompt, imageData, retryCount + 1);
+      }
+
+      throw new Error(`Servis hatası (${res.status}): ${apiMsg}`);
+    }
+
+    const data = await res.json();
+
+    // Cevap boş gelmiş olabilir — safety filter, vb.
+    if (!data.candidates || data.candidates.length === 0) {
+      const block = data.promptFeedback?.blockReason;
+      if (block) {
+        throw new Error(`Cevap engellendi (${block}). Soruyu farklı şekilde yazmayı dene.`);
+      }
+      throw new Error('AI boş cevap döndü. Tekrar dene.');
+    }
+
+    const candidate = data.candidates[0];
+    if (candidate.finishReason === 'SAFETY') {
+      throw new Error('Cevap güvenlik filtresine takıldı. Soruyu farklı yaz.');
+    }
+
+    const text = candidate.content?.parts?.[0]?.text || '';
+    if (!text) {
+      console.warn('[İHA] Boş text:', candidate);
+      throw new Error('AI metin döndürmedi. Tekrar dene.');
+    }
+    console.log(`[İHA] Cevap alındı (${text.length} karakter)`);
+    return text;
+
+  } catch(e) {
+    if (e.name === 'AbortError') throw new Error('İstek 60 saniyede tamamlanmadı. İnternet bağlantını kontrol et.');
+    if (e.message?.includes('Failed to fetch') || e.message?.includes('NetworkError')) {
+      throw new Error('İnternet bağlantısı sorunu. Bağlantını kontrol edip tekrar dene.');
+    }
+    throw e;
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+
+// ═══════════════════════════════════════════════════════════════
+// HESAPLAMA MOTORU (4857 sayılı İş Kanunu, 2026)
+// ═══════════════════════════════════════════════════════════════
+
+// Kıdem tazminatı: her tam yıl için 30 gün brüt giydirilmiş ücret
+// 2026 1.yarı tavan: 64.948,77 ₺/yıl
+function hesaplaKidem(brutMaas, toplamYil) {
+  if (toplamYil < 1) return { tutar: 0, tavanaTakildi: false, not: '1 yıl şartı sağlanmadı' };
+  // Tavan kontrolü: aylık brüt > tavan ise tavanı kullan
+  const aylikEsasUcret = Math.min(brutMaas, KIDEM_TAVANI_2026_H1);
+  const tutar = aylikEsasUcret * toplamYil;
+  return {
+    tutar,
+    tavanaTakildi: brutMaas > KIDEM_TAVANI_2026_H1,
+    not: brutMaas > KIDEM_TAVANI_2026_H1
+      ? `${toplamYil.toFixed(2)} yıl × tavan ${fmtTL(KIDEM_TAVANI_2026_H1)} (maaşın tavanı aşıyor)`
+      : `${toplamYil.toFixed(2)} yıl × ${fmtTL(brutMaas)} brüt`
+  };
+}
+
+// İhbar tazminatı: 4857/m.17
+function hesaplaIhbar(brutMaas, toplamYil) {
+  let hafta = 2;
+  if (toplamYil >= 0.5 && toplamYil < 1.5) hafta = 4;
+  else if (toplamYil >= 1.5 && toplamYil < 3) hafta = 6;
+  else if (toplamYil >= 3) hafta = 8;
+  const gunlukUcret = brutMaas / 30;
+  const tutar = gunlukUcret * hafta * 7;
+  return { tutar, hafta, not: `${hafta} hafta × günlük ücret` };
+}
+
+// Fazla mesai (1 ay): 4857/m.41 — saatlik ücretin %50 fazlası
+function hesaplaFazlaMesai(brutMaas, haftaSaati, fmAylikSaat) {
+  // Yasal saatlik ücret: aylık maaş / (45 saat × 4.33 hafta) = aylık maaş / 195
+  // (Eğer çalışan haftalık 45'in altında çalışıyorsa, gerçek saati kullanılır)
+  const haftalikNorm = Math.min(haftaSaati || HAFTALIK_YASAL_TAVAN, HAFTALIK_YASAL_TAVAN);
+  const saatlikUcret = brutMaas / (haftalikNorm * 4.33);
+  const fmZamli = saatlikUcret * 1.5 * fmAylikSaat;
+  return { tutar: fmZamli, saatlik: saatlikUcret };
+}
+
+// Yıllık izin: 4857/m.53 — 1-5 yıl: 14, 5-15 yıl: 20, 15+ yıl: 26 gün
+// SINIR DÜZELTMESİ: ">=" kullanılıyor (önceki kod ">" yanlıştı)
+function yillikIzinHak(toplamYil) {
+  if (toplamYil < 1) return 0;
+  if (toplamYil >= 15) return 26;  // 15 yıl ve üzeri
+  if (toplamYil >= 5) return 20;   // 5 yıl ve üzeri (ama 15'ten az)
+  return 14;                        // 1 yıl ve üzeri (ama 5'ten az)
+}
+
+function hesaplaYillikIzin(brutMaas, toplamYil, kullanilanGun) {
+  const hak = yillikIzinHak(toplamYil);
+  const bakiye = Math.max(0, hak - (kullanilanGun || 0));
+  const gunlukUcret = brutMaas / 30;
+  return { hak, bakiye, tutar: bakiye * gunlukUcret };
+}
+
+// ═══════════════════════════════════════════════════════════════
+// OFFLINE ANALİZ MOTORU (rule-based)
+// ═══════════════════════════════════════════════════════════════
+function offlineAnaliz(form) {
+  const { sector, contractType, dailyHours, weeklyDays, salary, years, months, overtime, situation, extra } = form;
+
+  const dh = parseFloat(dailyHours) || 0;
+  const wd = parseFloat(weeklyDays) || 0;
+  const haftaSaati = dh * wd;
+  const brutMaas = parseFloat(salary) || 0;
+  const toplamYil = (parseFloat(years) || 0) + (parseFloat(months) || 0) / 12;
+
+  // İhlaller listesi
+  const ihlaller = [];
+
+  // 1. Haftalık 45 saat aşımı
+  if (haftaSaati > HAFTALIK_YASAL_TAVAN) {
+    const fazlaSaat = haftaSaati - HAFTALIK_YASAL_TAVAN;
+    ihlaller.push({
+      seviye: fazlaSaat > 10 ? 'YÜKSEK' : 'ORTA',
+      baslik: 'Haftalık çalışma süresi yasal sınırı aşıyor',
+      aciklama: `Haftada ${haftaSaati} saat çalışıyorsun. Yasal sınır 45 saat. Aradaki ${fazlaSaat} saat fazla mesai sayılır ve %50 zamlı ödenmelidir.`,
+      kanun: '4857 sayılı İş Kanunu m.41, m.63'
+    });
+  }
+
+  // 2. Günde 11 saat aşımı
+  if (dh > 11) {
+    ihlaller.push({
+      seviye: 'YÜKSEK',
+      baslik: 'Günlük çalışma süresi yasal sınırı aşıyor',
+      aciklama: `Günde ${dh} saat çalışıyorsun. Yasal üst sınır günde 11 saattir, bu sınırı aşmak işverenin sorumluluğundadır.`,
+      kanun: '4857 sayılı İş Kanunu m.63'
+    });
+  }
+
+  // 3. Fazla mesai ödenmemesi
+  if (overtime === 'Hayır, hiç almıyorum' && haftaSaati > HAFTALIK_YASAL_TAVAN) {
+    ihlaller.push({
+      seviye: 'YÜKSEK',
+      baslik: 'Fazla mesai ücreti ödenmiyor',
+      aciklama: 'Haftalık 45 saati aşan çalışman var ve karşılığında ücret almıyorsun. İşveren her fazla mesai saati için %50 zamlı ödeme yapmak zorundadır. Geriye dönük 5 yıla kadar talep edebilirsin.',
+      kanun: '4857 sayılı İş Kanunu m.41 (zamanaşımı: 5 yıl)'
+    });
+  } else if (overtime === 'İzin olarak veriliyor (ücret yok)' && haftaSaati > HAFTALIK_YASAL_TAVAN) {
+    ihlaller.push({
+      seviye: 'ORTA',
+      baslik: 'Fazla mesai izinle değiştirilirse %50 fazla izin verilmelidir',
+      aciklama: 'Fazla çalışmanı para yerine izinle değiştirebilirsin, fakat her 1 saat fazla mesai için 1 saat 30 dakika izin verilmesi gerekir. Eşit takas yasal değildir.',
+      kanun: '4857 sayılı İş Kanunu m.41/4'
+    });
+  }
+
+  // 4. Haftada 7 gün çalışma — hafta tatili ihlali
+  if (wd >= 7) {
+    ihlaller.push({
+      seviye: 'YÜKSEK',
+      baslik: 'Hafta tatili kullandırılmıyor',
+      aciklama: 'Haftada en az 1 gün (24 saat kesintisiz) hafta tatili kullanma hakkın vardır. Hafta tatilinde çalıştırılırsan o gün ücretin %50 zamlı ödenir.',
+      kanun: '4857 sayılı İş Kanunu m.46'
+    });
+  }
+
+  // 5. Kayıt dışı çalışma
+  if (contractType === 'Kayıt dışı / Sigortasız') {
+    ihlaller.push({
+      seviye: 'YÜKSEK',
+      baslik: 'Sigortasız çalıştırılıyorsun',
+      aciklama: 'Sigortasız çalıştırma yasal değildir. Hizmet tespit davası açarak geçmiş çalışma sürenin sigortalı olarak tescilini sağlayabilirsin. Bu, ileride emekliliğini ciddi etkiler.',
+      kanun: '5510 sayılı SSGSS Kanunu m.86'
+    });
+  }
+
+  // 6. Asgari ücret altında ödeme
+  if (brutMaas > 0 && brutMaas < ASGARI_UCRET_2026_BRUT) {
+    ihlaller.push({
+      seviye: 'YÜKSEK',
+      baslik: 'Asgari ücretin altında ödeme yapılıyor',
+      aciklama: `Brüt maaşın ${fmtTL(brutMaas)}, ancak 2026 asgari ücret brüt ${fmtTL(ASGARI_UCRET_2026_BRUT)}. Aradaki fark eksik ödemedir.`,
+      kanun: '4857 sayılı İş Kanunu m.39'
+    });
+  }
+
+  // 7. Maaş ödenmemesi
+  if (situation === 'Maaşım ödenmiyor') {
+    ihlaller.push({
+      seviye: 'YÜKSEK',
+      baslik: 'Ücret ödenmemesi haklı fesih sebebidir',
+      aciklama: 'Ücretin 20 gün geç ödenirse iş sözleşmeni haklı nedenle feshedebilir, kıdem tazminatı talep edebilirsin (en az 1 yıllık çalışma şartıyla). Mevduat hesabı dökümünü saklamayı unutma.',
+      kanun: '4857 sayılı İş Kanunu m.24/II-e, m.34'
+    });
+  }
+
+  // 8. Mobbing
+  if (situation === 'Mobbing / baskı altındayım') {
+    ihlaller.push({
+      seviye: 'ORTA',
+      baslik: 'Mobbing haklı fesih ve tazminat sebebidir',
+      aciklama: 'Sistematik baskı, aşağılama, izolasyon mobbingdir. Yargıtay mobbingi haklı fesih sebebi sayar. Yazılı, tanıklı, kayıtlı kanıt biriktir.',
+      kanun: '6098 sayılı TBK m.417, 4857 m.24/II-d'
+    });
+  }
+
+  // 9. Ücret kesintisi
+  if (situation === 'Ücret kesintisi yapıldı') {
+    ihlaller.push({
+      seviye: 'ORTA',
+      baslik: 'Tek taraflı ücret indirimi yasal değildir',
+      aciklama: 'İşveren senin onayın olmadan maaşını düşüremez. Bu durum haklı fesih sebebidir.',
+      kanun: '4857 sayılı İş Kanunu m.22, m.24/II-e'
+    });
+  }
+
+  // 10. Haksız fesih
+  if (situation === 'Haksız yere işten çıkarıldım' && toplamYil >= 0.5) {
+    ihlaller.push({
+      seviye: 'YÜKSEK',
+      baslik: 'Haksız fesih — işe iade davası mümkün',
+      aciklama: 'En az 6 ay kıdemin var ve 30+ kişilik işyerinde çalışıyorsan, fesih tarihinden itibaren 1 ay içinde işe iade davası açabilirsin. Süre kaçırılırsa hak düşer.',
+      kanun: '4857 sayılı İş Kanunu m.18-21'
+    });
+  }
+
+  // Risk skoru: ihlal sayısı ve şiddetine göre
+  let skor = 0;
+  ihlaller.forEach(i => {
+    if (i.seviye === 'YÜKSEK') skor += 22;
+    else if (i.seviye === 'ORTA') skor += 12;
+    else skor += 6;
+  });
+  skor = Math.min(100, skor);
+
+  // Verdict
+  let durum, ozet;
+  if (ihlaller.length === 0) {
+    durum = 'IHLAL_YOK';
+    ozet = 'Verdiğin bilgilere göre belirgin bir hak ihlali tespit edilmedi. Yine de "ek detaylar" alanına yazdıklarını bir uzmanla değerlendirmek faydalı olabilir.';
+  } else if (skor >= 60) {
+    durum = 'IHLAL_VAR';
+    ozet = `${ihlaller.length} farklı hak ihlali tespit edildi. Bunların ${ihlaller.filter(i=>i.seviye==='YÜKSEK').length} tanesi yüksek önem taşıyor. Aşağıdaki adımları takip etmeni öneririz.`;
+  } else if (skor >= 30) {
+    durum = 'IHLAL_VAR';
+    ozet = `${ihlaller.length} hak ihlali tespit edildi. Bunlar ciddi maddi kayba yol açabilir, ihmal etme.`;
+  } else {
+    durum = 'BELIRSIZ';
+    ozet = `Bazı belirsizlikler var. Durumun tam aydınlanması için iş hukuku avukatına danışmanı öneririz.`;
+  }
+
+  // Hesaplamalar
+  const hesap = [];
+  if (toplamYil >= 0.5) {
+    if (toplamYil >= 1) {
+      const k = hesaplaKidem(brutMaas, toplamYil);
+      if (k.tutar > 0) hesap.push({ kalem: 'Kıdem Tazminatı', not: k.not, tutar: k.tutar });
+    }
+    const i = hesaplaIhbar(brutMaas, toplamYil);
+    if (i.tutar > 0 && (situation === 'Haksız yere işten çıkarıldım' || situation === 'İstifa etmek istiyorum, haklarımı öğrenmek istiyorum')) {
+      hesap.push({ kalem: 'İhbar Tazminatı', not: i.not, tutar: i.tutar });
+    }
+  }
+  if (overtime === 'Hayır, hiç almıyorum' && haftaSaati > HAFTALIK_YASAL_TAVAN && brutMaas > 0) {
+    const fazlaSaatHaftalik = haftaSaati - HAFTALIK_YASAL_TAVAN;
+    const fazlaSaatAylik = fazlaSaatHaftalik * 4.33;
+    const fm = hesaplaFazlaMesai(brutMaas, haftaSaati, fazlaSaatAylik);
+    hesap.push({ kalem: 'Aylık Fazla Mesai', not: `~${Math.round(fazlaSaatAylik)} saat × %50 zamlı`, tutar: fm.tutar });
+    hesap.push({ kalem: 'Yıllık Fazla Mesai (12 ay)', not: 'Geriye dönük 5 yıl talep edilebilir', tutar: fm.tutar * 12 });
+  }
+  if (toplamYil >= 1 && brutMaas > 0) {
+    const iz = hesaplaYillikIzin(brutMaas, toplamYil, 0);
+    if (iz.tutar > 0) hesap.push({ kalem: 'Yıllık İzin Ücreti', not: `${iz.bakiye} gün × günlük ücret`, tutar: iz.tutar });
+  }
+
+  // Zaman çizelgesi
+  const zaman = [];
+  if (toplamYil >= 0.5) zaman.push({ durum: 'GEÇMİŞ', sure: `${toplamYil.toFixed(1)} yıl önce`, aciklama: 'İşe başladın' });
+  zaman.push({ durum: 'ŞİMDİ', sure: 'Bugün', aciklama: ihlaller.length > 0 ? `${ihlaller.length} hak ihlali var` : 'Hak ihlali tespit edilmedi' });
+  if (toplamYil < 1) {
+    const kalan = Math.ceil((1 - toplamYil) * 365);
+    zaman.push({ durum: 'GELECEK', sure: `~${kalan} gün sonra`, aciklama: 'Kıdem tazminatı, ihbar süresi artışı ve yıllık izin haklarına kavuşacaksın' });
+  } else if (toplamYil < 3) {
+    const kalan = Math.ceil((3 - toplamYil) * 365);
+    zaman.push({ durum: 'GELECEK', sure: `~${kalan} gün sonra`, aciklama: 'İhbar süren 8 haftaya yükselecek' });
+  } else if (toplamYil < 5) {
+    const kalan = Math.ceil((5 - toplamYil) * 365);
+    zaman.push({ durum: 'GELECEK', sure: `~${kalan} gün sonra`, aciklama: 'Yıllık izin hakkın 20 güne yükselecek' });
+  }
+  zaman.push({ durum: 'GELECEK', sure: '5 yıl', aciklama: 'Fazla mesai alacaklarında zamanaşımı (geri tarihli talep süresi sınırı)' });
+
+  // Adımlar
+  const adimlar = [];
+  if (ihlaller.length > 0) {
+    adimlar.push({
+      baslik: 'Tüm kanıtları topla',
+      aciklama: 'Mesai çizelgesi, mesajlar, e-postalar, görgü tanıklarının bilgileri, maaş bordroları, banka hesap dökümleri. Telefonla fotoğraflarını çek, e-posta ile kendine yolla.'
+    });
+    adimlar.push({
+      baslik: 'İhtarname çek',
+      aciklama: 'Bir avukat veya noter aracılığıyla işverene yazılı ihtarname gönder. Bu hem yasal süreç başlatır hem de ileride mahkemede güçlü kanıt olur.'
+    });
+    adimlar.push({
+      baslik: 'ALO 170 İŞKUR çağrı merkezini ara',
+      aciklama: 'Çalışma Bakanlığı şikayet hattı. Ücretsizdir, isminizi gizleyebilir. Bakanlık denetçileri işyerine gelip inceleme yapabilir.'
+    });
+    if (situation === 'Haksız yere işten çıkarıldım') {
+      adimlar.push({
+        baslik: '1 ay içinde işe iade davası aç',
+        aciklama: 'Fesih tarihinden itibaren 1 ay içinde arabuluculuk başvurusu yap. Süre dolarsa hak düşer.'
+      });
+    }
+    adimlar.push({
+      baslik: 'İş hukuku avukatıyla görüş',
+      aciklama: 'Baroların İş Hukuku Komisyonu ücretsiz danışmanlık verir. CİMER\'den de avukat yönlendirmesi talep edebilirsin.'
+    });
+  } else {
+    adimlar.push({
+      baslik: 'Mevcut belgelerini düzenli sakla',
+      aciklama: 'İş sözleşmen, bordroların, banka dökümlerini bir klasörde topla. İleride lazım olur.'
+    });
+    adimlar.push({
+      baslik: 'Hak takibi yap',
+      aciklama: '"Hak Takip Panom" sekmesinden işe başlangıç tarihini gir, haklarının nasıl geliştiğini izle.'
+    });
+  }
+
+  // Dilekçe taslağı
+  const dilekce = `[İŞYERİ ADI / ÜNVANI]
+[İŞYERİ ADRESİ]
+
+Konu: İşçilik Alacaklarıma İlişkin Talep
+
+Sayın Yetkili,
+
+[GÜNDÜZ ÇALIŞMA TARİHİ] tarihinde işyerinizde [POZİSYON] olarak çalışmaya başladım${toplamYil >= 0.5 ? ` ve halen ${toplamYil.toFixed(1)} yıldır görevimi sürdürmekteyim` : ''}. ${ihlaller.length > 0 ? 'Aşağıda belirtilen hak ihlalleri nedeniyle yasal alacaklarımın tarafıma ödenmesini talep ediyorum:' : 'Yasal haklarımın tarafıma ödenmesini talep ediyorum:'}
+
+${ihlaller.slice(0, 3).map((i, idx) => `${idx + 1}. ${i.baslik} (${i.kanun})`).join('\n')}
+
+Yasal Alacaklarım:
+${hesap.map(h => `• ${h.kalem}: ${fmtTL(h.tutar)} (brüt, tahmini)`).join('\n')}
+
+İşbu ihtarname tebliğinden itibaren 7 (yedi) gün içinde belirtilen alacaklarımın tarafıma ödenmemesi halinde; 4857 sayılı İş Kanunu, 6098 sayılı Türk Borçlar Kanunu ve ilgili sair mevzuat çerçevesinde yasal yollara başvurmak, iş akdimi haklı nedenle feshetmek ve uğradığım maddi-manevi zararların tazminini talep etmek üzere her türlü yasal hakkımı kullanacağımı ihtaren bildiririm.
+
+Saygılarımla,
+
+[ADINIZ SOYADINIZ]
+[T.C. KİMLİK NO]
+[ADRES]
+[TARİH]
+[İMZA]
+
+---
+Not: Bu taslak yol gösterici niteliktedir. Göndermeden önce mutlaka bir avukat veya noter ile görüş.`;
+
+  return { durum, skor, ozet, ihlaller, hesap, zaman, adimlar, dilekce };
+}
+
+
+// ═══════════════════════════════════════════════════════════════
+// ANA ANALİZ (offline veya AI)
+// ═══════════════════════════════════════════════════════════════
+let analysisContext = '';
+let formSnapshot = {};
+
+async function analyze() {
+  const form = {
+    sector:       document.getElementById('sector').value,
+    contractType: document.getElementById('contractType').value,
+    dailyHours:   document.getElementById('dailyHours').value,
+    weeklyDays:   document.getElementById('weeklyDays').value,
+    salary:       document.getElementById('salary').value,
+    years:        document.getElementById('years').value,
+    months:       document.getElementById('months').value,
+    overtime:     document.getElementById('overtime').value,
+    situation:    document.getElementById('situation').value,
+    extra:        document.getElementById('extra').value.trim()
+  };
+
+  if (!form.sector && !form.situation && !form.extra && !form.salary) {
+    alert('Lütfen en azından sektör, durum veya maaş bilgisi gir.');
+    return;
+  }
+
+  formSnapshot = form;
+  const btn = document.getElementById('analyzeBtn');
+  btn.disabled = true; btn.classList.add('loading');
+  const panel = document.getElementById('rightPanel');
+
+  try {
+    if (APP_MODE === 'ai' && GEMINI_KEY) {
+      panel.innerHTML = `<div class="empty-state"><div class="empty-icon" style="display:inline-block;animation:spin 1s linear infinite">⚖️</div><h3 style="margin-top:12px">AI analiz yapıyor...</h3><p>Yapay zeka çalışma koşullarını değerlendiriyor.</p></div>`;
+      await aiAnaliz(form);
+    } else {
+      panel.innerHTML = `<div class="empty-state"><div class="empty-icon">⚖️</div><h3>Hesaplanıyor...</h3><p>Yasal formüller uygulanıyor.</p></div>`;
+      await new Promise(r => setTimeout(r, 350)); // küçük UX gecikmesi
+      const result = offlineAnaliz(form);
+      analysisContext = `Çalışan bilgileri: Sektör:${form.sector}, ${form.dailyHours} saat/gün × ${form.weeklyDays} gün/hafta, ${form.salary}₺ brüt, ${form.years} yıl ${form.months} ay çalışma, fazla mesai durumu: ${form.overtime}, durumu: ${form.situation}. Tespit edilen ihlal sayısı: ${result.ihlaller.length}, risk skoru: ${result.skor}.`;
+      renderResults(result);
+    }
+  } catch(e) {
+    if (e.message === 'AI_REQUIRED') {
+      panel.innerHTML = `<div class="empty-state"><div class="empty-icon">🤖</div><h3>AI moduna geç</h3><p>Bu özellik AI gerektirir. Üst sağdaki rozetten AI moduna geçebilirsin.</p></div>`;
+    } else {
+      panel.innerHTML = `<div class="empty-state"><div class="empty-icon">⚠️</div><h3>Hata oluştu</h3><p>${escapeHTML(e.message)}</p></div>`;
+    }
+    console.error(e);
+  } finally {
+    btn.disabled = false; btn.classList.remove('loading');
+  }
+}
+
+function resetForm() {
+  if (!confirm('Form sıfırlansın mı? Sonuçlar da silinecek.')) return;
+  ['sector','contractType','dailyHours','weeklyDays','salary','years','months','overtime','situation','extra'].forEach(id => {
+    document.getElementById(id).value = '';
+  });
+  document.getElementById('rightPanel').innerHTML = `
+    <div class="empty-state" id="emptyState">
+      <div class="empty-icon">⚖️</div>
+      <h3>Analiz bekleniyor</h3>
+      <p>Sol taraftaki formu doldur. Çalışma koşullarını anlat — haklarını saniyeler içinde değerlendireceğiz.</p>
+    </div>`;
+  analysisContext = ''; formSnapshot = {};
+}
+
+// AI Analiz
+async function aiAnaliz(form) {
+  const prompt = `Sen Türkiye iş hukuku konusunda uzman bir hukuki danışmansın. 4857 sayılı İş Kanunu ve 2026 yılı resmi tutarlarını biliyorsun (kıdem tavanı: 64.948,77 ₺/yıl, asgari ücret brüt: 33.030 ₺).
+
+ÇALIŞAN BİLGİLERİ:
+- Sektör: ${form.sector || 'Belirtilmedi'}
+- Sözleşme türü: ${form.contractType || 'Belirtilmedi'}
+- Günlük çalışma saati: ${form.dailyHours || 'Belirtilmedi'}
+- Haftalık çalışma günü: ${form.weeklyDays || 'Belirtilmedi'}
+- Brüt aylık maaş: ${form.salary ? form.salary + ' ₺' : 'Belirtilmedi'}
+- Çalışma süresi: ${form.years || 0} yıl ${form.months || 0} ay
+- Fazla mesai durumu: ${form.overtime || 'Belirtilmedi'}
+- Mevcut durum: ${form.situation || 'Belirtilmedi'}
+- Ek bilgi: ${form.extra || 'Yok'}
+
+Şu formatta Türkçe analiz yap. Her bölüm başlığını mutlaka === ile yaz:
+
+===VERDICT===
+DURUM: [İHLAL_VAR veya İHLAL_YOK veya BELIRSIZ]
+SKOR: [0-100 arası risk skoru]
+ÖZET: [2-3 cümle, direkt ve net]
+
+===IHLALLER===
+[Format: SEVİYE|Başlık|Açıklama|Yasal Dayanak (madde no)
+SEVİYE: YÜKSEK, ORTA, DÜŞÜK
+2-6 satır. Yoksa: YOK]
+
+===HESAP===
+[Format: KALEM|açıklama|tutar (sadece sayı)
+Kıdem hesaplarken 64.948,77 ₺ tavanı uygula!
+Son satır: TOPLAM||rakam
+Yoksa: YOK]
+
+===ZAMAN===
+[Format: DURUM|Süre|Açıklama
+DURUM: GEÇMİŞ, ŞİMDİ, GELECEK
+3-5 madde, 5 yıl zamanaşımını da ekle]
+
+===ADIMLAR===
+[Format: Başlık|Açıklama
+4-6 somut adım]
+
+===DILEKCE===
+[Resmi dilekçe taslağı, [İSİM], [ADRES], [TARİH] yer tutucularıyla]`;
+
+  const res = await callGemini(prompt);
+  analysisContext = `ÇALIŞAN: ${form.sector}, ${form.dailyHours}s/gün, ${form.salary}₺, ${form.years}yıl${form.months}ay, ${form.situation}. AI analizi: ${res.substring(0, 600)}`;
+
+  // AI cevabını parse et
+  const result = parseAIResponse(res);
+  renderResults(result);
+}
+
+function getSection(text, key) {
+  const re = new RegExp(`===${key}===\\s*([\\s\\S]*?)(?====[A-ZÇĞİÖŞÜ_]+===|$)`);
+  const m = text.match(re);
+  return m ? m[1].trim() : '';
+}
+
+function parseAIResponse(text) {
+  // Verdict
+  const vRaw = getSection(text, 'VERDICT');
+  const durumMatch = vRaw.match(/DURUM:\s*(\S+)/);
+  const skorMatch = vRaw.match(/SKOR:\s*(\d+)/);
+  const ozetMatch = vRaw.match(/ÖZET:\s*([\s\S]+?)(?=\n[A-ZÇĞİÖŞÜ]+:|$)/);
+  const durum = durumMatch ? durumMatch[1] : 'BELIRSIZ';
+  const skor = skorMatch ? parseInt(skorMatch[1]) : 50;
+  const ozet = ozetMatch ? ozetMatch[1].trim() : '';
+
+  // İhlaller
+  const ihlaller = [];
+  const ihlalRaw = getSection(text, 'IHLALLER');
+  if (ihlalRaw && ihlalRaw !== 'YOK') {
+    ihlalRaw.split('\n').filter(l => l.includes('|')).forEach(line => {
+      const parts = line.split('|').map(s => s.trim());
+      if (parts.length >= 3) {
+        ihlaller.push({
+          seviye: parts[0],
+          baslik: parts[1],
+          aciklama: parts[2],
+          kanun: parts[3] || ''
+        });
+      }
+    });
+  }
+
+  // Hesap
+  const hesap = [];
+  const hesapRaw = getSection(text, 'HESAP');
+  if (hesapRaw && hesapRaw !== 'YOK') {
+    hesapRaw.split('\n').filter(l => l.includes('|')).forEach(line => {
+      const parts = line.split('|').map(s => s.trim());
+      if (parts[0] === 'TOPLAM') return;
+      if (parts.length >= 3) {
+        const tutar = parseFloat(parts[2].replace(/[^\d.]/g, ''));
+        if (isFinite(tutar) && tutar > 0) {
+          hesap.push({ kalem: parts[0], not: parts[1], tutar });
+        }
+      }
+    });
+  }
+
+  // Zaman
+  const zaman = [];
+  const zamanRaw = getSection(text, 'ZAMAN');
+  if (zamanRaw) {
+    zamanRaw.split('\n').filter(l => l.includes('|')).forEach(line => {
+      const parts = line.split('|').map(s => s.trim());
+      if (parts.length >= 3) zaman.push({ durum: parts[0], sure: parts[1], aciklama: parts[2] });
+    });
+  }
+
+  // Adımlar
+  const adimlar = [];
+  const adimRaw = getSection(text, 'ADIMLAR');
+  if (adimRaw) {
+    adimRaw.split('\n').filter(l => l.includes('|')).forEach(line => {
+      const parts = line.split('|').map(s => s.replace(/^\d+[\.\)]\s*/, '').trim());
+      if (parts.length >= 2) adimlar.push({ baslik: parts[0], aciklama: parts[1] });
+    });
+  }
+
+  // Dilekçe
+  const dilekce = getSection(text, 'DILEKCE');
+
+  return { durum, skor, ozet, ihlaller, hesap, zaman, adimlar, dilekce };
+}
+
+// ═══════════════════════════════════════════════════════════════
+// SONUÇ RENDER
+// ═══════════════════════════════════════════════════════════════
+function renderResults(result) {
+  const panel = document.getElementById('rightPanel');
+  panel.innerHTML = '';
+
+  const { durum, skor, ozet, ihlaller, hesap, zaman, adimlar, dilekce } = result;
+
+  // Verdict
+  let vbClass, vbIcon, vbTitle, scoreColor;
+  if (durum.includes('İHLAL_VAR') || durum.includes('IHLAL_VAR')) {
+    vbClass = 'vb-red'; vbIcon = '🚨'; vbTitle = 'Hak ihlali tespit edildi';
+    scoreColor = skor > 65 ? '#b91c1c' : '#b45309';
+  } else if (durum.includes('YOK')) {
+    vbClass = 'vb-green'; vbIcon = '✅'; vbTitle = 'Belirgin bir ihlal görünmüyor'; scoreColor = '#15803d';
+  } else {
+    vbClass = 'vb-amber'; vbIcon = '⚠️'; vbTitle = 'Bazı belirsizlikler var'; scoreColor = '#b45309';
+  }
+
+  const r = 54, circ = 2 * Math.PI * r, offset = circ * (1 - skor/100);
+  const gaugeHTML = `
+    <div class="score-wrap">
+      <svg class="gauge-svg" width="120" height="120" viewBox="0 0 130 130">
+        <circle cx="65" cy="65" r="${r}" fill="none" stroke="#e5e7eb" stroke-width="10"/>
+        <circle cx="65" cy="65" r="${r}" fill="none" stroke="${scoreColor}" stroke-width="10"
+          stroke-linecap="round" stroke-dasharray="${circ.toFixed(1)}" stroke-dashoffset="${circ.toFixed(1)}"
+          transform="rotate(-90 65 65)"
+          style="transition:stroke-dashoffset 1.2s cubic-bezier(.4,0,.2,1)" id="gaugeArc"/>
+        <text x="65" y="62" text-anchor="middle" font-family="Lora,serif" font-size="28" font-weight="700" fill="${scoreColor}">${skor}</text>
+        <text x="65" y="80" text-anchor="middle" font-family="DM Mono,monospace" font-size="10" fill="#9ca3af">Risk skoru</text>
+      </svg>
+      <div class="score-info">
+        <div class="verdict-banner ${vbClass}" style="margin-bottom:0">
+          <div class="vb-icon">${vbIcon}</div>
+          <div class="vb-text"><h3>${escapeHTML(vbTitle)}</h3><p>${escapeHTML(ozet)}</p></div>
+        </div>
+      </div>
+    </div>`;
+
+  const c1 = mkCard('ci-navy', '⚖️', 'Genel Değerlendirme',
+    APP_MODE === 'ai' ? 'AI analizi' : 'Formül analizi', gaugeHTML);
+  panel.appendChild(c1);
+  setTimeout(() => { const arc = document.getElementById('gaugeArc'); if (arc) arc.style.strokeDashoffset = offset.toFixed(1); }, 200);
+
+  // Export
+  const exportDiv = document.createElement('div');
+  exportDiv.className = 'btn-row';
+  exportDiv.style.padding = '14px 22px';
+  exportDiv.innerHTML = `
+    <button class="pdf-btn" onclick="downloadReport()">📄 PDF Rapor İndir</button>
+    <button class="wa-btn" onclick="shareWhatsApp()">💬 WhatsApp ile Paylaş</button>`;
+  const exportCard = document.createElement('div');
+  exportCard.className = 'result-card';
+  exportCard.appendChild(exportDiv);
+  panel.appendChild(exportCard);
+
+  // İhlaller
+  if (ihlaller.length > 0) {
+    let html = '';
+    ihlaller.forEach(i => {
+      const sc = i.seviye.includes('YÜKSEK') || i.seviye.includes('YUKSEK') ? 'vs-high'
+               : i.seviye.includes('ORTA') ? 'vs-mid' : 'vs-low';
+      const sl = i.seviye.includes('YÜKSEK') || i.seviye.includes('YUKSEK') ? 'Yüksek'
+               : i.seviye.includes('ORTA') ? 'Orta' : 'Düşük';
+      html += `<div class="violation-item">
+        <span class="v-severity ${sc}">${sl}</span>
+        <div class="v-content">
+          <div class="v-title">${escapeHTML(i.baslik)}</div>
+          <div class="v-desc">${escapeHTML(i.aciklama)}</div>
+          ${i.kanun ? `<div class="v-law">📖 ${escapeHTML(i.kanun)}</div>` : ''}
+        </div>
+      </div>`;
+    });
+    panel.appendChild(mkCard('ci-red', '⚠️', 'Tespit Edilen İhlaller', `${ihlaller.length} ihlal`, html));
+  }
+
+  // Hesap
+  if (hesap.length > 0) {
+    let rows = '', toplam = 0;
+    hesap.forEach(h => {
+      toplam += h.tutar;
+      rows += `<tr>
+        <td><strong>${escapeHTML(h.kalem)}</strong><br><span style="color:var(--muted);font-size:12px">${escapeHTML(h.not)}</span></td>
+        <td class="amount">${fmtTL(h.tutar)}</td>
+      </tr>`;
+    });
+    const totalRow = `<tr class="total"><td>Toplam Tahmini Brüt Alacak</td><td class="amount">${fmtTL(toplam)}</td></tr>`;
+    const tbl = `<table class="money-table"><thead><tr><th>Alacak Kalemi</th><th style="text-align:right">Tutar (Brüt)</th></tr></thead><tbody>${rows}${totalRow}</tbody></table>
+      <p style="font-size:11.5px;color:var(--muted);margin-top:12px;line-height:1.55">⚠️ Brüt rakamlar, tahminidir. Kıdem tazminatından sadece ‰7,59 damga vergisi kesilir; diğer alacaklarda gelir vergisi + SGK kesilir. Kesin hesap için avukat veya İŞKUR'a danışın.</p>`;
+    panel.appendChild(mkCard('ci-green', '💰', 'Alacak Hesaplaması', '2026 brüt', tbl));
+  }
+
+  // Zaman çizelgesi
+  if (zaman.length > 0) {
+    let tlHTML = '<div class="timeline">';
+    zaman.forEach(z => {
+      const isAktif = z.durum.includes('ŞİMDİ') || z.durum.includes('SIMDI');
+      const isGecmis = z.durum.includes('GEÇMİŞ') || z.durum.includes('GECMIS');
+      const dotClass = isAktif ? 'active' : (isGecmis ? 'active' : 'future');
+      tlHTML += `<div class="tl-item">
+        <div class="tl-dot ${dotClass}"></div>
+        <div class="tl-time">${escapeHTML(z.sure)}</div>
+        <div class="tl-desc">${escapeHTML(z.aciklama)}</div>
+      </div>`;
+    });
+    tlHTML += '</div>';
+    panel.appendChild(mkCard('ci-blue', '📅', 'Hak Zaman Çizelgesi', '', tlHTML));
+  }
+
+  // ⏰ Zamanaşımı Alarmı (canlı geri sayım)
+  const alarmlar = hesaplaZamanasimi(formSnapshot);
+  if (alarmlar.length > 0) {
+    let alarmHTML = '<p style="font-size:13px;color:var(--muted);margin-bottom:14px;line-height:1.6">Yasal alacakların belli bir süre sonra zamanaşımına uğrar — yani talep edemezsin. Aşağıdaki süreler içinde harekete geç.</p>';
+    alarmHTML += '<div style="display:grid;gap:10px">';
+    alarmlar.forEach(a => {
+      const renkSinif = a.gun < 90 ? 'background:#fef2f2;border:1px solid #fca5a5;color:#991b1b' :
+                        a.gun < 365 ? 'background:#fffbeb;border:1px solid #fcd34d;color:#92400e' :
+                        'background:#f0fdf4;border:1px solid #86efac;color:#166534';
+      const ikon = a.gun < 90 ? '🚨' : a.gun < 365 ? '⚠️' : '✅';
+      alarmHTML += `<div style="${renkSinif};border-radius:10px;padding:12px 16px;display:flex;align-items:center;gap:14px">
+        <div style="font-size:22px">${ikon}</div>
+        <div style="flex:1">
+          <div style="font-weight:600;font-size:14px;margin-bottom:2px">${escapeHTML(a.baslik)}</div>
+          <div style="font-size:12.5px;opacity:0.9;line-height:1.5">${escapeHTML(a.aciklama)}</div>
+        </div>
+        <div style="text-align:right;flex-shrink:0">
+          <div style="font-family:'Lora',serif;font-size:24px;font-weight:700;line-height:1">${a.gun > 0 ? a.gun : 0}</div>
+          <div style="font-size:11px;font-family:var(--mono);opacity:0.8">gün kaldı</div>
+        </div>
+      </div>`;
+    });
+    alarmHTML += '</div>';
+    alarmHTML += '<p style="font-size:11.5px;color:var(--muted);margin-top:14px;line-height:1.55">⚠️ Süreler yaklaşık olarak hesaplanmıştır. Olay tarihi ve fesih tarihi gibi detaylar gerçek süreyi etkileyebilir. Önemli kararlar için avukata danış.</p>';
+    panel.appendChild(mkCard('ci-red', '⏰', 'Zamanaşımı Alarmı', 'Acil', alarmHTML));
+  }
+
+  // Adımlar
+  if (adimlar.length > 0) {
+    let stepsHTML = ''; let i = 1;
+    adimlar.forEach(a => {
+      stepsHTML += `<div class="step-item">
+        <div class="step-num">${i++}</div>
+        <div class="step-text"><strong>${escapeHTML(a.baslik)}</strong>${escapeHTML(a.aciklama)}</div>
+      </div>`;
+    });
+    panel.appendChild(mkCard('ci-amber', '📋', 'Ne Yapmalısın?', 'Adım adım', stepsHTML));
+  }
+
+  // Dilekçe
+  if (dilekce) {
+    const letBody = `<div class="letter-box" id="letterText">${escapeHTML(dilekce)}</div>
+      <div class="btn-row">
+        <button class="copy-btn" onclick="copyLetter()">📋 Kopyala</button>
+        <button class="copy-btn" onclick="downloadLetter()">📥 .txt indir</button>
+      </div>`;
+    panel.appendChild(mkCard('ci-navy', '📝', 'Dilekçe Taslağı', 'Düzenle ve kullan', letBody));
+  }
+
+  // Sohbet (sadece AI modunda)
+  if (APP_MODE === 'ai') {
+    const chatCard = document.createElement('div');
+    chatCard.className = 'result-card';
+    chatCard.innerHTML = `
+      <div class="card-head">
+        <div class="card-icon ci-blue">💬</div>
+        <div class="card-title">Sorularını Sor</div>
+        <div class="card-subtitle">AI sohbet</div>
+      </div>
+      <div class="chat-box">
+        <div class="chat-messages" id="chatMessages">
+          <div class="chat-msg ai"><div class="chat-bubble">Analizi inceledim. Aklına takılan bir şey var mı? Örnek: "Kıdem tazminatımı nasıl alırım?", "Dava nasıl açılır?"</div></div>
+        </div>
+        <div class="chat-typing" id="chatTyping" style="display:none">Yazıyor...</div>
+        <div class="chat-input-row">
+          <input class="chat-input" id="chatInput" placeholder="Sorunu yaz..." onkeydown="if(event.key==='Enter')sendChat()">
+          <button class="chat-send" id="chatSendBtn" onclick="sendChat()">Gönder →</button>
+        </div>
+      </div>`;
+    panel.appendChild(chatCard);
+  } else {
+    const offlineNote = document.createElement('div');
+    offlineNote.className = 'result-card';
+    offlineNote.innerHTML = `
+      <div class="card-head"><div class="card-icon ci-blue">💬</div><div class="card-title">Sohbet</div></div>
+      <div class="ai-only-note">
+        <span>🤖</span>
+        <span>AI sohbet özelliği için üst sağdaki rozetten AI moduna geçebilirsin (ücretsiz Google API key ile).</span>
+      </div>`;
+    panel.appendChild(offlineNote);
+  }
+
+  setTimeout(() => panel.scrollIntoView({ behavior: 'smooth', block: 'start' }), 150);
+}
+
+function mkCard(iconClass, icon, title, subtitle, bodyHTML) {
+  const div = document.createElement('div');
+  div.className = 'result-card';
+  div.innerHTML = `<div class="card-head">
+    <div class="card-icon ${iconClass}">${icon}</div>
+    <div class="card-title">${escapeHTML(title)}</div>
+    ${subtitle ? `<div class="card-subtitle">${escapeHTML(subtitle)}</div>` : ''}
+  </div><div class="card-body">${bodyHTML}</div>`;
+  return div;
+}
+
+// ═══════════════════════════════════════════════════════════════
+// SOHBET (AI)
+// ═══════════════════════════════════════════════════════════════
+async function sendChat() {
+  const input = document.getElementById('chatInput');
+  const msg = input.value.trim();
+  if (!msg) return;
+  const btn = document.getElementById('chatSendBtn');
+  btn.disabled = true; input.value = '';
+
+  const msgs = document.getElementById('chatMessages');
+  const userDiv = document.createElement('div');
+  userDiv.className = 'chat-msg user';
+  userDiv.innerHTML = `<div class="chat-bubble">${escapeHTML(msg)}</div>`;
+  msgs.appendChild(userDiv);
+  document.getElementById('chatTyping').style.display = 'block';
+  msgs.scrollTop = msgs.scrollHeight;
+
+  try {
+    const prompt = `Sen Türkiye iş hukuku konusunda uzman bir danışmansın. Aşağıdaki bağlamda kullanıcının sorusunu Türkçe, 2-4 cümle, somut yanıtla.
+
+BAĞLAM: ${analysisContext}
+
+KULLANICI SORUSU: ${msg}`;
+    const res = await callGemini(prompt);
+    document.getElementById('chatTyping').style.display = 'none';
+    const aiDiv = document.createElement('div');
+    aiDiv.className = 'chat-msg ai';
+    aiDiv.innerHTML = `<div class="chat-bubble">${renderAIText(res)}</div>`;
+    msgs.appendChild(aiDiv);
+    msgs.scrollTop = msgs.scrollHeight;
+  } catch(e) {
+    document.getElementById('chatTyping').style.display = 'none';
+    const errDiv = document.createElement('div');
+    errDiv.className = 'chat-msg ai';
+    errDiv.innerHTML = `<div class="chat-bubble">Bir hata oluştu: ${escapeHTML(e.message)}</div>`;
+    msgs.appendChild(errDiv);
+  } finally {
+    btn.disabled = false;
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════
+// EXPORT (PDF, kopyala, WhatsApp)
+// ═══════════════════════════════════════════════════════════════
+function copyLetter() {
+  const el = document.getElementById('letterText');
+  if (!el) return;
+  navigator.clipboard.writeText(el.innerText).then(
+    () => alert('Dilekçe panoya kopyalandı ✓'),
+    () => alert('Kopyalama başarısız. Manuel seçip kopyalayın.')
+  );
+}
+
+function downloadLetter() {
+  const el = document.getElementById('letterText');
+  if (!el) return;
+  const blob = new Blob([el.innerText], { type: 'text/plain;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = 'dilekce-taslagi.txt';
+  document.body.appendChild(a); a.click(); a.remove();
+  URL.revokeObjectURL(url);
+}
+
+function downloadReport() {
+  // Yazdır diyaloğu - kullanıcı PDF olarak kaydedebilir (dürüst yaklaşım)
+  const oldTitle = document.title;
+  document.title = 'Isci-Haklari-Analiz-Raporu';
+  window.print();
+  document.title = oldTitle;
+}
+
+function shareWhatsApp() {
+  const panel = document.getElementById('rightPanel');
+  const lines = ['*İşçi Hakları Analizi*', ''];
+  panel.querySelectorAll('.card-title').forEach(c => {
+    if (c.textContent.trim() && c.textContent.trim() !== 'Sorularını Sor' && c.textContent.trim() !== 'Sohbet') {
+      lines.push('• ' + c.textContent.trim());
+    }
+  });
+  lines.push('', 'Detaylı analiz için: İşçi Hakları Asistanı');
+  const text = lines.join('\n').substring(0, 1500);
+  window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+}
+
+// ═══════════════════════════════════════════════════════════════
+// SEKMELER
+// ═══════════════════════════════════════════════════════════════
+function switchTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === name));
+  document.querySelectorAll('.tab-content').forEach(c => c.style.display = (c.id === `tab-${name}` ? 'block' : 'none'));
+  // Patron sekmesi açıldığında mod bilgisini güncelle
+  if (name === 'patron') updatePatronModeInfo();
+  // Belge sekmesi açıldığında offline uyarısını göster/gizle
+  if (name === 'belge') {
+    const notice = document.getElementById('belgeOfflineNotice');
+    if (notice) notice.style.display = (APP_MODE === 'ai' && GEMINI_KEY) ? 'none' : 'block';
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════
+// HAK TAKİP PANOM
+// ═══════════════════════════════════════════════════════════════
+function saveTakip() {
+  localStorage.setItem('takip', JSON.stringify({
+    bas:  document.getElementById('tBaslangic').value,
+    maas: document.getElementById('tMaas').value,
+    izin: document.getElementById('tIzin').value
+  }));
+}
+
+function loadTakip() {
+  try {
+    const d = JSON.parse(localStorage.getItem('takip') || '{}');
+    if (d.bas)  document.getElementById('tBaslangic').value = d.bas;
+    if (d.maas) document.getElementById('tMaas').value = d.maas;
+    if (d.izin) document.getElementById('tIzin').value = d.izin;
+  } catch(e) { /* sessizce yoksay */ }
+}
+
+function updateTakip() {
+  saveTakip();
+  const bas = document.getElementById('tBaslangic').value;
+  const maas = parseFloat(document.getElementById('tMaas').value) || 0;
+  const kullanilan = parseFloat(document.getElementById('tIzin').value) || 0;
+  if (!bas || !maas) { document.getElementById('takipResult').style.display = 'none'; return; }
+
+  const start = new Date(bas);
+  const now = new Date();
+  const ms = now - start;
+  if (ms < 0) { document.getElementById('takipResult').style.display = 'none'; return; }
+
+  const totalDays = Math.floor(ms / (1000 * 60 * 60 * 24));
+  const yil = Math.floor(totalDays / 365);
+  const kalanGun = totalDays - yil * 365;
+  const ay = Math.floor(kalanGun / 30);
+  const gun = kalanGun - ay * 30;
+  const toplamYil = totalDays / 365;
+
+  document.getElementById('tYil').textContent = yil;
+  document.getElementById('tAy').textContent = ay;
+  document.getElementById('tGun').textContent = gun;
+
+  // Kıdem (TAVAN UYGULANIYOR)
+  const kidemRes = hesaplaKidem(maas, toplamYil);
+  if (toplamYil >= 1) {
+    document.getElementById('tKidem').textContent = fmtTL(kidemRes.tutar);
+    document.getElementById('tKidemNote').textContent = kidemRes.not;
+  } else {
+    const kalanGunSayi = Math.ceil(365 - totalDays);
+    document.getElementById('tKidem').textContent = '—';
+    document.getElementById('tKidemNote').textContent = `${kalanGunSayi} gün sonra hak doğacak`;
+  }
+
+  // İhbar
+  const ihbarRes = hesaplaIhbar(maas, toplamYil);
+  document.getElementById('tIhbar').textContent = fmtTL(ihbarRes.tutar);
+  document.getElementById('tIhbarNote').textContent = ihbarRes.not;
+
+  // Yıllık izin
+  const izinRes = hesaplaYillikIzin(maas, toplamYil, kullanilan);
+  if (toplamYil >= 1) {
+    document.getElementById('tIzinAmt').textContent = izinRes.bakiye > 0 ? fmtTL(izinRes.tutar) : 'Tümü kullanılmış';
+    document.getElementById('tIzinNote').textContent = `${izinRes.bakiye}/${izinRes.hak} gün kullanılmamış`;
+  } else {
+    document.getElementById('tIzinAmt').textContent = '—';
+    document.getElementById('tIzinNote').textContent = '1 yıl tamamlandığında hak doğar';
+  }
+
+  // Sıradaki kilometre taşı
+  let next = '';
+  if (toplamYil < 1) {
+    const kalan = Math.ceil(365 - totalDays);
+    const target = new Date(start.getTime() + 365 * 86400000);
+    next = `<strong style="color:var(--blue);font-size:16px">⏳ ${kalan} gün sonra (${target.toLocaleDateString('tr-TR')})</strong>
+      <p style="color:var(--muted);font-size:13px;margin-top:6px;line-height:1.6">Kıdem tazminatı, ihbar tazminatı ve yıllık izin haklarına kavuşacaksın.</p>`;
+  } else if (toplamYil < 1.5) {
+    const target = new Date(start.getTime() + 1.5 * 365 * 86400000);
+    const ek = (Math.min(maas, KIDEM_TAVANI_2026_H1) / 30) * 7 * 2;
+    next = `<strong style="color:var(--blue);font-size:16px">⏳ ${Math.ceil((target - now)/86400000)} gün sonra (${target.toLocaleDateString('tr-TR')})</strong>
+      <p style="color:var(--muted);font-size:13px;margin-top:6px;line-height:1.6">İhbar süren 4→6 haftaya yükselecek (~+${fmtTL(ek)} ek tazminat).</p>`;
+  } else if (toplamYil < 3) {
+    const target = new Date(start.getTime() + 3 * 365 * 86400000);
+    const ek = (Math.min(maas, KIDEM_TAVANI_2026_H1) / 30) * 7 * 2;
+    next = `<strong style="color:var(--blue);font-size:16px">⏳ ${Math.ceil((target - now)/86400000)} gün sonra (${target.toLocaleDateString('tr-TR')})</strong>
+      <p style="color:var(--muted);font-size:13px;margin-top:6px;line-height:1.6">İhbar süren 6→8 haftaya yükselecek (~+${fmtTL(ek)} ek tazminat).</p>`;
+  } else if (toplamYil < 5) {
+    const target = new Date(start.getTime() + 5 * 365 * 86400000);
+    next = `<strong style="color:var(--blue);font-size:16px">⏳ ${Math.ceil((target - now)/86400000)} gün sonra (${target.toLocaleDateString('tr-TR')})</strong>
+      <p style="color:var(--muted);font-size:13px;margin-top:6px;line-height:1.6">Yıllık izin hakkın 14→20 güne yükselecek.</p>`;
+  } else if (toplamYil < 15) {
+    const target = new Date(start.getTime() + 15 * 365 * 86400000);
+    next = `<strong style="color:var(--blue);font-size:16px">⏳ ${Math.ceil((target - now)/86400000)} gün sonra (${target.toLocaleDateString('tr-TR')})</strong>
+      <p style="color:var(--muted);font-size:13px;margin-top:6px;line-height:1.6">Yıllık izin hakkın 20→26 güne yükselecek.</p>`;
+  } else {
+    next = `<strong style="color:var(--green);font-size:16px">✓ Tüm temel haklarına ulaştın</strong>
+      <p style="color:var(--muted);font-size:13px;margin-top:6px;line-height:1.6">${yil} yıllık emeğinin karşılığı yasal olarak korunmaktadır.</p>`;
+  }
+  document.getElementById('tNext').innerHTML = next;
+  document.getElementById('takipResult').style.display = 'block';
+}
+
+// ═══════════════════════════════════════════════════════════════
+// HIZLI HESAPLAYICI (offline)
+// ═══════════════════════════════════════════════════════════════
+function calcAll() {
+  const maas = parseFloat(document.getElementById('hMaas').value) || 0;
+  const yil = parseFloat(document.getElementById('hYil').value) || 0;
+  const ay = parseFloat(document.getElementById('hAy').value) || 0;
+  const haftaSaati = parseFloat(document.getElementById('hSaat').value) || 0;
+  const fmAylik = parseFloat(document.getElementById('hFm').value) || 0;
+  if (!maas) { document.getElementById('calcResults').style.display = 'none'; return; }
+
+  const toplamYil = yil + ay/12;
+
+  // Kıdem (TAVAN İLE)
+  const kidemRes = hesaplaKidem(maas, toplamYil);
+  document.getElementById('kidemVal').textContent = toplamYil >= 1 ? fmtTL(kidemRes.tutar) : '—';
+  document.getElementById('kidemNote').textContent = toplamYil >= 1 ? kidemRes.not : '1 yıl şartı yok';
+
+  // İhbar
+  const ihbarRes = hesaplaIhbar(maas, toplamYil);
+  document.getElementById('ihbarVal').textContent = fmtTL(ihbarRes.tutar);
+  document.getElementById('ihbarNote').textContent = ihbarRes.not;
+
+  // Fazla mesai
+  const fmRes = hesaplaFazlaMesai(maas, haftaSaati, fmAylik);
+  document.getElementById('fmVal').textContent = fmAylik > 0 ? fmtTL(fmRes.tutar) : '—';
+
+  // İzin
+  const izinRes = hesaplaYillikIzin(maas, toplamYil, 0);
+  document.getElementById('izinVal').textContent = toplamYil >= 1 ? fmtTL(izinRes.tutar) : '—';
+  document.getElementById('izinNote').textContent = toplamYil >= 1 ? `${izinRes.hak} gün × günlük ücret` : '1 yıl şartı yok';
+
+  // Toplam
+  const toplam = (toplamYil >= 1 ? kidemRes.tutar : 0) + ihbarRes.tutar + fmRes.tutar + (toplamYil >= 1 ? izinRes.tutar : 0);
+  document.getElementById('toplamVal').textContent = fmtTL(toplam);
+  document.getElementById('calcResults').style.display = 'block';
+}
+
+// ═══════════════════════════════════════════════════════════════
+// 🎭 PATRON SİMÜLATÖRÜ — Hibrit (AI + Offline Senaryo Ağacı)
+// ═══════════════════════════════════════════════════════════════
+let patronHistory = [];
+let patronTopic = '';
+let patronTip = '';
+let patronMode = 'offline'; // 'ai' veya 'offline'
+let patronCurrentNode = null;
+let patronChoices = []; // kullanıcının yaptığı seçimler (offline mode için skor)
+
+// Konu × patron tipi başlangıç cümleleri
+const PATRON_OPENING = {
+  zam: {
+    sert: 'Söyle bakalım, ne istiyorsun? Vaktim az.',
+    oyalayici: 'Otur, otur. Ne konuşacaktık? Hatırlatır mısın?',
+    anlayisli: 'Buyur, dinliyorum seni. Bir sorun mu var?',
+    tehditkar: 'Hmm, bu ofise gelmen iyiye işaret değil. Ne diyeceksen de.'
+  },
+  istifa: {
+    sert: 'Ne yani, gidiyor musun? Kim çıkardı bu fikri kafana?',
+    oyalayici: 'Acele etme bakalım. Otur önce, bir kahve içelim, ne var ne yok konuşalım.',
+    anlayisli: 'İstifa mı edeceksin? Düşünmüş müsün iyi? Sana bir derdin varsa konuşalım.',
+    tehditkar: 'İstifa lafı mı geçti? Burada her şey yazılı, hesabını verirsin haa.'
+  },
+  fazlamesai: {
+    sert: 'Fazla mesai derdi mi? Burası fabrika, herkes çalışıyor. Sen mi özelsin?',
+    oyalayici: 'Ay bu konuyu muhasebeye soralım, ben tam bilmiyorum şimdi rakamları.',
+    anlayisli: 'Hak ettiğin bir şey varsa elbet konuşuruz, neyin var anlat bakalım.',
+    tehditkar: 'Mesai ücreti istemek? Sen kontratını okudun mu? Burada her ay maaş alıyorsun.'
+  },
+  maas: {
+    sert: 'Yine maaş mı? Ben sana borcum olduğunu söyledim mi?',
+    oyalayici: 'Bu ay biraz sıkıştık, biliyorsun piyasa kötü. Bekle birkaç gün daha.',
+    anlayisli: 'Maaşın gecikti mi? Hemen muhasebeye sorayım, üzgünüm böyle bir durum varsa.',
+    tehditkar: 'Maaş için geldin demek. Ben bu işyerini batırırım da seni başkalarına şikayet ettirmem.'
+  },
+  mobbing: {
+    sert: 'Mobbing mi? Bu ne demek şimdi? Ne dramı bu?',
+    oyalayici: 'Aman canım, kim ne demiş sana? Ben hep iyi şeyler duyuyorum senin hakkında.',
+    anlayisli: 'Böyle bir şey duymak beni üzdü. Anlat bakayım, kim ne yapıyor sana?',
+    tehditkar: 'Bana iftira atma şimdi, dikkat et konuşurken.'
+  },
+  izin: {
+    sert: 'İzin mi? İşler yetişmiyor zaten, sen izin diyorsun.',
+    oyalayici: 'İzin tabii ki olur ama şu an olmaz, biraz sonraki ayları konuşalım.',
+    anlayisli: 'Tabii, izin hakkın var. Ne zaman düşünüyorsun?',
+    tehditkar: 'İzin? Senin yerine kim çalışacak? Sonra geri dönerken yerini bulacak mısın?'
+  },
+  haksizfesih: {
+    sert: 'Sana zaten söyledim, performans yetersiz. Konu kapandı.',
+    oyalayici: 'Yanlış anlama, biz seni sevmedik diye değil. Şartlar... bilirsin.',
+    anlayisli: 'Bu karar zor oldu. Anladığım kadarıyla sen de mutlu değildin.',
+    tehditkar: 'Çıkışını verdik, neye dert ediyorsun? Sakın bana mahkeme falan deme.'
+  }
+};
+
+// Senaryo ağacı: her konu için 3-4 derinlikte dallar
+// Her node'da: patron sözü, 3 seçenek, her seçeneğin sonraki node'a yönlendirmesi
+// Seçeneklerin "puanı" var: iyi (2), orta (1), kötü (0)
+// Sonunda toplam puana göre değerlendirme verilir
+const SENARYO_AGACI = {
+  zam: {
+    start: {
+      patron: () => PATRON_OPENING.zam[patronTip],
+      choices: [
+        { text: 'Maaşıma zam istiyorum, son bir yılda enflasyon çok arttı, sektör ortalamasını da incelediğimde geride kaldım.', puan: 2, next: 'zam_iyi' },
+        { text: 'Maaşım çok az, geçinemiyorum. Zam yapın lütfen.', puan: 1, next: 'zam_zayif' },
+        { text: 'Hep böyle az veriyorsunuz, başka yerde daha iyi maaş veriyorlar.', puan: 0, next: 'zam_tehdit' }
+      ]
+    },
+    zam_iyi: {
+      patron: () => ({
+        sert: 'Hmm, hazırlanmışsın demek. Ama şirket şu an zor durumda, biliyorsun.',
+        oyalayici: 'İlginç bir bakış açın var. Bunu birlikte değerlendirelim, şimdi karar veremem ama...',
+        anlayisli: 'Doğru söylüyorsun, enflasyon herkesi etkiliyor. Ne kadar düşünüyorsun?',
+        tehditkar: 'Sektör araştırmışsın bir de. Sen kendini ne sanıyorsun?'
+      })[patronTip],
+      choices: [
+        { text: 'Anlıyorum şirket durumunu. %25 zam beklediğimi belirtmek isterim, mevcut maaşımın enflasyon kaybını karşılıyor.', puan: 2, next: 'zam_son1' },
+        { text: 'Ne kadar olabilir sizce?', puan: 1, next: 'zam_son2' },
+        { text: 'Vermezseniz istifa ederim.', puan: 0, next: 'zam_son_kotu' }
+      ]
+    },
+    zam_zayif: {
+      patron: () => ({
+        sert: 'Herkes geçinemiyor. Bana özel bir durumun mu var?',
+        oyalayici: 'Hepimiz aynı durumdayız, biraz daha sabret.',
+        anlayisli: 'Anlıyorum, durumun zor. Ama somut bir şey söyleyebilir misin?',
+        tehditkar: 'Geçinemiyorsan başka iş bul.'
+      })[patronTip],
+      choices: [
+        { text: 'Aslında düşününce, son bir yıldaki enflasyon, sorumluluklarımın artması ve sektör ortalaması düşünüldüğünde ben %20-25 arası bir zam talep etmek istiyorum.', puan: 2, next: 'zam_son1' },
+        { text: 'Aslında bilmiyorum, siz uygun gördüğünüz neyse...', puan: 0, next: 'zam_son_kotu' },
+        { text: 'O zaman boş ver.', puan: 0, next: 'zam_son_kotu' }
+      ]
+    },
+    zam_tehdit: {
+      patron: () => ({
+        sert: 'Madem öyle, kapı orada. Git başka yerde dene.',
+        oyalayici: 'Aman, hemen tehdit etme şimdi. Konuşalım önce.',
+        anlayisli: 'Tehdit etme bana ne işe yaramaz. Asıl derdin nedir, onu söyle.',
+        tehditkar: 'Tehdit mi? Bana mı tehdit savuruyorsun?'
+      })[patronTip],
+      choices: [
+        { text: 'Kusura bakmayın, sözüm yanlış oldu. Aslında somut bir teklifim var: Son enflasyon ve sorumluluklarım göz önünde bulundurularak %20-25 zam talep ediyorum.', puan: 2, next: 'zam_son1' },
+        { text: 'Yani vermeyecek misiniz?', puan: 0, next: 'zam_son_kotu' },
+        { text: 'Siz bilirsiniz o zaman.', puan: 0, next: 'zam_son_kotu' }
+      ]
+    },
+    zam_son1: {
+      patron: () => ({
+        sert: 'Tamam, bunu yönetimle konuşacağım, ama söz veremem. Bir hafta içinde dönerim.',
+        oyalayici: 'Mantıklı bir teklif gibi geldi. Bakalım, bir karar verelim...',
+        anlayisli: 'Adil bir talep gibi görünüyor. Hesapları gözden geçirip cuma günü cevap vereceğim.',
+        tehditkar: 'Düşüneceğim. Ama beklentini yüksek tutma.'
+      })[patronTip],
+      finalScore: true,
+      message: 'Patron seni dinledi ve düşünmek için süre istedi. Bu iyi bir başlangıç — hazırlıklı geldiğin için saygı kazandın.'
+    },
+    zam_son2: {
+      patron: () => 'Bilmem, %5-10 olabilir belki. Şu an net konuşamıyorum.',
+      finalScore: true,
+      message: 'Sayıyı patron belirledi, sen kabul ettin gibi durdun. Pazarlıkta önce sen rakam söylersen, daha iyi sonuç alırsın.'
+    },
+    zam_son_kotu: {
+      patron: () => ({
+        sert: 'Konu kapandı.',
+        oyalayici: 'Tamam tamam, sen sakinleş, sonra konuşuruz.',
+        anlayisli: 'Bu şekilde olmuyor. Hazırlanıp tekrar gel istersen.',
+        tehditkar: 'Düşünmeden konuşma. Bu kadar.'
+      })[patronTip],
+      finalScore: true,
+      message: 'Görüşme iyi bitmedi. Tehdit veya pasif yaklaşım yerine somut argümanlarla pazarlık etmek daha etkilidir.'
+    }
+  },
+
+  istifa: {
+    start: {
+      patron: () => PATRON_OPENING.istifa[patronTip],
+      choices: [
+        { text: 'Karar verdim, iş akdimi feshetmek istiyorum. Yasal hakların ödenmesini talep ediyorum.', puan: 1, next: 'istifa_genel' },
+        { text: 'İstifa edeceğim ama haklı sebeple — ücret ödenmemesi/mobbing nedeniyle. Kıdem tazminatım ödensin.', puan: 2, next: 'istifa_haklı' },
+        { text: 'Artık dayanamıyorum, gidiyorum. Hakkımı vermezseniz mahkemeye veririm.', puan: 0, next: 'istifa_tehdit' }
+      ]
+    },
+    istifa_genel: {
+      patron: () => ({
+        sert: 'Kendi isteğinle gidiyorsan kıdem alamazsın, biliyorsun değil mi?',
+        oyalayici: 'İstifa verirsen sadece bordrodaki haklarını alırsın. Düşün bunu.',
+        anlayisli: 'Tabii, hakkın olan ne varsa ödenir. Ama düz istifada kıdem yok haberin var mı?',
+        tehditkar: 'İstifa diyorsan zaten kıdem-ihbar yok. Bunu bil.'
+      })[patronTip],
+      choices: [
+        { text: 'Aslında haklı sebebim var: [maaş ödenmedi / mobbing / ücret kesintisi]. Bu durumda 4857 sayılı İş Kanunu m.24 uyarınca kıdem tazminatım ödenmelidir.', puan: 2, next: 'istifa_son_iyi' },
+        { text: 'Doğru söylüyorsunuz, biliyorum. Sadece bordro alacaklarımı isterim.', puan: 1, next: 'istifa_son_orta' },
+        { text: 'Haklı olmasam da hakkımı veriyorlardır.', puan: 0, next: 'istifa_son_kotu' }
+      ]
+    },
+    istifa_haklı: {
+      patron: () => ({
+        sert: 'Sen ne diyorsun? Hangi haklı sebep? Bana iftira atma!',
+        oyalayici: 'Ay haklı sebep mi? Konuşalım önce, ne olduğunu anlayalım.',
+        anlayisli: 'Açıkça konuşmuşsun, takdir ettim. Hangi sebep haklı fesih?',
+        tehditkar: 'Haklı feshe gidersen mahkemeye gideriz. Sen kazanamazsın.'
+      })[patronTip],
+      choices: [
+        { text: 'Mahkeme görür kazanırım. Yasal süreç başlatıyorum, mesaj kayıtları, tanıklarım, banka dökümlerim hazır.', puan: 2, next: 'istifa_son_iyi' },
+        { text: 'Belki gerçekten haklı değilimdir... Düşüneyim.', puan: 0, next: 'istifa_son_kotu' },
+        { text: 'Sadece konuşmaya geldim, mahkemeye gitmeyi düşünmemiştim.', puan: 1, next: 'istifa_son_orta' }
+      ]
+    },
+    istifa_tehdit: {
+      patron: () => ({
+        sert: 'Mahkeme mi? Sen kazanamazsın bizden, paramız çok bizim.',
+        oyalayici: 'Aman, mahkemeye gitmeyelim, otur konuşalım.',
+        anlayisli: 'Mahkeme son çare olmalı. Hangi haklı sebebin var, anlat bakalım.',
+        tehditkar: 'Mahkemeyi sen mi diyorsun bana? Karşılığında üç katı seninle uğraşırım.'
+      })[patronTip],
+      choices: [
+        { text: 'Sakin oluyorum: somut talebim haklı feshe dayalı kıdem tazminatımın ödenmesi. Kanıtlarım hazır.', puan: 2, next: 'istifa_son_iyi' },
+        { text: 'Tamam tamam, sakinleşelim, konuşalım.', puan: 1, next: 'istifa_son_orta' },
+        { text: 'Korkmuyorum sizden!', puan: 0, next: 'istifa_son_kotu' }
+      ]
+    },
+    istifa_son_iyi: {
+      patron: () => 'Tamam, avukatımla görüşeyim, bir gün içinde sana cevap vereyim.',
+      finalScore: true,
+      message: 'Mükemmel — kanıt, somut talep, sakin tutum. Patron mahkeme riskini hesapladı. Şimdi ihtarname çekmek için harekete geç, kanıtlarını yedekle.'
+    },
+    istifa_son_orta: {
+      patron: () => 'Tamam, biraz düşünelim, sonra konuşuruz.',
+      finalScore: true,
+      message: 'Görüşme açık kaldı. Patronun "bekleyelim" tavrını oyalama olarak değerlendir — bir avukatla görüş, ihtarname çek, süreçleri kaçırma.'
+    },
+    istifa_son_kotu: {
+      patron: () => 'Tamam o zaman, istediğin gibi olsun. Çıkışını yapalım.',
+      finalScore: true,
+      message: 'Hak kayıpla ayrıldın. Düz istifa kıdem-ihbar tazminatı kaybettirir. Eğer haklı feshe sebep varsa hala dava açabilirsin (5 yıl içinde).'
+    }
+  },
+
+  fazlamesai: {
+    start: {
+      patron: () => PATRON_OPENING.fazlamesai[patronTip],
+      choices: [
+        { text: 'Son 6 aydır haftada 55 saat çalışıyorum. Yasal sınır 45 saat. 4857/m.41 uyarınca fazla mesai ücretimi talep ediyorum.', puan: 2, next: 'fm_kanit' },
+        { text: 'Ben fazla çalışıyorum ama ücret alamıyorum, bu doğru değil.', puan: 1, next: 'fm_zayif' },
+        { text: 'Ya bu mesaiyi öderseniz öderseniz, yoksa istifa ederim!', puan: 0, next: 'fm_tehdit' }
+      ]
+    },
+    fm_kanit: {
+      patron: () => ({
+        sert: 'Madem rakamları biliyorsun, kanıtın var mı?',
+        oyalayici: 'Bu rakamları nereden duydun? Muhasebe ile kontrol edelim.',
+        anlayisli: 'Hakkın olabilir. Mesai çizelgesi var mı sende?',
+        tehditkar: 'Sen burada ne kadar çalışıyorsun, ben mi bilmiyorum yoksa sen mi?'
+      })[patronTip],
+      choices: [
+        { text: 'Evet: WhatsApp mesaj kayıtları, tanıklar, parmak izi giriş-çıkış kayıtları hazır.', puan: 2, next: 'fm_son_iyi' },
+        { text: 'Çizelge yok, ama hep geç çıktığımı herkes biliyor.', puan: 1, next: 'fm_son_orta' },
+        { text: 'Şu an yanımda yok ama hatırlıyorum.', puan: 0, next: 'fm_son_kotu' }
+      ]
+    },
+    fm_zayif: {
+      patron: () => ({
+        sert: 'Anlatma şimdi. Net rakam ver.',
+        oyalayici: 'Genel konuştun, somut bir şey gerekiyor.',
+        anlayisli: 'Anlıyorum. Saatleri tutuyor musun?',
+        tehditkar: 'Boş laf etme, kanıtın yoksa sus.'
+      })[patronTip],
+      choices: [
+        { text: 'Tamam, son 6 ayın detayını çıkardım: ortalama haftalık 55 saat, yani aylık 40 saat fazla mesai. Aşağı yukarı [tutar] ₺ alacağım var.', puan: 2, next: 'fm_son_iyi' },
+        { text: 'Detayını şimdi çıkaramam ama hatırlarım.', puan: 0, next: 'fm_son_kotu' },
+        { text: 'Önemli değil, geç istemem ben de.', puan: 0, next: 'fm_son_kotu' }
+      ]
+    },
+    fm_tehdit: {
+      patron: () => ({
+        sert: 'İstifa edersen kıdem alamazsın, dikkat et.',
+        oyalayici: 'Sakin ol, konuşalım, bağırma.',
+        anlayisli: 'Tehdit yerine somut konuşalım, ne istiyorsun?',
+        tehditkar: 'İstifa et de görelim, sonra mahkemede kazanabilecek misin.'
+      })[patronTip],
+      choices: [
+        { text: 'Haklı fesih sebebim olduğunu söylüyorum: Maaş + fazla mesai ücretinin ödenmemesi. Kanıtlarım hazır.', puan: 2, next: 'fm_son_iyi' },
+        { text: 'Pardon, sinirim çıktı, geri çekilirim.', puan: 1, next: 'fm_son_orta' },
+        { text: 'Görelim bakalım kim kazanacak!', puan: 0, next: 'fm_son_kotu' }
+      ]
+    },
+    fm_son_iyi: {
+      patron: () => 'Tamam, muhasebeden hesap çıkarıp sana hafta içi dönerim. Sakin ol.',
+      finalScore: true,
+      message: 'Harika — kanıt + rakam + yasal dayanak. Patron riski gördü. ⚠️ ÖNEMLİ: Konuşmadan sonra bunun tutanağını sen WhatsApp ile patronuna yollayıp "bugünkü konuşmamızda söz verdiğiniz üzere..." diye yaz, kanıt zinciri başlasın.'
+    },
+    fm_son_orta: {
+      patron: () => 'Bakacağım, döneceğim sana.',
+      finalScore: true,
+      message: 'Yeterince net olmadın. Patron oyalama moduna geçmiş olabilir. Bir sonraki konuşmaya rakamlar ve kanıtlarla git.'
+    },
+    fm_son_kotu: {
+      patron: () => 'Tamam, sonra konuşalım. Şimdi işin başına dön.',
+      finalScore: true,
+      message: 'Konu unutuldu gibi kapandı. Kanıt + rakam olmadan fazla mesai talebi havada kalır. Hemen kanıt klasörünü doldurmaya başla.'
+    }
+  },
+
+  maas: {
+    start: {
+      patron: () => PATRON_OPENING.maas[patronTip],
+      choices: [
+        { text: '23 gündür maaşımı alamadım. 4857/m.34 uyarınca 20 gün geçtikten sonra haklı fesih hakkım doğar. Bugün/yarın ödeme yapılmazsa yasal yollara başvuracağım.', puan: 2, next: 'maas_iyi' },
+        { text: 'Maaşımı bekliyorum, ne zaman ödenecek?', puan: 1, next: 'maas_orta' },
+        { text: 'Maaşımı vermezseniz bu işi sürdüremem.', puan: 1, next: 'maas_orta' }
+      ]
+    },
+    maas_iyi: {
+      patron: () => ({
+        sert: 'Kanun maddelerini ezbere biliyorsun haa. Bu hafta öderiz.',
+        oyalayici: 'Eyvah, kanun bilen biri varmış. Hafta içi öderiz, söz.',
+        anlayisli: 'Doğru söylüyorsun, gecikmek hoş değil. Yarın ilk iş öderim.',
+        tehditkar: 'Kanun maddesi mi atıyorsun bana? Ödeyince konuşuruz!'
+      })[patronTip],
+      choices: [
+        { text: 'Teşekkür ederim. Yine de bugün konuşmamızı tutanak halinde WhatsApp\'tan size atayacağım — yasal süreç açısından önemli.', puan: 2, next: 'maas_son_iyi' },
+        { text: 'Tamam, bekliyorum.', puan: 1, next: 'maas_son_orta' },
+        { text: 'Yarın saat kaçta?', puan: 1, next: 'maas_son_orta' }
+      ]
+    },
+    maas_orta: {
+      patron: () => ({
+        sert: 'Hafta içi gibi.',
+        oyalayici: 'Şu işler düzeldiğinde hemen.',
+        anlayisli: 'Bu hafta içinde halledelim.',
+        tehditkar: 'Vereceğim ya, sıkıştırma beni!'
+      })[patronTip],
+      choices: [
+        { text: 'Anladım, ama 20 günü geçtiği için yasal olarak haklı fesih hakkım doğdu. Bu durumu yazılı bir taahhüt halinde alabilir miyim?', puan: 2, next: 'maas_son_iyi' },
+        { text: 'Tamam, beklerim biraz daha.', puan: 0, next: 'maas_son_kotu' },
+        { text: 'Hafta içinin sonu mu, başı mı?', puan: 1, next: 'maas_son_orta' }
+      ]
+    },
+    maas_son_iyi: {
+      patron: () => 'Tamam, yazılı yapalım. Çek bunu kabul ediyorum.',
+      finalScore: true,
+      message: 'Mükemmel iş çıkardın! Yazılı taahhüt = kanıt. Bugün konuşmanın özetini WhatsApp\'tan yolla, "tutanaktır" diye. Hala ödenmezse 5 yıl içinde dava açabilirsin.'
+    },
+    maas_son_orta: {
+      patron: () => 'Tamam, ödeyeceğim ya, merak etme.',
+      finalScore: true,
+      message: 'Sözlü taahhüt aldın ama yazılı yok. Kanıt değeri zayıf. Çıktıktan sonra hemen WhatsApp\'tan yaz: "Bugünkü konuşmamızda hafta içi ödeme yapılacağını söylediniz, doğrulayabilir misiniz?"'
+    },
+    maas_son_kotu: {
+      patron: () => 'Tamam, sen merak etme.',
+      finalScore: true,
+      message: 'Hak kaybediyorsun. 20 günü geçen ücret = haklı fesih + kıdem tazminatı hakkı. Hemen ihtarname çekmek için bir avukatla görüş.'
+    }
+  },
+
+  mobbing: {
+    start: {
+      patron: () => PATRON_OPENING.mobbing[patronTip],
+      choices: [
+        { text: 'Son 3 aydır sistematik baskı, hakaret ve aşağılamaya maruz kalıyorum. Tarih, saat, tanık ve mesaj kayıtlarını topladım. Bu durumun düzelmesini talep ediyorum.', puan: 2, next: 'mob_iyi' },
+        { text: 'Bana çok kötü davranıyorlar, bu mobbingdir.', puan: 1, next: 'mob_orta' },
+        { text: 'Hep beni hedef alıyorsunuz, bıktım artık!', puan: 0, next: 'mob_kotu' }
+      ]
+    },
+    mob_iyi: {
+      patron: () => ({
+        sert: 'Hangi tanıklar, hangi mesajlar? Göster bakalım.',
+        oyalayici: 'Yanılıyor olabilirsin canım, abartmayalım.',
+        anlayisli: 'Bu çok ciddi bir suçlama. Detayını anlatır mısın?',
+        tehditkar: 'Mesajlarımı kayda alma izinin var mı? Suç işlemiyor musun?'
+      })[patronTip],
+      choices: [
+        { text: 'Yargıtay kararları işyerinde ses kaydı, yazışma kayıtlarının kanıt olarak kullanılabileceğini onaylıyor. Tanıklarım da ifade verecek. Şu an düzeltme istiyorum, aksi halde yasal yollara başvuracağım.', puan: 2, next: 'mob_son_iyi' },
+        { text: 'Detayları yazılı olarak iletirim.', puan: 1, next: 'mob_son_orta' },
+        { text: 'Şu an detay vermeyeceğim.', puan: 0, next: 'mob_son_kotu' }
+      ]
+    },
+    mob_orta: {
+      patron: () => ({
+        sert: 'Boş laf. Somut konuş.',
+        oyalayici: 'Aman, herkes biraz geriliyor bazen.',
+        anlayisli: 'Yardım etmek için somut bilgi lazım.',
+        tehditkar: 'Genel konuşma, suçlamak istiyorsan kanıt göster.'
+      })[patronTip],
+      choices: [
+        { text: 'Somut: 12 Mart\'ta toplantıda hakaret, 28 Nisan\'da iş arkadaşları önünde aşağılama, son 60 günün 30\'unda görev kapsamı dışı işler. Detaylı tutanağım var.', puan: 2, next: 'mob_son_iyi' },
+        { text: 'Sürekli oluyor, tek tek hatırlamıyorum.', puan: 0, next: 'mob_son_kotu' },
+        { text: 'Yazılı bildirimde bulunacağım.', puan: 1, next: 'mob_son_orta' }
+      ]
+    },
+    mob_kotu: {
+      patron: () => ({
+        sert: 'Hedef almıyoruz. Performansın yetersiz, hepsi bu.',
+        oyalayici: 'Aman, ne dramatik konuşuyorsun.',
+        anlayisli: 'Sakinleşelim. Lütfen somut anlat.',
+        tehditkar: 'Sus! Sen kimsin de bana mobbing diyorsun!'
+      })[patronTip],
+      choices: [
+        { text: 'Pardon, sinirim oldu. Somut konuya geçeyim: tarih, olay, tanık. Şimdi açıklıyorum.', puan: 2, next: 'mob_son_iyi' },
+        { text: 'Tamam, ben gidiyorum.', puan: 0, next: 'mob_son_kotu' },
+        { text: 'Yine bana mı bağırıyorsunuz!', puan: 0, next: 'mob_son_kotu' }
+      ]
+    },
+    mob_son_iyi: {
+      patron: () => 'Tamam, bu durumu inceleyeceğim. Birkaç gün içinde dönerim.',
+      finalScore: true,
+      message: 'Profesyonel ve hazırlıklıydın. Mobbing davası kazanmanın #1 koşulu sistematik kanıt. Bugünkü konuşmayı da kanıt klasörüne ekle. Düzelmezse: 1) İŞKUR\'a şikayet, 2) Avukatla ihtarname, 3) Haklı fesih + manevi tazminat.'
+    },
+    mob_son_orta: {
+      patron: () => 'Yazılı bildirimini bekliyorum.',
+      finalScore: true,
+      message: 'İyi başlangıç ama somutluk eksik. 7 gün içinde detaylı yazılı bildirim hazırla, tarihli ve tanıklı.'
+    },
+    mob_son_kotu: {
+      patron: () => 'Tamam, performans değerlendirmenle ilgili karar veririz.',
+      finalScore: true,
+      message: 'Konuşma seninle aleyhine döndü. Patron şimdi seni "performansla" çıkarmaya hazırlanıyor olabilir — DİKKAT. Hemen kanıt klasörünü doldur, bir hukuk uzmanıyla görüş.'
+    }
+  },
+
+  izin: {
+    start: {
+      patron: () => PATRON_OPENING.izin[patronTip],
+      choices: [
+        { text: 'Geçen yıldan birikmiş 14 gün iznim var, 15 Temmuz - 28 Temmuz arası kullanmak istiyorum. 4857/m.53 uyarınca yasal hakkım.', puan: 2, next: 'izin_iyi' },
+        { text: 'İzne çıkmak istiyorum, ne zaman uygun olur?', puan: 1, next: 'izin_orta' },
+        { text: 'İzin alamazsam bu iş yürümez.', puan: 0, next: 'izin_kotu' }
+      ]
+    },
+    izin_iyi: {
+      patron: () => ({
+        sert: 'Tamam ama kim seni yerine geçecek?',
+        oyalayici: 'O dönem zor, başka tarih bakalım.',
+        anlayisli: 'Hakkın, alabilirsin. İş devrini kim yapacak?',
+        tehditkar: 'O tarih olmaz, yoğunluk var.'
+      })[patronTip],
+      choices: [
+        { text: 'İş devrini Ahmet Bey ile koordine ediyorum, eksiksiz teslim edeceğim. Talep formunu 1 hafta önceden imzalı vereceğim.', puan: 2, next: 'izin_son_iyi' },
+        { text: 'Başka tarih önerebilirsiniz.', puan: 1, next: 'izin_son_orta' },
+        { text: 'Sizinle her seferinde tartışıyoruz!', puan: 0, next: 'izin_son_kotu' }
+      ]
+    },
+    izin_orta: {
+      patron: () => ({
+        sert: 'Şu an sırası değil.',
+        oyalayici: 'Önümüzdeki ay konuşalım.',
+        anlayisli: 'Tabii, ne zaman istiyorsun?',
+        tehditkar: 'İzin değil, mesai konuşalım önce.'
+      })[patronTip],
+      choices: [
+        { text: '14 günlük iznimi yasal hakkım gereği kullanmak zorundayım. 15 Temmuz uygun bir tarih, somut alternatif önermeniz halinde değerlendirebilirim.', puan: 2, next: 'izin_son_iyi' },
+        { text: 'Peki, ne zaman uygun?', puan: 0, next: 'izin_son_kotu' },
+        { text: 'Tamam, beklerim biraz daha.', puan: 0, next: 'izin_son_kotu' }
+      ]
+    },
+    izin_kotu: {
+      patron: () => 'Tehdit etme, izin onayını ben veririm.',
+      choices: [
+        { text: 'Pardon, doğrudan söyleyeyim: Yıllık izin yasal haktır, işveren kullandırmazsa idari para cezası uygulanır. Talep formumu yazılı veriyorum, lütfen onaylayın.', puan: 2, next: 'izin_son_iyi' },
+        { text: 'Yine bana siz karar veriyorsunuz!', puan: 0, next: 'izin_son_kotu' },
+        { text: 'Tamam, ben veririm.', puan: 1, next: 'izin_son_orta' }
+      ]
+    },
+    izin_son_iyi: {
+      patron: () => 'Tamam, formu ver, imzalayım.',
+      finalScore: true,
+      message: 'Hakkını kullanmayı yasal dayanakla anlattın. ÖNEMLİ: İzin formunun imzalı kopyasını mutlaka SEN sakla. Ödenmemiş izin ücreti 5 yıl zamanaşımına tabidir.'
+    },
+    izin_son_orta: {
+      patron: () => 'Bakacağım, sonra söylerim.',
+      finalScore: true,
+      message: 'Cevap belirsiz kaldı. Yazılı talep formu ver, onay imzasını al, kopyasını sakla. Aksi halde "ben hep söylüyordum" ispatı zor olur.'
+    },
+    izin_son_kotu: {
+      patron: () => 'İzin meselesi sonra.',
+      finalScore: true,
+      message: 'Hakkın elinden gitti gibi durdu. Yazılı talep + imzalı onay olmadan, izin kullanmamış sayılırsın. Hemen ALO 170\'e şikayette bulunabilirsin.'
+    }
+  },
+
+  haksizfesih: {
+    start: {
+      patron: () => PATRON_OPENING.haksizfesih[patronTip],
+      choices: [
+        { text: 'Fesih sebebinin yazılı bildirilmesini, 4857/m.19 uyarınca savunmamın alınmamasının haksız fesih sayılacağını ve işe iade davası açacağımı bildiririm.', puan: 2, next: 'haksiz_iyi' },
+        { text: 'Bu haksız bir karar, ne yapacağımı bilmiyorum.', puan: 1, next: 'haksiz_orta' },
+        { text: 'Sizi mahkemeye veririm, hepsini kaybedersiniz!', puan: 0, next: 'haksiz_kotu' }
+      ]
+    },
+    haksiz_iyi: {
+      patron: () => ({
+        sert: 'Yasal süreçlerle korkutuyorsun. Olabilir, gör bakalım.',
+        oyalayici: 'Mahkemeye gitme, anlaşalım, bir tazminat verelim.',
+        anlayisli: 'Haklı olabilirsin, talebini somutlaştırırsan değerlendiririm.',
+        tehditkar: 'Mahkemeye gitsen seni karalarız.'
+      })[patronTip],
+      choices: [
+        { text: 'Tazminata açığım, ancak yasal kıdem + ihbar + işe iade alacaklarımın altında olamaz. Yazılı bir teklif rica ediyorum.', puan: 2, next: 'haksiz_son_iyi' },
+        { text: 'Tamam, ne kadar verirsiniz?', puan: 1, next: 'haksiz_son_orta' },
+        { text: 'Anlaşma yok, mahkemede görüşürüz.', puan: 0, next: 'haksiz_son_kotu' }
+      ]
+    },
+    haksiz_orta: {
+      patron: () => 'Üzgünüm, alınmış bir karar bu.',
+      choices: [
+        { text: 'Karar kötü, ama haklarımı talep ederim. Fesih bildirimi için yazılı belge istiyorum, kıdem ve ihbar tazminatım, fazla mesai alacaklarım, izin ücretim hesaplansın.', puan: 2, next: 'haksiz_son_iyi' },
+        { text: 'Anladım, kabul ediyorum.', puan: 0, next: 'haksiz_son_kotu' },
+        { text: 'Ne yapabilirim?', puan: 1, next: 'haksiz_son_orta' }
+      ]
+    },
+    haksiz_kotu: {
+      patron: () => 'Tehditle kazanamazsın, dene istersen.',
+      choices: [
+        { text: 'Pardon, sakin oluyorum: Yazılı fesih bildirimi, alacak hesaplaması istiyorum. Hak yoluyla değerlendireceğim.', puan: 2, next: 'haksiz_son_iyi' },
+        { text: 'Tamam, mahkemeye gideceğim.', puan: 1, next: 'haksiz_son_orta' },
+        { text: 'Hala tehdit ediyorsunuz!', puan: 0, next: 'haksiz_son_kotu' }
+      ]
+    },
+    haksiz_son_iyi: {
+      patron: () => 'Tamam, avukatımdan teklif çıkarttıracağım. 1 hafta içinde dönerim.',
+      finalScore: true,
+      message: 'Çok iyi bir konuşma. ⚠️ KRİTİK: Fesih tarihinden itibaren 1 AY içinde arabulucuya başvurmazsan işe iade hakkın YANAR. Bu hafta içinde bir avukatla görüş ya da arabuluculuk merkezine git.'
+    },
+    haksiz_son_orta: {
+      patron: () => 'Tamam, sonra konuşuruz.',
+      finalScore: true,
+      message: '1 AYLIK işe iade süresi işliyor. Patron oyalama yapıyor olabilir. Hemen baroya başvur, ücretsiz danışmanlık al.'
+    },
+    haksiz_son_kotu: {
+      patron: () => 'Çıkışın kesin. Konuşma kapandı.',
+      finalScore: true,
+      message: 'Görüşme iyi bitmedi ama hala 1 ay içinde işe iade davası açabilirsin. Pes etme, hemen bir avukatla görüş.'
+    }
+  }
+};
+
+// Mod seçimine göre note'u güncelle
+function updatePatronModeInfo() {
+  const info = document.getElementById('patronModeInfo');
+  const note = document.getElementById('patronNote');
+  if (!info) return;
+  if (APP_MODE === 'ai' && GEMINI_KEY) {
+    info.style.background = '#eff4ff';
+    info.style.borderColor = '#93c5fd';
+    info.style.color = 'var(--blue)';
+    info.innerHTML = '🤖 <strong>AI mod:</strong> Gemini patron rolünü oynar, sen serbest cevaplar yazarsın. Doğal diyalog deneyimi.';
+    if (note) note.textContent = 'AI mod aktif. Offline moda geçersen senaryo ağacı tabanlı çalışır.';
+  } else {
+    info.style.background = '#f0fdf4';
+    info.style.borderColor = '#86efac';
+    info.style.color = '#166534';
+    info.innerHTML = '📊 <strong>Offline mod:</strong> Senaryo ağacı tabanlı — patron önceden hazırlanmış cevaplar verir, sen 3 farklı cevap arasından seçim yaparsın. Eğitici ve hızlı.';
+    if (note) note.textContent = 'Offline modda da çalışır (senaryo ağacı). AI moduna geçersen daha doğal diyaloglar olur.';
+  }
+}
+
+async function startPatron() {
+  const topic = document.getElementById('patronTopic').value;
+  const tip = document.getElementById('patronTip').value;
+  if (!topic) { alert('Lütfen bir konu seç'); return; }
+
+  patronTopic = topic;
+  patronTip = tip;
+  patronHistory = [];
+  patronChoices = [];
+  patronMode = (APP_MODE === 'ai' && GEMINI_KEY) ? 'ai' : 'offline';
+
+  const btn = document.getElementById('startPatronBtn');
+  btn.disabled = true; btn.classList.add('loading');
+
+  try {
+    const tipLabel = { sert: 'Sert', oyalayici: 'Oyalayıcı', anlayisli: 'Anlayışlı', tehditkar: 'Tehditkar' }[tip] || tip;
+    const topicLabel = document.querySelector(`#patronTopic option[value="${topic}"]`).textContent;
+    document.getElementById('patronCardTitle').textContent = `🎭 ${tipLabel} patron · ${topicLabel}`;
+    document.getElementById('patronModeBadge').textContent = patronMode === 'ai' ? '🤖 AI Mod' : '📊 Offline Mod';
+    document.getElementById('patronChat').style.display = 'block';
+    document.getElementById('patronMessages').innerHTML = '';
+    document.getElementById('feedbackResult').style.display = 'none';
+
+    if (patronMode === 'ai') {
+      // AI mod
+      document.getElementById('patronAIInput').style.display = 'flex';
+      document.getElementById('patronChoices').style.display = 'none';
+      const opening = await callGemini(`Sen Türkiye'de bir küçük şirket patronusun. Kişiliğin: ${tipLabel.toLowerCase()}. Çalışan seninle "${topicLabel}" konusunda konuşmak istiyor. Ofisine gelmiş, sen ona ilk söze giriyorsun. Sadece patronun ilk cümlesi (1-2 cümle), Türkçe, gerçekçi ve karaktere uygun. Sadece replik, açıklama yok.`);
+      patronHistory.push({ role: 'patron', text: opening });
+      renderPatronMsg('patron', opening);
+    } else {
+      // Offline mod — senaryo ağacı
+      document.getElementById('patronAIInput').style.display = 'none';
+      document.getElementById('patronChoices').style.display = 'block';
+      const tree = SENARYO_AGACI[topic];
+      if (!tree) {
+        alert('Bu konu için offline senaryo henüz hazır değil. AI moduna geçebilirsin.');
+        return;
+      }
+      patronCurrentNode = 'start';
+      renderPatronNode();
+    }
+  } catch(e) {
+    alert('Hata: ' + e.message);
+    console.error(e);
+  } finally {
+    btn.disabled = false; btn.classList.remove('loading');
+  }
+}
+
+function renderPatronNode() {
+  const tree = SENARYO_AGACI[patronTopic];
+  const node = tree[patronCurrentNode];
+  if (!node) return;
+
+  // Patron sözünü göster
+  const patronSoz = typeof node.patron === 'function' ? node.patron() : node.patron;
+  patronHistory.push({ role: 'patron', text: patronSoz });
+  renderPatronMsg('patron', patronSoz);
+
+  // Eğer son nodeysa
+  if (node.finalScore) {
+    document.getElementById('patronChoices').style.display = 'none';
+    setTimeout(() => {
+      const sonucDiv = document.createElement('div');
+      sonucDiv.style.cssText = 'padding:14px 22px;background:#f0fdf4;border-top:1px solid #86efac';
+
+      // Skor hesapla
+      const toplamPuan = patronChoices.reduce((s, c) => s + c, 0);
+      const maxPuan = patronChoices.length * 2;
+      const yuzde = maxPuan > 0 ? Math.round((toplamPuan / maxPuan) * 100) : 0;
+
+      let degerlendirme;
+      if (yuzde >= 80) degerlendirme = { ikon: '🏆', renk: '#15803d', metin: 'Mükemmel! Profesyonel ve hazırlıklı bir görüşme yaptın.' };
+      else if (yuzde >= 50) degerlendirme = { ikon: '👍', renk: '#b45309', metin: 'İyi denedin. Bazı seçimlerini güçlendirebilirsin.' };
+      else degerlendirme = { ikon: '📚', renk: '#b91c1c', metin: 'Pratik etmen lazım. Tekrar dene, daha iyi seçimler yap.' };
+
+      sonucDiv.style.background = yuzde >= 80 ? '#f0fdf4' : yuzde >= 50 ? '#fffbeb' : '#fef2f2';
+      sonucDiv.style.borderTopColor = yuzde >= 80 ? '#86efac' : yuzde >= 50 ? '#fcd34d' : '#fca5a5';
+
+      sonucDiv.innerHTML = `
+        <div style="display:flex;gap:14px;align-items:flex-start">
+          <div style="font-size:32px;flex-shrink:0">${degerlendirme.ikon}</div>
+          <div style="flex:1">
+            <div style="font-weight:700;color:${degerlendirme.renk};font-size:15px;margin-bottom:4px">Senaryo Tamamlandı · Skor: ${yuzde}/100</div>
+            <div style="font-size:13.5px;color:var(--ink);margin-bottom:10px">${escapeHTML(degerlendirme.metin)}</div>
+            <div style="font-size:13px;color:var(--ink);background:#fff;border-radius:8px;padding:11px 14px;line-height:1.6">
+              <strong>📝 Görüşme sonrası tavsiye:</strong><br>${escapeHTML(node.message)}
+            </div>
+          </div>
+        </div>`;
+      document.getElementById('patronMessages').parentElement.insertBefore(sonucDiv, document.getElementById('patronMessages').nextSibling);
+    }, 600);
+    return;
+  }
+
+  // Seçenekleri göster
+  setTimeout(() => {
+    const list = document.getElementById('patronChoicesList');
+    list.innerHTML = '';
+    node.choices.forEach((choice, idx) => {
+      const btn = document.createElement('button');
+      btn.style.cssText = 'display:block;width:100%;text-align:left;background:#fff;border:1.5px solid var(--border);border-radius:10px;padding:11px 14px;font-family:var(--sans);font-size:13.5px;color:var(--ink);cursor:pointer;margin-bottom:8px;line-height:1.5;transition:all 0.15s';
+      btn.textContent = choice.text;
+      btn.onmouseover = () => { btn.style.borderColor = 'var(--blue)'; btn.style.background = 'var(--blue-light)'; };
+      btn.onmouseout = () => { btn.style.borderColor = 'var(--border)'; btn.style.background = '#fff'; };
+      btn.onclick = () => selectPatronChoice(choice);
+      list.appendChild(btn);
+    });
+    document.getElementById('patronChoices').style.display = 'block';
+  }, 500);
+}
+
+function selectPatronChoice(choice) {
+  // Kullanıcının seçimini ekle
+  patronHistory.push({ role: 'sen', text: choice.text });
+  renderPatronMsg('sen', choice.text);
+  patronChoices.push(choice.puan);
+  document.getElementById('patronChoices').style.display = 'none';
+
+  // Sonraki node'a geç
+  patronCurrentNode = choice.next;
+  setTimeout(() => renderPatronNode(), 700);
+}
+
+function renderPatronMsg(role, text) {
+  const msgs = document.getElementById('patronMessages');
+  const cls = role === 'patron' ? 'ai' : 'user';
+  const label = role === 'patron' ? '👔 ' : '';
+  const div = document.createElement('div');
+  div.className = `chat-msg ${cls}`;
+  div.innerHTML = `<div class="chat-bubble">${escapeHTML(label)}${renderAIText(text)}</div>`;
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+
+async function sendPatron() {
+  // Sadece AI modunda çalışır
+  if (patronMode !== 'ai') return;
+  const input = document.getElementById('patronInput');
+  const msg = input.value.trim();
+  if (!msg) return;
+  input.value = '';
+  document.getElementById('patronSendBtn').disabled = true;
+  patronHistory.push({ role: 'sen', text: msg });
+  renderPatronMsg('sen', msg);
+  document.getElementById('patronTyping').style.display = 'block';
+
+  const transcript = patronHistory.map(m => `${m.role === 'patron' ? 'PATRON' : 'ÇALIŞAN'}: ${m.text}`).join('\n');
+  const tipLabel = { sert: 'sert ve baskıcı', oyalayici: 'sakin ama oyalayıcı', anlayisli: 'anlayışlı', tehditkar: 'tehditkar' }[patronTip] || patronTip;
+  const prompt = `Sen Türkiye'de bir patron rolü oynuyorsun. Kişiliğin: ${tipLabel}. Konu: ${patronTopic}. Aşağıda diyalog var. Sıra sende, patron olarak cevap ver. 1-3 cümle, Türkçe, karaktere sadık. Sadece replik:
+
+${transcript}
+
+PATRON:`;
+  try {
+    const reply = await callGemini(prompt);
+    patronHistory.push({ role: 'patron', text: reply });
+    document.getElementById('patronTyping').style.display = 'none';
+    renderPatronMsg('patron', reply);
+  } catch(e) {
+    document.getElementById('patronTyping').style.display = 'none';
+    renderPatronMsg('patron', `Hata: ${e.message}`);
+  } finally {
+    document.getElementById('patronSendBtn').disabled = false;
+  }
+}
+
+async function getFeedback() {
+  if (patronHistory.length < 2) { alert('Önce biraz konuş, sonra değerlendirelim.'); return; }
+
+  if (patronMode === 'offline') {
+    // Offline modda: zaten skor verilmiş, sadece tekrar göster
+    const toplamPuan = patronChoices.reduce((s, c) => s + c, 0);
+    const maxPuan = patronChoices.length * 2;
+    const yuzde = maxPuan > 0 ? Math.round((toplamPuan / maxPuan) * 100) : 0;
+
+    const div = document.getElementById('feedbackResult');
+    div.style.display = 'block';
+    div.innerHTML = `
+      <div style="background:#fafaf8;border-radius:10px;padding:14px 18px">
+        <div style="font-weight:700;font-size:14px;margin-bottom:6px">📊 Bu Görüşmenin Skorları</div>
+        <div style="font-size:13px;line-height:1.7">
+          <strong>Toplam Puan:</strong> ${toplamPuan}/${maxPuan} (${yuzde}/100)<br>
+          <strong>Yapılan Seçimler:</strong> ${patronChoices.length}<br>
+          <strong>İyi seçimler (2 puan):</strong> ${patronChoices.filter(p => p === 2).length}<br>
+          <strong>Orta seçimler (1 puan):</strong> ${patronChoices.filter(p => p === 1).length}<br>
+          <strong>Geliştirilecek (0 puan):</strong> ${patronChoices.filter(p => p === 0).length}
+        </div>
+        <div style="font-size:12.5px;color:var(--muted);margin-top:10px;line-height:1.55">
+          💡 <strong>İpucu:</strong> Daha doğal ve serbest diyalog deneyimi için AI moduna geç (üst sağdaki rozet). AI patronlarla yazışma açık uçludur, sen ne yazarsan o ona cevap verir.
+        </div>
+      </div>`;
+    return;
+  }
+
+  // AI modu — Gemini ile değerlendirme
+  const btn = document.getElementById('feedbackBtn');
+  btn.disabled = true; btn.textContent = '⏳ Değerlendiriliyor...';
+  const transcript = patronHistory.map(m => `${m.role === 'patron' ? 'PATRON' : 'ÇALIŞAN'}: ${m.text}`).join('\n');
+  const prompt = `Aşağıda bir çalışanın patronla "${patronTopic}" konusunda yaptığı pratik konuşma var. Çalışana 3 başlık altında geri bildirim ver:
+1. **Güçlü yönler**: Ne iyi yaptı?
+2. **Geliştirilecek**: Hangi cümleler daha iyi olabilirdi?
+3. **Tavsiye**: Bir sonraki gerçek konuşma için 2-3 somut öneri.
+
+Türkçe, samimi ve yapıcı ol. Markdown formatı kullan.
+
+${transcript}`;
+  try {
+    const fb = await callGemini(prompt);
+    const div = document.getElementById('feedbackResult');
+    div.style.display = 'block';
+    div.innerHTML = renderAIText(fb);
+    btn.textContent = '📊 Tekrar değerlendir';
+  } catch(e) {
+    alert('Hata: ' + e.message);
+    btn.textContent = '📊 Performansımı değerlendir';
+  } finally {
+    btn.disabled = false;
+  }
+}
+
+function resetPatron() {
+  patronHistory = []; patronTopic = ''; patronTip = ''; patronChoices = []; patronCurrentNode = null;
+  document.getElementById('patronChat').style.display = 'none';
+  document.getElementById('patronTopic').value = '';
+  document.getElementById('feedbackResult').style.display = 'none';
+  // Eski sonuç div'ini temizle
+  document.querySelectorAll('#patronChat > div').forEach(el => {
+    if (el.querySelector && el.querySelector('[style*="border-top-color"]')) el.remove();
+  });
+}
+
+// ═══════════════════════════════════════════════════════════════
+// BELGE ANALİZİ (AI)
+// ═══════════════════════════════════════════════════════════════
+let belgeBase64 = null, belgeMime = null;
+
+function onBelgeFile() {
+  const f = document.getElementById('belgeFile').files[0];
+  if (!f) return;
+  if (f.size > 8 * 1024 * 1024) { alert('Dosya çok büyük. Maks 8 MB.'); return; }
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    belgeBase64 = e.target.result.split(',')[1];
+    belgeMime = f.type;
+    const preview = document.getElementById('belgePreview');
+    if (f.type.startsWith('image/')) {
+      const img = document.createElement('img');
+      img.src = e.target.result;
+      img.style.cssText = 'max-width:240px;max-height:240px;border-radius:8px;border:1px solid var(--border);margin-top:8px;display:block';
+      const meta = document.createElement('div');
+      meta.style.cssText = 'font-size:12px;color:var(--muted);margin-top:6px';
+      meta.textContent = `${f.name} (${(f.size/1024).toFixed(0)} KB)`;
+      preview.innerHTML = ''; preview.appendChild(img); preview.appendChild(meta);
+    } else {
+      const div = document.createElement('div');
+      div.style.cssText = 'padding:11px 14px;background:#fafaf8;border:1px solid var(--border);border-radius:8px;font-size:13px';
+      div.textContent = `📄 ${f.name} (${(f.size/1024).toFixed(0)} KB)`;
+      preview.innerHTML = ''; preview.appendChild(div);
+    }
+  };
+  reader.readAsDataURL(f);
+}
+
+async function analyzeBelge() {
+  if (APP_MODE !== 'ai' || !GEMINI_KEY) {
+    alert('Belge Analizi AI gerektirir. Üst sağdaki rozetten AI moduna geçebilirsin.');
+    return;
+  }
+  if (!belgeBase64) { alert('Lütfen bir belge yükle'); return; }
+  const tip = document.getElementById('belgeTip').value;
+  const ctx = document.getElementById('belgeContext').value.trim();
+  const btn = document.getElementById('belgeBtn');
+  btn.disabled = true; btn.classList.add('loading');
+  const result = document.getElementById('belgeResult');
+  result.innerHTML = `<div class="single-card"><div class="card-body" style="text-align:center;padding:40px"><div style="display:inline-block;animation:spin 1s linear infinite;font-size:32px">📄</div><p style="margin-top:14px;color:var(--muted)">Belge analiz ediliyor...</p></div></div>`;
+
+  const prompt = `Sen Türkiye iş hukuku uzmanısın. 4857 sayılı İş Kanunu ve 2026 tutarlarını biliyorsun.
+
+Aşağıdaki "${tip}" türündeki belgeyi analiz et.
+
+ÇALIŞANIN DURUMU: ${ctx || 'Belirtilmedi'}
+
+Belgede neler var? Yasal sorunlar, çelişkiler veya çalışan aleyhine maddeler var mı? Türkçe, net ve maddeler halinde:
+
+1. **Belgenin özeti** (2-3 cümle)
+2. **Tespit edilen sorunlar** (varsa, madde madde)
+3. **Çalışanın durumuyla çelişen yerler** (varsa)
+4. **Tavsiyeler** (somut adımlar)`;
+
+  try {
+    const res = await callGemini(prompt, { mime: belgeMime, data: belgeBase64 });
+    result.innerHTML = `<div class="single-card">
+      <div class="card-head"><div class="card-icon ci-blue">📄</div><div class="card-title">Belge Analizi</div></div>
+      <div class="card-body" style="font-size:14px;line-height:1.75">${renderAIText(res)}</div>
+    </div>`;
+  } catch(e) {
+    result.innerHTML = `<div class="single-card"><div class="card-body" style="text-align:center;padding:36px;color:var(--muted)">⚠️ ${escapeHTML(e.message)}</div></div>`;
+  } finally {
+    btn.disabled = false; btn.classList.remove('loading');
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════
+// ⏰ ZAMANAŞIMI ALARMI
+// ═══════════════════════════════════════════════════════════════
+// Türk İş Hukuku zamanaşımı süreleri (4857 + 6098 TBK):
+// - Ücret, fazla mesai, prim alacakları: 5 yıl (TBK m.146)
+// - Kıdem tazminatı: 5 yıl (7036 sayılı kanun, 25.10.2017'den sonraki fesihler için)
+// - İhbar tazminatı: 5 yıl
+// - Yıllık izin ücreti: 5 yıl (fesih tarihinden itibaren)
+// - İşe iade davası: 1 ay (fesih tebliğinden itibaren)
+// - Mobbing tazminatı: 10 yıl (haksız fiil)
+// - Sigortasız çalışma tespit davası: 5 yıl
+
+function hesaplaZamanasimi(form) {
+  if (!form || !form.situation) return [];
+  const alarmlar = [];
+  const bugun = new Date();
+  const yil365 = 365 * 86400000;
+
+  const durum = form.situation;
+  const overtime = form.overtime;
+  const haftaSaati = (parseFloat(form.dailyHours)||0) * (parseFloat(form.weeklyDays)||0);
+  const toplamYil = (parseFloat(form.years)||0) + (parseFloat(form.months)||0)/12;
+
+  // 1. İŞE İADE DAVASI - 1 AY (en kritik)
+  if (durum === 'Haksız yere işten çıkarıldım') {
+    // Fesih tarihini bilmiyoruz, bugün varsayalım — kullanıcıyı uyarmak yeterli
+    alarmlar.push({
+      baslik: 'İşe İade Davası Süresi',
+      aciklama: 'Fesih tebliğinden itibaren sadece 1 ay içinde arabulucuya başvurmazsan, işe iade hakkın yanar. Bu en kritik süredir.',
+      gun: 30,
+      kritik: true
+    });
+  }
+
+  // 2. FAZLA MESAİ ALACAĞI - 5 YIL
+  if (overtime === 'Hayır, hiç almıyorum' && haftaSaati > 45) {
+    alarmlar.push({
+      baslik: 'Geriye Dönük Fazla Mesai Alacağı',
+      aciklama: 'Fazla mesai alacakları her ay için 5 yıllık zamanaşımına tabidir. Yani bugün 6 yıl önceki fazla mesainin parasını isteyemezsin. En eski hak ediş tarihinden itibaren 5 yıl saymalısın.',
+      gun: 5 * 365  // genel uyarı, kişiye özel değil
+    });
+  }
+
+  // 3. ÜCRET ÖDENMEMESİ - 5 YIL
+  if (durum === 'Maaşım ödenmiyor' || durum === 'Ücret kesintisi yapıldı') {
+    alarmlar.push({
+      baslik: 'Ücret Alacağı Zamanaşımı',
+      aciklama: 'Ödenmemiş ücret alacakları her ay için 5 yıllık zamanaşımına tabidir. İlk ödenmeyen ay için süre işlemeye başlar — çabuk harekete geç.',
+      gun: 5 * 365
+    });
+  }
+
+  // 4. KIDEM/İHBAR TAZMİNATI - 5 YIL (fesih tarihinden)
+  if (durum === 'Haksız yere işten çıkarıldım' || durum === 'İstifa etmek istiyorum, haklarımı öğrenmek istiyorum') {
+    if (toplamYil >= 1) {
+      alarmlar.push({
+        baslik: 'Kıdem ve İhbar Tazminatı',
+        aciklama: 'Fesih tarihinden itibaren 5 yıl içinde dava açmalısın. 25.10.2017 sonrası fesihler için zamanaşımı süresi 10 yıldan 5 yıla indirildi.',
+        gun: 5 * 365
+      });
+    }
+  }
+
+  // 5. MOBBING - 10 YIL (haksız fiil)
+  if (durum === 'Mobbing / baskı altındayım') {
+    alarmlar.push({
+      baslik: 'Mobbing Tazminatı',
+      aciklama: 'Mobbing nedeniyle manevi tazminat haksız fiil sayılır, 10 yıllık zamanaşımına tabidir. Ancak son mobbing eyleminden itibaren 2 yıl içinde harekete geçmek daha güvenlidir.',
+      gun: 2 * 365
+    });
+  }
+
+  // 6. YILLIK İZİN ÜCRETİ - 5 YIL (fesih sonrası)
+  if (toplamYil >= 1) {
+    alarmlar.push({
+      baslik: 'Yıllık İzin Ücreti (Fesih Sonrası)',
+      aciklama: 'Kullanılmamış yıllık izinlerinin ücreti, iş sözleşmesinin sona ermesinden itibaren 5 yıl içinde talep edilmelidir.',
+      gun: 5 * 365
+    });
+  }
+
+  // Eğer durum belirsizse genel bir uyarı
+  if (alarmlar.length === 0 && (overtime || durum)) {
+    alarmlar.push({
+      baslik: 'Genel Zamanaşımı Hatırlatması',
+      aciklama: 'İşçilik alacaklarının çoğu 5 yıllık zamanaşımına tabidir. Hak kaybı yaşamamak için kanıtlarını topla ve gerektiğinde harekete geç.',
+      gun: 5 * 365
+    });
+  }
+
+  // Süresine göre sırala (en az kalan en üstte)
+  return alarmlar.sort((a, b) => a.gun - b.gun);
+}
+
+// ═══════════════════════════════════════════════════════════════
+// 📈 SENARYO KARŞILAŞTIRMA
+// ═══════════════════════════════════════════════════════════════
+function calcSenaryo() {
+  const bas = document.getElementById('sBaslangic').value;
+  const maas = parseFloat(document.getElementById('sMaas').value) || 0;
+  const sebep = document.getElementById('sSebep').value;
+  const fmAylik = parseFloat(document.getElementById('sFm').value) || 0;
+
+  if (!bas || !maas) { document.getElementById('senaryoResult').style.display = 'none'; return; }
+
+  const start = new Date(bas);
+  const bugun = new Date();
+  if (start > bugun) { document.getElementById('senaryoResult').style.display = 'none'; return; }
+
+  // Senaryo zamanları: bugün, +3 ay, +6 ay, +9 ay, +12 ay, +18 ay, +24 ay
+  const senaryolar = [
+    { etiket: 'BUGÜN', ay: 0 },
+    { etiket: '+3 ay', ay: 3 },
+    { etiket: '+6 ay', ay: 6 },
+    { etiket: '+9 ay', ay: 9 },
+    { etiket: '+1 yıl', ay: 12 },
+    { etiket: '+1.5 yıl', ay: 18 },
+    { etiket: '+2 yıl', ay: 24 }
+  ];
+
+  let html = '';
+  let toplamlar = [];
+
+  senaryolar.forEach((s, idx) => {
+    const ayrilis = new Date(bugun);
+    ayrilis.setMonth(ayrilis.getMonth() + s.ay);
+    const calismaMs = ayrilis - start;
+    const toplamYil = calismaMs / yil365();
+
+    if (toplamYil < 0) return;
+
+    const yilTam = Math.floor(toplamYil);
+    const ayTam = Math.floor((toplamYil - yilTam) * 12);
+    const sureMetni = `${yilTam}y ${ayTam}a`;
+
+    let kidem = 0, ihbar = 0, izin = 0;
+
+    // Kıdem (haklı/işveren/emeklilik durumlarında alınır, istifa hariç)
+    if ((sebep === 'haklı' || sebep === 'işveren' || sebep === 'emeklilik') && toplamYil >= 1) {
+      kidem = hesaplaKidem(maas, toplamYil).tutar;
+    }
+
+    // İhbar (sadece haklı + işveren — istifa ve emeklilikte yok)
+    if (sebep === 'haklı' || sebep === 'işveren') {
+      ihbar = hesaplaIhbar(maas, toplamYil).tutar;
+    }
+
+    // İzin (her durumda — fesihte ödenmemiş izin alacağı)
+    if (toplamYil >= 1) {
+      const hak = yillikIzinHak(toplamYil);
+      // Geriye dönük 5 yıllık birikmiş izin ücreti varsayımı
+      const yilSayisi = Math.min(toplamYil, 5);
+      izin = (maas / 30) * hak * yilSayisi * 0.4; // Genelde yarısı kullanılır, %40 kalan varsayımı
+    }
+
+    // Fazla mesai (yıllık)
+    let fmYillik = 0;
+    if (fmAylik > 0) {
+      const fm = hesaplaFazlaMesai(maas, 45, fmAylik);
+      fmYillik = fm.tutar * 12;
+    }
+
+    const toplam = kidem + ihbar + izin + fmYillik;
+    toplamlar.push({ ay: s.ay, toplam, sureMetni });
+
+    const isToday = idx === 0;
+    const tarihStr = ayrilis.toLocaleDateString('tr-TR', { day: '2-digit', month: 'short', year: 'numeric' });
+
+    html += `<tr style="${isToday ? 'background:#eff4ff' : ''}">
+      <td style="padding-left:22px"><strong>${s.etiket}</strong><br><span style="color:var(--muted);font-size:11.5px">${tarihStr}</span></td>
+      <td style="font-size:13px">${sureMetni}</td>
+      <td class="amount" style="font-size:13.5px">${kidem > 0 ? fmtTL(kidem) : '—'}</td>
+      <td class="amount" style="font-size:13.5px">${ihbar > 0 ? fmtTL(ihbar) : '—'}</td>
+      <td class="amount" style="font-size:13.5px">${izin > 0 ? fmtTL(izin) : '—'}</td>
+      <td class="amount" style="padding-right:22px;font-size:14px;color:${isToday ? 'var(--blue)' : 'var(--green)'}">${fmtTL(toplam)}</td>
+    </tr>`;
+  });
+
+  document.getElementById('senaryoTable').innerHTML = html;
+
+  // Akıllı tavsiyeler
+  let tavsiyeHTML = '';
+  if (toplamlar.length >= 2) {
+    const bugunkuToplam = toplamlar[0].toplam;
+    const son = toplamlar[toplamlar.length - 1];
+    const fark = son.toplam - bugunkuToplam;
+
+    if (fark > 1000) {
+      tavsiyeHTML += `<p style="margin-bottom:10px"><strong>💰 Bekleme avantajı:</strong> Bugün ayrılırsan ${fmtTL(bugunkuToplam)} alırsın, ${son.ay} ay daha çalışırsan toplam ${fmtTL(son.toplam)} alırsın — yani <strong style="color:var(--green)">${fmtTL(fark)} fark</strong>.</p>`;
+    }
+
+    // Önemli eşikler kontrol et
+    const start = new Date(document.getElementById('sBaslangic').value);
+    const bugun2 = new Date();
+    const calismaYil = (bugun2 - start) / yil365();
+
+    if (calismaYil < 1) {
+      const kalanGun = Math.ceil((1 - calismaYil) * 365);
+      tavsiyeHTML += `<p style="margin-bottom:10px"><strong>⚡ Kritik eşik:</strong> Daha 1 yılı doldurmadın. <strong style="color:var(--red)">${kalanGun} gün</strong> sonra kıdem tazminatı hakkın doğacak. Mümkünse o tarihe kadar çalış.</p>`;
+    } else if (calismaYil < 1.5) {
+      const kalanGun = Math.ceil((1.5 - calismaYil) * 365);
+      tavsiyeHTML += `<p style="margin-bottom:10px"><strong>📅 Yaklaşan eşik:</strong> ${kalanGun} gün sonra ihbar süren 4 haftadan 6 haftaya yükselecek (~${fmtTL((Math.min(maas, KIDEM_TAVANI_2026_H1)/30)*7*2)} ek tazminat).</p>`;
+    } else if (calismaYil < 3) {
+      const kalanGun = Math.ceil((3 - calismaYil) * 365);
+      tavsiyeHTML += `<p style="margin-bottom:10px"><strong>📅 Yaklaşan eşik:</strong> ${kalanGun} gün sonra ihbar süren 6 haftadan 8 haftaya yükselecek.</p>`;
+    } else if (calismaYil < 5) {
+      const kalanGun = Math.ceil((5 - calismaYil) * 365);
+      tavsiyeHTML += `<p style="margin-bottom:10px"><strong>📅 Yaklaşan eşik:</strong> ${kalanGun} gün sonra yıllık izin hakkın 14'ten 20 güne yükselecek.</p>`;
+    }
+
+    if (sebep === 'istifa') {
+      tavsiyeHTML += `<p style="margin-bottom:10px;color:var(--red)"><strong>⚠️ Kritik uyarı:</strong> Kendi isteğinle istifa edersen <strong>kıdem ve ihbar tazminatı alamazsın</strong>. Eğer maaş ödenmemesi, mobbing, ücret kesintisi gibi haklı bir sebebin varsa — istifa yerine "haklı fesih" yap, tazminatları kaybetme.</p>`;
+    }
+
+    if (sebep === 'haklı' || sebep === 'işveren') {
+      tavsiyeHTML += `<p style="margin-bottom:10px"><strong>⏰ Zamanaşımı:</strong> Fesih tarihinden itibaren <strong>5 yıl</strong> içinde dava açmalısın, yoksa hakkın yanar. Ayrıca eğer işverenin haksız feshiyse, fesih tebliğinden <strong>1 ay</strong> içinde işe iade davası için arabulucuya başvurmalısın.</p>`;
+    }
+
+    if (!tavsiyeHTML) {
+      tavsiyeHTML = '<p>Senaryolarda büyük fark yok. Hak kaybı yaşamamak için ne zaman ayrılırsan kanıtlarını topla.</p>';
+    }
+  }
+
+  document.getElementById('senaryoTavsiye').innerHTML = tavsiyeHTML;
+  document.getElementById('senaryoResult').style.display = 'block';
+}
+
+function yil365() { return 365 * 86400000; }
+
+// ═══════════════════════════════════════════════════════════════
+// 📁 KANIT KLASÖRÜ
+// ═══════════════════════════════════════════════════════════════
+const KANIT_KEY = 'kanit_klasoru';
+
+function loadKanit() {
+  try {
+    const data = JSON.parse(localStorage.getItem(KANIT_KEY) || '{}');
+    return {
+      mesailer: data.mesailer || [],
+      taniklar: data.taniklar || [],
+      belgeler: data.belgeler || [],
+      notlar: data.notlar || []
+    };
+  } catch(e) {
+    return { mesailer: [], taniklar: [], belgeler: [], notlar: [] };
+  }
+}
+
+function saveKanit(data) {
+  try {
+    localStorage.setItem(KANIT_KEY, JSON.stringify(data));
+  } catch(e) {
+    if (e.name === 'QuotaExceededError') {
+      alert('Tarayıcı depolama alanı doldu. Bazı dosyaları silmen gerekebilir veya "Tümünü İndir" ile dışarı aktarıp temizle.');
+    }
+  }
+}
+
+function renderKanit() {
+  const data = loadKanit();
+
+  // Mesailer
+  document.getElementById('kMesaiCount').textContent = `${data.mesailer.length} kayıt`;
+  const ml = document.getElementById('mesaiListe');
+  if (data.mesailer.length === 0) {
+    ml.innerHTML = '<p style="color:var(--muted);font-size:13px;text-align:center;padding:14px">Henüz kayıt yok. Yukarıdan ekle.</p>';
+  } else {
+    let totalSaat = 0;
+    let html = '<div style="border-top:1px solid var(--border)">';
+    data.mesailer.slice().reverse().forEach((m, idx) => {
+      const realIdx = data.mesailer.length - 1 - idx;
+      const saat = saatHesapla(m.bas, m.bit);
+      totalSaat += saat;
+      html += `<div style="display:flex;align-items:center;gap:14px;padding:10px 0;border-bottom:1px solid var(--border)">
+        <div style="flex:1">
+          <div style="font-size:13.5px;font-weight:500">${escapeHTML(formatTarih(m.tarih))}</div>
+          <div style="font-size:12px;color:var(--muted);font-family:var(--mono)">${escapeHTML(m.bas)} – ${escapeHTML(m.bit)} (${saat.toFixed(1)} saat)</div>
+        </div>
+        <button onclick="delMesai(${realIdx})" style="background:none;border:none;color:var(--red);cursor:pointer;font-size:16px;padding:4px 8px">×</button>
+      </div>`;
+    });
+    html += `<div style="padding:12px 0 0;font-size:13px;color:var(--muted)"><strong style="color:var(--ink)">Toplam:</strong> ${totalSaat.toFixed(1)} saat / ${data.mesailer.length} gün — ortalama ${(totalSaat/data.mesailer.length).toFixed(1)} saat/gün</div></div>`;
+    ml.innerHTML = html;
+  }
+
+  // Tanıklar
+  document.getElementById('kTanikCount').textContent = `${data.taniklar.length} tanık`;
+  const tl = document.getElementById('tanikListe');
+  if (data.taniklar.length === 0) {
+    tl.innerHTML = '<p style="color:var(--muted);font-size:13px;text-align:center;padding:14px">Henüz tanık eklenmedi.</p>';
+  } else {
+    let html = '';
+    data.taniklar.forEach((t, idx) => {
+      html += `<div style="background:#fafaf8;border:1px solid var(--border);border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <div style="display:flex;align-items:flex-start;gap:10px">
+          <div style="flex:1">
+            <div style="font-weight:600;font-size:13.5px">${escapeHTML(t.ad)}</div>
+            <div style="font-size:12.5px;color:var(--muted);font-family:var(--mono);margin:2px 0 6px">${escapeHTML(t.tel)}</div>
+            <div style="font-size:13px;line-height:1.5">${escapeHTML(t.ifade)}</div>
+          </div>
+          <button onclick="delTanik(${idx})" style="background:none;border:none;color:var(--red);cursor:pointer;font-size:18px">×</button>
+        </div>
+      </div>`;
+    });
+    tl.innerHTML = html;
+  }
+
+  // Belgeler
+  document.getElementById('kBelgeCount').textContent = `${data.belgeler.length} belge`;
+  const bl = document.getElementById('belgeListe');
+  if (data.belgeler.length === 0) {
+    bl.innerHTML = '<p style="color:var(--muted);font-size:13px;text-align:center;padding:14px">Henüz belge yüklenmedi.</p>';
+  } else {
+    let html = '<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px">';
+    data.belgeler.forEach((b, idx) => {
+      const isImg = b.mime && b.mime.startsWith('image/');
+      const preview = isImg ? `<img src="${b.data}" style="width:100%;height:100px;object-fit:cover;border-radius:6px">`
+                            : `<div style="width:100%;height:100px;background:#f3f4f6;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:32px">📄</div>`;
+      html += `<div style="background:#fafaf8;border:1px solid var(--border);border-radius:8px;padding:8px;position:relative">
+        ${preview}
+        <div style="font-size:11.5px;margin-top:6px;line-height:1.4;height:32px;overflow:hidden">${escapeHTML(b.aciklama)}</div>
+        <div style="font-size:10.5px;color:var(--muted);margin-top:3px">${escapeHTML(formatTarih(b.tarih))}</div>
+        <button onclick="delBelge(${idx})" style="position:absolute;top:6px;right:6px;background:rgba(0,0,0,0.6);color:#fff;border:none;border-radius:50%;width:22px;height:22px;cursor:pointer;font-size:14px;line-height:1">×</button>
+      </div>`;
+    });
+    html += '</div>';
+    bl.innerHTML = html;
+  }
+
+  // Notlar
+  document.getElementById('kNotCount').textContent = `${data.notlar.length} kayıt`;
+  const nl = document.getElementById('notListe');
+  if (data.notlar.length === 0) {
+    nl.innerHTML = '<p style="color:var(--muted);font-size:13px;text-align:center;padding:14px">Henüz olay kaydı yok.</p>';
+  } else {
+    let html = '';
+    data.notlar.slice().reverse().forEach((n, idx) => {
+      const realIdx = data.notlar.length - 1 - idx;
+      html += `<div style="background:#fafaf8;border-left:3px solid var(--blue);border-radius:0 8px 8px 0;padding:11px 14px;margin-bottom:8px">
+        <div style="display:flex;align-items:flex-start;gap:10px">
+          <div style="flex:1">
+            <div style="font-size:12px;color:var(--muted);font-family:var(--mono);margin-bottom:4px">${escapeHTML(formatTarih(n.tarih))}</div>
+            <div style="font-size:13.5px;line-height:1.55">${escapeHTML(n.icerik)}</div>
+          </div>
+          <button onclick="delNot(${realIdx})" style="background:none;border:none;color:var(--red);cursor:pointer;font-size:18px">×</button>
+        </div>
+      </div>`;
+    });
+    nl.innerHTML = html;
+  }
+}
+
+function saatHesapla(bas, bit) {
+  if (!bas || !bit) return 0;
+  const [h1, m1] = bas.split(':').map(Number);
+  const [h2, m2] = bit.split(':').map(Number);
+  let dakika = (h2 * 60 + m2) - (h1 * 60 + m1);
+  if (dakika < 0) dakika += 24 * 60; // gece vardiyası
+  return dakika / 60;
+}
+
+function formatTarih(iso) {
+  if (!iso) return '';
+  try { return new Date(iso).toLocaleDateString('tr-TR', { day: '2-digit', month: 'long', year: 'numeric' }); }
+  catch(e) { return iso; }
+}
+
+function addMesai() {
+  const tarih = document.getElementById('mesaiTarih').value;
+  const bas = document.getElementById('mesaiBas').value;
+  const bit = document.getElementById('mesaiBit').value;
+  if (!tarih || !bas || !bit) { alert('Tarih ve saatleri doldur'); return; }
+  const data = loadKanit();
+  data.mesailer.push({ tarih, bas, bit, eklenme: Date.now() });
+  saveKanit(data);
+  document.getElementById('mesaiTarih').value = '';
+  renderKanit();
+}
+
+function delMesai(idx) {
+  const data = loadKanit();
+  data.mesailer.splice(idx, 1);
+  saveKanit(data);
+  renderKanit();
+}
+
+function addTanik() {
+  const ad = document.getElementById('tanikAd').value.trim();
+  const tel = document.getElementById('tanikTel').value.trim();
+  const ifade = document.getElementById('tanikIfade').value.trim();
+  if (!ad || !ifade) { alert('Ad ve ifadeyi doldur'); return; }
+  const data = loadKanit();
+  data.taniklar.push({ ad, tel, ifade, eklenme: Date.now() });
+  saveKanit(data);
+  document.getElementById('tanikAd').value = '';
+  document.getElementById('tanikTel').value = '';
+  document.getElementById('tanikIfade').value = '';
+  renderKanit();
+}
+
+function delTanik(idx) {
+  const data = loadKanit();
+  data.taniklar.splice(idx, 1);
+  saveKanit(data);
+  renderKanit();
+}
+
+function addBelge() {
+  const aciklama = document.getElementById('belgeAciklama').value.trim();
+  const dosya = document.getElementById('belgeDosya').files[0];
+  if (!aciklama || !dosya) { alert('Açıklama ve dosya gerekli'); return; }
+  if (dosya.size > 4 * 1024 * 1024) { alert('Dosya 4 MB\'dan büyük olamaz'); return; }
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    const data = loadKanit();
+    data.belgeler.push({
+      aciklama,
+      data: e.target.result,
+      mime: dosya.type,
+      ad: dosya.name,
+      tarih: new Date().toISOString().split('T')[0],
+      eklenme: Date.now()
+    });
+    saveKanit(data);
+    document.getElementById('belgeAciklama').value = '';
+    document.getElementById('belgeDosya').value = '';
+    renderKanit();
+  };
+  reader.readAsDataURL(dosya);
+}
+
+function delBelge(idx) {
+  if (!confirm('Bu belgeyi sil?')) return;
+  const data = loadKanit();
+  data.belgeler.splice(idx, 1);
+  saveKanit(data);
+  renderKanit();
+}
+
+function addNot() {
+  const tarih = document.getElementById('notTarih').value;
+  const icerik = document.getElementById('notIcerik').value.trim();
+  if (!tarih || !icerik) { alert('Tarih ve olay açıklamasını doldur'); return; }
+  const data = loadKanit();
+  data.notlar.push({ tarih, icerik, eklenme: Date.now() });
+  saveKanit(data);
+  document.getElementById('notTarih').value = '';
+  document.getElementById('notIcerik').value = '';
+  renderKanit();
+}
+
+function delNot(idx) {
+  const data = loadKanit();
+  data.notlar.splice(idx, 1);
+  saveKanit(data);
+  renderKanit();
+}
+
+// Tüm kanıtları tek metin dosyası olarak indir
+function kanitExport() {
+  const data = loadKanit();
+  if (data.mesailer.length === 0 && data.taniklar.length === 0 && data.belgeler.length === 0 && data.notlar.length === 0) {
+    alert('Henüz kanıt eklenmedi.');
+    return;
+  }
+
+  const tarih = new Date().toLocaleString('tr-TR');
+  let metin = `═══════════════════════════════════════════════════════════════
+KANIT KLASÖRÜ — İŞÇİ HAKLARI ASİSTANI
+Oluşturulma: ${tarih}
+═══════════════════════════════════════════════════════════════
+
+Bu dosya, dava süreci için toplanmış kanıtların özetini içerir.
+Belgelerin orijinalleri ayrıca indirilmelidir (ek dosyalar bölümü).
+
+`;
+
+  // Mesai kayıtları
+  if (data.mesailer.length > 0) {
+    metin += `\n═══ MESAİ KAYITLARI (${data.mesailer.length} gün) ═══\n\n`;
+    let toplamSaat = 0;
+    data.mesailer.sort((a,b) => a.tarih.localeCompare(b.tarih)).forEach(m => {
+      const saat = saatHesapla(m.bas, m.bit);
+      toplamSaat += saat;
+      metin += `${formatTarih(m.tarih)}: ${m.bas}–${m.bit} (${saat.toFixed(1)} saat)\n`;
+    });
+    metin += `\nTOPLAM: ${toplamSaat.toFixed(1)} saat / ${data.mesailer.length} gün\n`;
+    metin += `Ortalama: ${(toplamSaat/data.mesailer.length).toFixed(1)} saat/gün\n`;
+    metin += `Yasal sınır karşılaştırması: Haftalık 45 saat (günde ortalama 7.5 saat)\n`;
+  }
+
+  // Tanıklar
+  if (data.taniklar.length > 0) {
+    metin += `\n\n═══ TANIKLAR (${data.taniklar.length} kişi) ═══\n\n`;
+    data.taniklar.forEach((t, i) => {
+      metin += `${i+1}. ${t.ad}\n`;
+      if (t.tel) metin += `   Tel: ${t.tel}\n`;
+      metin += `   İfade: ${t.ifade}\n\n`;
+    });
+  }
+
+  // Notlar
+  if (data.notlar.length > 0) {
+    metin += `\n═══ OLAY GÜNLÜĞÜ (${data.notlar.length} kayıt) ═══\n\n`;
+    data.notlar.sort((a,b) => a.tarih.localeCompare(b.tarih)).forEach(n => {
+      metin += `[${formatTarih(n.tarih)}]\n${n.icerik}\n\n`;
+    });
+  }
+
+  // Belgeler listesi
+  if (data.belgeler.length > 0) {
+    metin += `\n═══ EKLİ BELGELER (${data.belgeler.length} dosya) ═══\n\n`;
+    data.belgeler.forEach((b, i) => {
+      metin += `${i+1}. ${b.aciklama}\n`;
+      metin += `   Dosya: ${b.ad} (${b.mime})\n`;
+      metin += `   Eklenme: ${formatTarih(b.tarih)}\n\n`;
+    });
+    metin += `\nNot: Belgelerin görsel içerikleri JSON yedeğinde mevcuttur.\n`;
+  }
+
+  metin += `\n═══════════════════════════════════════════════════════════════\nHazırlayan: İşçi Hakları Asistanı\n═══════════════════════════════════════════════════════════════\n`;
+
+  // Metin dosyasını indir
+  const blob = new Blob([metin], { type: 'text/plain;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `kanit-klasoru-${new Date().toISOString().split('T')[0]}.txt`;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(url);
+
+  // JSON yedeğini de indir (resimleri içerir)
+  setTimeout(() => {
+    const jsonBlob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+    const jsonUrl = URL.createObjectURL(jsonBlob);
+    const a2 = document.createElement('a');
+    a2.href = jsonUrl;
+    a2.download = `kanit-klasoru-yedek-${new Date().toISOString().split('T')[0]}.json`;
+    document.body.appendChild(a2);
+    a2.click();
+    a2.remove();
+    URL.revokeObjectURL(jsonUrl);
+  }, 300);
+
+  alert('İki dosya indirildi:\n\n• .txt → avukatına/İŞKUR\'a sunabileceğin özet metin\n• .json → tüm verilerin (görseller dahil) yedeği');
+}
+
+// ═══════════════════════════════════════════════════════════════
+// İLK YÜKLEME
+// ═══════════════════════════════════════════════════════════════
+window.addEventListener('DOMContentLoaded', () => {
+  loadTakip();
+  setTimeout(updateTakip, 80);
+  renderKanit();
+  // Bugünün tarihini default olarak ayarla
+  const today = new Date().toISOString().split('T')[0];
+  const mesaiTarih = document.getElementById('mesaiTarih');
+  const notTarih = document.getElementById('notTarih');
+  if (mesaiTarih) mesaiTarih.value = today;
+  if (notTarih) notTarih.value = today;
+});
+</script>
+
+<style>
+/* PRINT (PDF) */
+@media print {
+  .header,.disclaimer-banner,.hero,.tabs-bar,.form-panel,.modal-overlay,.btn-row,.chat-box,.analyze-btn,.form-note,.empty-state,.ai-only-note,.field-help { display:none!important; }
+  body { background:#fff!important; }
+  .main { grid-template-columns:1fr!important; padding:0!important; max-width:none!important; }
+  .single-col { padding:0!important; }
+  .result-card,.single-card { break-inside:avoid; box-shadow:none!important; border:1px solid #ddd!important; margin-bottom:14px!important; }
+  .right-panel { gap:14px!important; }
+  .card-head { background:#f5f5f5!important; padding:10px 16px!important; }
+  .card-body { padding:14px 16px!important; }
+  @page { margin:1.5cm; size:A4; }
+}
+</style>
+</body>
+</html>
